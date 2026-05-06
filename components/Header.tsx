@@ -36,8 +36,9 @@ export function Header() {
             : 'bg-white/40 backdrop-blur-sm border-transparent'
         }`}>
           
-          <Link href="/" className="flex items-center">
-            <Image src="/logo.svg" alt="DMSPilot" width={36} height={36} className="h-9 w-9" priority />
+          <Link href="/" className="flex items-center gap-2">
+            <Image src="/logo.svg" alt="DMSPilot" width={32} height={32} className="h-8 w-8" priority />
+            <span className="font-bold text-lg tracking-tight text-gray-900">DMSPilot</span>
           </Link>
 
           {/* Desktop Nav in the center */}
