@@ -22,21 +22,21 @@ export function Hero() {
           {/* Top Badge */}
           <div className="inline-flex items-center rounded-full border border-purple-200 bg-white/50 backdrop-blur-sm px-4 py-1.5 text-xs font-mono font-bold text-purple-700 tracking-wider shadow-sm animate-[fadeInScale_0.5s_0.3s_both]">
             <span className="flex h-2 w-2 rounded-full bg-purple-600 mr-2.5 animate-pulse"></span>
-            DMSPILOT_CORE_V2.0_DEPLOYED
+            #1 DEALER MANAGEMENT SYSTEM — NOW LIVE
           </div>
           
           <h1 className="text-5xl md:text-8xl lg:text-[6.5rem] font-sans font-bold tracking-[-0.05em] leading-[0.85] text-gray-900 text-balance">
-            The Nervous System <br className="hidden md:block" /> for Automotive
+            The Operating System<br className="hidden md:block" /> for Auto Dealers
           </h1>
           
           <p className="text-lg md:text-2xl text-gray-500 max-w-2xl font-medium leading-relaxed px-4 md:px-0">
-            High-performance, cloud-native ERP ecosystem connecting your Sales floor to your Service bay—all in one unified stream.
+            Replace CDK, Reynolds & Dealertrack with one cloud-native DMS. Inventory, sales, F&I, parts, accounting — unified in a single platform.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center gap-6 pt-10 w-full justify-center">
             <Link href="/request-access">
               <Button size="lg" className="h-14 bg-black hover:bg-gray-800 text-white rounded-2xl px-10 text-lg font-bold shadow-2xl hover:-translate-y-1 transition-all">
-                Join Network
+                Get Free Demo
               </Button>
             </Link>
             <Button 
@@ -46,7 +46,7 @@ export function Hero() {
               onClick={() => setShowApiPopup(true)}
             >
               <Terminal className="w-5 h-5 mr-3 text-purple-600" />
-              API Environment
+              See How It Works
             </Button>
           </div>
 
@@ -74,17 +74,17 @@ export function Hero() {
           <div className="flex items-center gap-10 pt-12 text-xs font-mono font-bold text-gray-400">
             <div className="flex flex-col items-center gap-1">
                <span className="text-gray-900 text-lg">500k+</span> 
-               <span className="uppercase tracking-widest text-[9px]">VINs_Processed</span>
+               <span className="uppercase tracking-widest text-[9px]">Vehicles_Managed</span>
             </div>
             <div className="w-[1px] h-8 bg-gray-100 hidden sm:block"></div>
             <div className="flex flex-col items-center gap-1">
                <span className="text-gray-900 text-lg">99.9%</span> 
-               <span className="uppercase tracking-widest text-[9px]">System_Uptime</span>
+               <span className="uppercase tracking-widest text-[9px]">Uptime_SLA</span>
             </div>
             <div className="w-[1px] h-8 bg-gray-100 hidden sm:block"></div>
             <div className="flex flex-col items-center gap-1">
-               <span className="text-gray-900 text-lg">4.9/5</span> 
-               <span className="uppercase tracking-widest text-[9px]">Partner_Index</span>
+               <span className="text-gray-900 text-lg">60%</span> 
+               <span className="uppercase tracking-widest text-[9px]">Cost_Savings</span>
             </div>
           </div>
         </div>
