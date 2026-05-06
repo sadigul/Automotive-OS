@@ -37,7 +37,7 @@ export function Header() {
         }`}>
           
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/logo.svg" alt="DMSPilot" width={32} height={32} className="h-8 w-8" priority />
+            <Image src="/logo.svg" alt="DMSPilot" width={40} height={40} className="h-10 w-10" priority />
             <span className="font-bold text-lg tracking-tight text-gray-900">DMSPilot</span>
           </Link>
 
