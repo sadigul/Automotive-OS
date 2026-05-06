@@ -1,18 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
   <defs>
-    <linearGradient id="orange" x1="20%" y1="0%" x2="80%" y2="100%">
-      <stop offset="0%" stop-color="#F97316"/>
-      <stop offset="100%" stop-color="#EA580C"/>
+    <linearGradient id="purple" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
     </linearGradient>
     <linearGradient id="dark" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4B5563"/>
-      <stop offset="100%" stop-color="#374151"/>
+      <stop offset="0%" stop-color="#1F2937"/>
+      <stop offset="100%" stop-color="#111827"/>
     </linearGradient>
   </defs>
   
-  <!-- Left wing of arrow - dark grey -->
+  <!-- Left wing of arrow - black -->
   <path d="M256 64 L128 400 L256 320 Z" fill="url(#dark)"/>
   
-  <!-- Right wing of arrow - orange -->
-  <path d="M256 64 L384 400 L256 320 Z" fill="url(#orange)"/>
+  <!-- Right wing of arrow - purple -->
+  <path d="M256 64 L384 400 L256 320 Z" fill="url(#purple)"/>
 </svg>
