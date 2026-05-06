@@ -47,9 +47,9 @@ export function DashboardSnapshot() {
             <div>
               <div className="flex items-center gap-2 mb-10 pl-2">
                 <div className="w-8 h-8 rounded-lg bg-purple-600 flex items-center justify-center shadow-sm">
-                  <span className="text-white font-mono font-bold text-sm tracking-tight">A</span>
+                  <span className="text-white font-mono font-bold text-sm tracking-tight">D</span>
                 </div>
-                <span className="font-sans font-bold text-lg tracking-tighter text-gray-900">AOS</span>
+                <span className="font-sans font-bold text-lg tracking-tighter text-gray-900">DMSPilot</span>
               </div>
               <nav className="space-y-1">
                 {[

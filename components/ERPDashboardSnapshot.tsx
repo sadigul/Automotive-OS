@@ -225,7 +225,7 @@ export function ERPDashboardSnapshot({ module = 'erp' }: { module?: string }) {
                        <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white">
                           <Mic className="w-4 h-4" />
                        </div>
-                       <div className="text-xs font-bold text-gray-900">AOS Intelligence</div>
+                       <div className="text-xs font-bold text-gray-900">DMSPilot Intelligence</div>
                     </div>
                     <div className="text-[10px] font-black text-gray-400">LIVE</div>
                   </div>
@@ -239,7 +239,7 @@ export function ERPDashboardSnapshot({ module = 'erp' }: { module?: string }) {
                     </div>
                     <div className="flex items-center gap-2 bg-gray-50 rounded-xl px-4 py-2 border border-gray-100">
                       <MessageSquare className="w-4 h-4 text-gray-400" />
-                      <span className="text-[11px] text-gray-400">Ask AOS...</span>
+                      <span className="text-[11px] text-gray-400">Ask DMSPilot...</span>
                     </div>
                   </div>
                 </div>

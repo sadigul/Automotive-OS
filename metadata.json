@@ -1,6 +1,6 @@
 {
-  "name": "AOS (Automotive Operating System)",
-  "description": "A high-performance, cloud-native ERP and CRM ecosystem designed to dismantle legacy dealership monopolies.",
+  "name": "DMSPilot (Dealer Management System)",
+  "description": "All-in-one cloud DMS platform for auto dealerships. Manage inventory, parts, CRM, accounting, F&I, and service operations.",
   "requestFramePermissions": [],
   "majorCapabilities": []
 }

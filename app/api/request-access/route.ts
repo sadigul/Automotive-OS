@@ -13,13 +13,13 @@ export async function POST(req: NextRequest) {
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     await resend.emails.send({
-      from: `AOS Platform <onboarding@resend.dev>`,
+      from: `DMSPilot <onboarding@resend.dev>`,
       to: 'sadigulx05@gmail.com',
       replyTo: email,
       subject: `New Access Request: ${fullName} — ${companyName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <h2 style="color: #111; border-bottom: 2px solid #7c3aed; padding-bottom: 10px;">New Access Request — AOS</h2>
+          <h2 style="color: #111; border-bottom: 2px solid #7c3aed; padding-bottom: 10px;">New Access Request — DMSPilot</h2>
           
           <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
             <tr>
@@ -61,7 +61,7 @@ export async function POST(req: NextRequest) {
           </table>
 
           <p style="margin-top: 24px; color: #6b7280; font-size: 12px;">
-            This request was submitted via the AOS platform. Reply directly to respond to ${fullName} at ${email}.
+            This request was submitted via the DMSPilot platform. Reply directly to respond to ${fullName} at ${email}.
           </p>
         </div>
       `,

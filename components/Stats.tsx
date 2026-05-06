@@ -77,7 +77,7 @@ export function Stats() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-24">
           <div className="flex-1 max-w-xl">
             <h2 className="text-4xl md:text-5xl font-sans font-bold text-gray-900 tracking-tight leading-tight animate-[fadeInUp_0.8s_ease-out_both]">
-              AOS is powering the next generation of high-growth dealerships.
+              DMSPilot is powering the next generation of high-growth dealerships.
             </h2>
           </div>
           

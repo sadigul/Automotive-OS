@@ -20,10 +20,10 @@ export function ERPFinancialPulse() {
     <div className="bg-[#f8f9ff] rounded-3xl md:rounded-[3rem] p-3 md:p-6 w-full shadow-2xl border border-white/50 font-sans text-gray-900 border-gray-200">
       <div className="bg-white/70 backdrop-blur-xl rounded-2xl md:rounded-[2.5rem] flex flex-col md:flex-row shadow-inner border border-white/80">
         
-        {/* Navigation Sidebar (AOS Standard) */}
+        {/* Navigation Sidebar (DMSPilot Standard) */}
         <div className="w-full md:w-16 xl:w-20 border-b md:border-b-0 md:border-r border-gray-100 flex flex-row md:flex-col items-center justify-between md:justify-start px-4 py-3 md:px-0 md:py-8 gap-4 md:gap-8 shrink-0 bg-white/40">
            <div className="w-8 h-8 md:w-10 md:h-10 bg-[#7C3AED] rounded-xl md:rounded-2xl flex shrink-0 items-center justify-center text-white font-black text-lg md:text-xl shadow-lg shadow-purple-200 md:mb-4">
-            A
+            D
           </div>
           
           <nav className="flex flex-row md:flex-col gap-2 md:gap-6">

@@ -157,7 +157,7 @@ export default function RequestAccessClientPage() {
               <div className="mb-12">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="text-[10px] font-black uppercase tracking-widest text-purple-600 bg-purple-50 px-3 py-1 rounded-full">
-                    AOS Onboarding
+                    DMSPilot Onboarding
                   </div>
                   <div className="text-xs font-bold text-gray-400">Step {step} of 3</div>
                 </div>
@@ -502,7 +502,7 @@ export default function RequestAccessClientPage() {
           )}
 
           <p className="text-center mt-12 text-gray-400 text-sm font-medium">
-            © 2024 AOS Ecosystem. Standardized Engineering for the Automotive Industry.
+            © 2026 DMSPilot. Standardized Engineering for the Automotive Industry.
           </p>
         </div>
       </main>

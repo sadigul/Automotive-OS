@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Twitter, Linkedin, Facebook, Instagram } from 'lucide-react';
 
 export function Footer() {
@@ -10,10 +11,8 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-gray-900 flex items-center justify-center">
-                <span className="text-white font-bold text-lg">A</span>
-              </div>
-              <span className="font-bold text-xl tracking-tight text-gray-900">AOS</span>
+              <Image src="/logo.svg" alt="DMSPilot" width={36} height={36} className="h-9 w-9" />
+              <span className="font-bold text-xl tracking-tight text-gray-900">DMSPilot</span>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed max-w-[260px]">
               The all-in-one platform built for modern dealerships. Simple, fast, and ready to grow with you.
@@ -59,7 +58,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center gap-6">
           <p className="text-gray-400 text-sm font-medium">
-            © 2026 AOS. All rights reserved.
+            © 2026 DMSPilot. All rights reserved.
           </p>
 
           <div className="flex gap-5">

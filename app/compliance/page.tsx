@@ -17,7 +17,7 @@ export default function CompliancePage() {
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">1. Data Protection</h2>
             <p className="text-gray-600 leading-relaxed">
-              AOS is committed to protecting your data in accordance with applicable data protection regulations. We implement technical and organizational measures to ensure the security and confidentiality of all dealership and customer data.
+              DMSPilot is committed to protecting your data in accordance with applicable data protection regulations. We implement technical and organizational measures to ensure the security and confidentiality of all dealership and customer data.
             </p>
           </section>
 
@@ -31,7 +31,7 @@ export default function CompliancePage() {
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">3. Security Certifications</h2>
             <p className="text-gray-600 leading-relaxed">
-              AOS maintains rigorous security practices including encrypted data storage, secure API communications, regular penetration testing, and continuous monitoring of all systems.
+              DMSPilot maintains rigorous security practices including encrypted data storage, secure API communications, regular penetration testing, and continuous monitoring of all systems.", "oldString": "              AOS maintains rigorous security practices including encrypted data storage, secure API communications, regular penetration testing, and continuous monitoring of all systems.
             </p>
           </section>
 

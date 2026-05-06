@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, Wrench, Database, Target, PhoneCall, BarChart3, Briefcase, Calculator, Layers } from 'lucide-react';
@@ -35,12 +36,9 @@ export function Header() {
             : 'bg-white/40 backdrop-blur-sm border-transparent'
         }`}>
           
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-purple-500/20">
-              <span className="text-white font-mono font-bold text-sm tracking-tight text-white/90">A</span>
-            </div>
-            <span className="font-sans font-bold text-lg tracking-tighter text-gray-900">AOS</span>
-          </div>
+          <Link href="/" className="flex items-center">
+            <Image src="/logo.svg" alt="DMSPilot" width={36} height={36} className="h-9 w-9" priority />
+          </Link>
 
           {/* Desktop Nav in the center */}
           <nav className="hidden md:flex items-center gap-8 pl-8">

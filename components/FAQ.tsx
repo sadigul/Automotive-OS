@@ -11,8 +11,8 @@ export function FAQ() {
       a: "Our typical enterprise migration takes 14-21 days. We use automated secure data extraction to ensure zero downtime or data loss during the transition."
     },
     {
-      q: "Do I need to train my staff to use AOS?",
-      a: "AOS is designed like a consumer app. If your team can use modern software, they can use AOS. We also provide initial onboarding sessions."
+      q: "Do I need to train my staff to use DMSPilot?",
+      a: "DMSPilot is designed like a consumer app. If your team can use modern software, they can use DMSPilot. We also provide initial onboarding sessions."
     },
     {
       q: "Is my dealership's data secure?",

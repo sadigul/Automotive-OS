@@ -6,7 +6,7 @@ import { Star } from 'lucide-react';
 export function Reviews() {
   const reviews = [
     {
-      text: "AOS replaced 4 different tools we were using. The real-time syncing between our service bay and accounting has saved us 20 hours a week.",
+      text: "DMSPilot replaced 4 different tools we were using. The real-time syncing between our service bay and accounting has saved us 20 hours a week.",
       author: "Sarah J.",
       title: "Service Director",
       avatar: "https://picsum.photos/seed/sarah/100/100"

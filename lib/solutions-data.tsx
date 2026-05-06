@@ -11,7 +11,7 @@ import {
 
 export const solutionsData = {
   'service-parts': {
-    title: 'AOS Service & Parts',
+    title: 'DMSPilot Service & Parts',
     tagline: 'Stop losing money on missing parts.',
     description: 'A simple system that tracks every part in your service bay. It knows what you have, what you need, and orders more before you run out. No more lost parts, no more unbilled work.',
     icon: Wrench,
@@ -49,7 +49,7 @@ export const solutionsData = {
     ]
   },
   'fixed-ops': {
-    title: 'AOS Enterprise ERP',
+    title: 'DMSPilot Enterprise ERP',
     tagline: 'Your entire dealership in one screen.',
     description: 'The command center for your operation. See inventory, finances, and supply chain all in one place. Make decisions faster because everything you need is right in front of you.',
     icon: Wrench,
@@ -127,7 +127,7 @@ export const solutionsData = {
   'sales-crm': {
     title: 'Sales CRM',
     tagline: 'Know your customers before they walk in.',
-    description: 'Stop guessing which leads are hot. AOS CRM watches your service drive and tells you exactly who is ready to buy, when to call them, and what to offer. More deals, less cold calls.',
+    description: 'Stop guessing which leads are hot. DMSPilot CRM watches your service drive and tells you exactly who is ready to buy, when to call them, and what to offer. More deals, less cold calls.',
     icon: Target,
     color: 'indigo',
     analytics: [
@@ -279,7 +279,7 @@ export const solutionsData = {
   'inventory': {
     title: 'Inventory Intelligence',
     tagline: 'Know what to buy and when to sell.',
-    description: 'Stop guessing which cars will sell. AOS looks at your market, your sales history, and tells you exactly which vehicles to stock and which ones to wholesale — before they age out.',
+    description: 'Stop guessing which cars will sell. DMSPilot looks at your market, your sales history, and tells you exactly which vehicles to stock and which ones to wholesale — before they age out.',
     icon: BarChart3,
     color: 'emerald',
     analytics: [

@@ -112,7 +112,7 @@ export default function SolutionDetailPage({ slug: propSlug }: { slug?: string }
                   <Icon className={`w-7 h-7 ${theme.text}`} />
                 </div>
                 <div className={`px-3 py-1.5 rounded-full ${theme.bg} border ${theme.border}`}>
-                  <span className={`text-xs font-bold ${theme.text}`}>AOS Module</span>
+                  <span className={`text-xs font-bold ${theme.text}`}>DMSPilot Module</span>
                 </div>
               </div>
 

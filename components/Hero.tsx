@@ -22,7 +22,7 @@ export function Hero() {
           {/* Top Badge */}
           <div className="inline-flex items-center rounded-full border border-purple-200 bg-white/50 backdrop-blur-sm px-4 py-1.5 text-xs font-mono font-bold text-purple-700 tracking-wider shadow-sm animate-[fadeInScale_0.5s_0.3s_both]">
             <span className="flex h-2 w-2 rounded-full bg-purple-600 mr-2.5 animate-pulse"></span>
-            AOS_CORE_V2.0_DEPLOYED
+            DMSPILOT_CORE_V2.0_DEPLOYED
           </div>
           
           <h1 className="text-5xl md:text-8xl lg:text-[6.5rem] font-sans font-bold tracking-[-0.05em] leading-[0.85] text-gray-900 text-balance">

@@ -28,7 +28,7 @@ export function Migration() {
     {
       icon: Cpu,
       title: 'Parallel Normalization',
-      description: 'Distributed compute engines map disparate data schemas into the AOS standard in seconds.',
+      description: 'Distributed compute engines map disparate data schemas into the DMSPilot standard in seconds.',
       colorClass: 'bg-purple-500/10 text-purple-500'
     },
     {
@@ -62,7 +62,7 @@ export function Migration() {
       'Normalizing UUID schema...',
       'Mapping vehicle history logs...',
       'Verifying RO integrity...',
-      'Streaming to AOS cloud...',
+      'Streaming to DMSPilot cloud...',
       'Validating record checksum...',
       'Indexing search cache...',
     ];
@@ -115,7 +115,7 @@ export function Migration() {
             </h2>
             
             <p className="text-xl font-medium text-gray-500 mb-10 leading-relaxed max-w-xl">
-              Don&apos;t let ten years of data hold you hostage. AOS utilizes a proprietary ETL pipeline that transforms legacy chaos into actionable enterprise intelligence automatically.
+              Don&apos;t let ten years of data hold you hostage. DMSPilot utilizes a proprietary ETL pipeline that transforms legacy chaos into actionable enterprise intelligence automatically.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
@@ -234,7 +234,7 @@ export function Migration() {
                       </div>
                     </div>
                     <div className="text-[11px] font-medium text-gray-500 italic">
-                      &quot;AOS pipeline automatically handled formatting variances in legacy CSV logs.&quot;
+                      &quot;DMSPilot pipeline automatically handled formatting variances in legacy CSV logs.&quot;
                     </div>
                   </div>
                 </div>

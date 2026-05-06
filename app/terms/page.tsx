@@ -17,21 +17,21 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">1. Acceptance of Terms</h2>
             <p className="text-gray-600 leading-relaxed">
-              By accessing or using the AOS platform, you agree to be bound by these Terms of Service. If you do not agree to these terms, you may not access or use our services.
+              By accessing or using the DMSPilot platform, you agree to be bound by these Terms of Service. If you do not agree to these terms, you may not access or use our services.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">2. Use of Service</h2>
             <p className="text-gray-600 leading-relaxed">
-              AOS provides dealership management software and related services. You agree to use the platform only for lawful purposes and in accordance with these terms. You are responsible for maintaining the confidentiality of your account credentials.
+              DMSPilot provides dealership management software and related services. You agree to use the platform only for lawful purposes and in accordance with these terms. You are responsible for maintaining the confidentiality of your account credentials.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">3. Intellectual Property</h2>
             <p className="text-gray-600 leading-relaxed">
-              All content, features, and functionality of the AOS platform are owned by AOS and are protected by international copyright, trademark, and other intellectual property laws.
+              All content, features, and functionality of the DMSPilot platform are owned by DMSPilot and are protected by international copyright, trademark, and other intellectual property laws.
             </p>
           </section>
 
@@ -45,7 +45,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">5. Limitation of Liability</h2>
             <p className="text-gray-600 leading-relaxed">
-              AOS shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the platform. Our total liability shall not exceed the amount paid by you in the twelve months preceding the claim.
+              DMSPilot shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the platform. Our total liability shall not exceed the amount paid by you in the twelve months preceding the claim.
             </p>
           </section>
 
