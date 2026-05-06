@@ -54,20 +54,11 @@ export const metadata: Metadata = {
     siteName: 'DMSPilot',
     title: 'DMSPilot | #1 Auto Dealer Management System & ERP Software',
     description: 'The all-in-one cloud DMS platform for modern auto dealerships. Manage inventory, parts, CRM, accounting, and service ops — replace legacy systems like CDK & Reynolds.',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'DMSPilot - Auto Dealer Management System',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'DMSPilot | #1 Auto Dealer Management System',
     description: 'Cloud-native DMS platform for auto dealerships. Inventory, CRM, Parts, Accounting & Service in one system.',
-    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -86,7 +77,6 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en" className={`${plusJakartaSans.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://dmspilot.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -125,12 +115,76 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
               "@type": "Organization",
               "name": "DMSPilot",
               "url": "https://dmspilot.com",
+              "logo": "https://dmspilot.com/logo.svg",
               "description": "Cloud-native dealer management system replacing legacy automotive software",
+              "sameAs": [
+                "https://www.linkedin.com/company/dmspilot",
+                "https://twitter.com/dmspilot"
+              ],
               "contactPoint": {
                 "@type": "ContactPoint",
                 "email": "sadigulx05@gmail.com",
                 "contactType": "sales"
               }
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "How long does migration from CDK/Reynolds take?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our typical enterprise migration takes 14-21 days. We use automated secure data extraction to ensure zero downtime or data loss during the transition."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do I need to train my staff to use DMSPilot?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "DMSPilot is designed like a consumer app. If your team can use modern software, they can use DMSPilot. We also provide initial onboarding sessions."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is my dealership's data secure?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. We use military-grade encryption and 100% cloud-native microservices. Your data is isolated, backed up in real-time, and strictly yours."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Can I just use the Sales CRM without the ERP?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Our modules are completely decoupled but natively integrated. You can start with the Sales CRM and expand into Service and ERP later."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is the best dealer management system for auto dealerships?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "DMSPilot is the #1 cloud-native dealer management system built for modern auto dealerships. It replaces legacy systems like CDK, Reynolds & Reynolds, and Dealertrack with one unified platform covering inventory, CRM, F&I, parts, accounting, and service operations."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How much does DMSPilot cost compared to CDK or Reynolds?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "DMSPilot saves dealerships up to 60% compared to legacy DMS providers. We offer custom pricing based on your dealership size and modules needed. Request a free demo to get a personalized quote."
+                  }
+                }
+              ]
             })
           }}
         />
