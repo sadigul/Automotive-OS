@@ -1,13 +1,26 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
+const MODULE_LABELS: Record<string, string> = {
+  'service-parts': 'Service Parts',
+  'fixed-ops': 'Enterprise ERP',
+  'erp-finance': 'ERP & Finance',
+  'sales-crm': 'Sales CRM',
+  'desking-fi': 'Desking & F&I',
+  'accounting': 'Accounting',
+  'comm-center': 'Comm-Center',
+  'inventory': 'Inventory Intel',
+  'stagg-portal': 'Stagg Portal',
+  'custom': 'Custom System',
+};
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const { fullName, email, phone, companyName, websiteUrl, location, fleetSize, currentErp, modules } = body;
 
     const moduleList = modules && modules.length > 0 
-      ? modules.join(', ') 
+      ? modules.map((m: string) => MODULE_LABELS[m] || m).join(', ') 
       : 'All Modules';
 
     const resend = new Resend(process.env.RESEND_API_KEY);
