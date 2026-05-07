@@ -14,31 +14,36 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'DMSPilot | #1 Auto Dealer Management System & ERP Software',
+    default: 'DMSPilot | AI-Powered Auto Dealer Management System & ERP Software',
     template: '%s | DMSPilot'
   },
-  description: 'DMSPilot is the all-in-one cloud DMS platform for auto dealerships. Manage inventory, parts, accounting, CRM, F&I desking, and service operations in one system. Replace CDK, Reynolds & Reynolds, and Dealertrack today.',
+  description: 'DMSPilot is the #1 AI-powered cloud DMS platform for auto dealerships. Automate inventory, parts, accounting, CRM, F&I desking & service operations. Built-in AI automation replaces CDK, Reynolds & Dealertrack — save 60% with intelligent workflows.',
   keywords: [
-    'auto dealer management system',
-    'DMS software',
+    'AI dealer management system',
+    'AI-powered DMS software',
     'dealership management software',
     'automotive ERP',
-    'car dealer software',
-    'auto dealer CRM',
-    'dealership inventory management',
+    'AI auto dealer CRM',
+    'automated dealership inventory',
+    'AI automotive software',
     'auto parts management system',
-    'F&I desking software',
-    'dealership accounting software',
-    'service department software',
+    'AI F&I desking software',
+    'dealership accounting automation',
+    'service department automation',
     'CDK alternative',
     'Reynolds and Reynolds alternative',
     'Dealertrack alternative',
-    'cloud DMS',
+    'cloud DMS AI',
     'automotive dealer operating system',
-    'car dealership ERP',
-    'vehicle inventory system',
-    'auto dealer technology',
-    'dealership operations platform'
+    'car dealership ERP automation',
+    'AI vehicle inventory system',
+    'auto dealer technology AI',
+    'dealership automation platform',
+    'AI dealership operations',
+    'machine learning automotive',
+    'intelligent DMS',
+    'automated dealer workflows',
+    'smart dealership software'
   ],
   authors: [{ name: 'DMSPilot' }],
   creator: 'DMSPilot',
@@ -52,13 +57,13 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://dmspilot.com',
     siteName: 'DMSPilot',
-    title: 'DMSPilot | #1 Auto Dealer Management System & ERP Software',
-    description: 'The all-in-one cloud DMS platform for modern auto dealerships. Manage inventory, parts, CRM, accounting, and service ops — replace legacy systems like CDK & Reynolds.',
+    title: 'DMSPilot | AI-Powered Dealer Management System & Automation Platform',
+    description: 'AI-powered cloud DMS replacing CDK & Reynolds. Automate inventory, CRM, F&I, parts, accounting & service ops — one intelligent platform, 60% less cost.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DMSPilot | #1 Auto Dealer Management System',
-    description: 'Cloud-native DMS platform for auto dealerships. Inventory, CRM, Parts, Accounting & Service in one system.',
+    title: 'DMSPilot | AI-Powered Auto Dealer Management System',
+    description: 'The AI-native DMS platform automating auto dealerships. Smart inventory, CRM, Parts, Accounting & Service — all powered by intelligent automation.',
   },
   icons: {
     icon: [
@@ -92,9 +97,11 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
               "@type": "SoftwareApplication",
               "name": "DMSPilot",
               "applicationCategory": "BusinessApplication",
+              "applicationSubCategory": "AI & Automation",
               "operatingSystem": "Web",
-              "description": "All-in-one cloud dealer management system for automotive dealerships. Manage inventory, parts, CRM, accounting, F&I, and service operations.",
+              "description": "AI-powered all-in-one cloud dealer management system for automotive dealerships. Intelligent automation for inventory, parts, CRM, accounting, F&I, and service operations. Machine learning workflows replace manual processes.",
               "url": "https://dmspilot.com",
+              "featureList": "AI Inventory Management, Automated CRM, Intelligent F&I Desking, Smart Parts Ordering, Automated Accounting, AI Service Scheduling, Predictive Analytics, Workflow Automation",
               "offers": {
                 "@type": "Offer",
                 "price": "0",
@@ -123,7 +130,9 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
               "name": "DMSPilot",
               "url": "https://dmspilot.com",
               "logo": "https://dmspilot.com/logo.svg",
-              "description": "Cloud-native dealer management system replacing legacy automotive software",
+              "description": "AI-powered cloud-native dealer management system with intelligent automation, replacing legacy automotive software like CDK, Reynolds & Reynolds, and Dealertrack",
+              "knowsAbout": ["Artificial Intelligence", "Dealership Automation", "Automotive ERP", "Machine Learning", "Cloud Computing"],
+              "slogan": "The AI-Powered Nervous System for Automotive",
               "sameAs": [
                 "https://www.linkedin.com/company/dmspilot",
                 "https://twitter.com/dmspilot"
@@ -177,10 +186,18 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
                 },
                 {
                   "@type": "Question",
-                  "name": "What is the best dealer management system for auto dealerships?",
+                  "name": "What is the best AI-powered dealer management system for auto dealerships?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "DMSPilot is the #1 cloud-native dealer management system built for modern auto dealerships. It replaces legacy systems like CDK, Reynolds & Reynolds, and Dealertrack with one unified platform covering inventory, CRM, F&I, parts, accounting, and service operations."
+                    "text": "DMSPilot is the #1 AI-powered cloud-native dealer management system built for modern auto dealerships. It uses intelligent automation and machine learning to replace legacy systems like CDK, Reynolds & Reynolds, and Dealertrack with one unified platform covering automated inventory, smart CRM, AI-driven F&I, parts, accounting, and service operations."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How does DMSPilot use AI and automation?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "DMSPilot leverages AI across every module — from intelligent inventory pricing and automated lead scoring in CRM, to predictive parts ordering, smart service scheduling, and automated accounting reconciliation. Our AI workflows eliminate 80% of manual data entry and repetitive tasks."
                   }
                 },
                 {

@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'DMSPilot - #1 Auto Dealer Management System';
+export const alt = 'DMSPilot - AI-Powered Auto Dealer Management System';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -46,7 +46,7 @@ export default function Image() {
             lineHeight: 1.3,
           }}
         >
-          The #1 Cloud Dealer Management System for Auto Dealerships
+          The #1 AI-Powered Cloud DMS for Auto Dealerships
         </div>
         <div
           style={{
@@ -57,7 +57,7 @@ export default function Image() {
             maxWidth: '700px',
           }}
         >
-          Inventory • CRM • F&I • Parts • Accounting • Service — All in One Platform
+          AI Inventory • Smart CRM • Auto F&I • Parts • Accounting • Service — All Automated
         </div>
         <div
           style={{
