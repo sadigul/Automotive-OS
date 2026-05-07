@@ -60,6 +60,13 @@ export const metadata: Metadata = {
     title: 'DMSPilot | #1 Auto Dealer Management System',
     description: 'Cloud-native DMS platform for auto dealerships. Inventory, CRM, Parts, Accounting & Service in one system.',
   },
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/logo.png', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: '/logo.png',
+  },
   robots: {
     index: true,
     follow: true,

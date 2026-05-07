@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" fill="none">
+  <!-- Arrow icon -->
+  <path d="M40 10 L20 65 L40 52 Z" fill="#1F2937"/>
+  <path d="M40 10 L60 65 L40 52 Z" fill="#7C3AED"/>
+  
+  <!-- DMSPilot text -->
+  <text x="75" y="52" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#111827">DMSPilot</text>
+</svg>
