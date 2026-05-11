@@ -49,9 +49,9 @@ export function CustomSolutions() {
                 ))}
               </div>
 
-              <Link href="/request-access">
+              <Link href="/request-access?module=custom">
                 <Button className="h-14 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full px-10 text-lg font-bold shadow-[0_0_40px_rgba(79,70,229,0.2)] transition-all flex items-center gap-2">
-                  Launch Design Request <ArrowRight className="w-5 h-5" />
+                  Launch Custom Solution Request <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>
             </div>

@@ -11,13 +11,13 @@ const MODULE_LABELS: Record<string, string> = {
   'comm-center': 'Comm-Center',
   'inventory': 'Inventory Intel',
   'stagg-portal': 'Stagg Portal',
-  'custom': 'Custom System',
+  'custom': 'Custom Solution',
 };
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { fullName, email, phone, companyName, websiteUrl, location, fleetSize, currentErp, modules } = body;
+    const { fullName, email, phone, companyName, websiteUrl, location, fleetSize, currentErp, modules, customDetails } = body;
 
     const moduleList = modules && modules.length > 0 
       ? modules.map((m: string) => MODULE_LABELS[m] || m).join(', ') 
@@ -71,6 +71,10 @@ export async function POST(req: NextRequest) {
               <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; font-weight: bold; color: #374151;">Requested Modules</td>
               <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #7c3aed; font-weight: bold;">${moduleList}</td>
             </tr>
+            ${customDetails ? `<tr>
+              <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; font-weight: bold; color: #374151;">Custom Requirements</td>
+              <td style="padding: 12px; border-bottom: 1px solid #f3f4f6; color: #111;">${customDetails.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</td>
+            </tr>` : ''}
           </table>
 
           <p style="margin-top: 24px; color: #6b7280; font-size: 12px;">

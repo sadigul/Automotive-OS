@@ -40,17 +40,22 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Support */}
+          {/* Social Media */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-gray-900 mb-6">Contact</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-gray-900 mb-6">Follow Us</h4>
             <div className="flex flex-col gap-4">
-              <a href="mailto:sadigulx05@gmail.com" className="text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium">sadigulx05@gmail.com</a>
-              <a href="tel:+923351345062" className="text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium">+92 335 134 5062</a>
-
-              <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                <span className="text-sm text-gray-500 font-medium">All Systems Online</span>
-              </div>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium">
+                <Facebook className="w-4 h-4" />
+                Facebook
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium">
+                <Instagram className="w-4 h-4" />
+                Instagram
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 transition-colors font-medium">
+                <Linkedin className="w-4 h-4" />
+                LinkedIn
+              </a>
             </div>
           </div>
         </div>

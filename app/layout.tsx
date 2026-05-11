@@ -14,7 +14,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'DMSPilot | Automated Auto Dealer Management System & ERP Software',
+    default: 'DMSPilot',
     template: '%s | DMSPilot'
   },
   description: 'DMSPilot is the #1 fully automated cloud DMS platform for auto dealerships. Automate inventory, parts, accounting, CRM, F&I desking & service operations. Built-in automation replaces CDK, Reynolds & Dealertrack — save 60% with zero manual workflows.',

@@ -33,7 +33,7 @@ const MODULES = [
   { slug: 'comm-center', label: 'Comm-Center' },
   { slug: 'inventory', label: 'Inventory Intel' },
   { slug: 'stagg-portal', label: 'Stagg Portal' },
-  { slug: 'custom', label: 'Custom System' },
+  { slug: 'custom', label: 'Custom Solution' },
 ];
 
 const formSchema = z.object({
@@ -60,6 +60,7 @@ export default function RequestAccessClientPage() {
     preSelectedModule ? [preSelectedModule] : []
   );
   const [submitError, setSubmitError] = useState('');
+  const [customDetails, setCustomDetails] = useState('');
 
   const toggleModule = (slug: string) => {
     if (slug === 'all') {
@@ -103,6 +104,7 @@ export default function RequestAccessClientPage() {
           modules: selectedModules.length > 0 
             ? selectedModules.map(s => MODULES.find(m => m.slug === s)?.label || s) 
             : ['All Modules'],
+          customDetails: selectedModules.includes('custom') ? customDetails : '',
         }),
       });
 
@@ -451,6 +453,26 @@ export default function RequestAccessClientPage() {
                         ))}
                       </div>
                     </div>
+
+                    {/* Custom Solution Details */}
+                    {selectedModules.includes('custom') && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="space-y-2"
+                      >
+                        <label className="text-xs font-black uppercase tracking-widest text-gray-400 ml-1">Custom Solution Requirements</label>
+                        <p className="text-xs text-gray-400 ml-1">Describe what you need — integrations, workflows, features, or any specific requirements.</p>
+                        <textarea
+                          value={customDetails}
+                          onChange={(e) => setCustomDetails(e.target.value)}
+                          placeholder="e.g. We need a custom integration with our existing inventory provider, automated VIN decoding, custom reporting dashboards for our 12 rooftops..."
+                          rows={5}
+                          className="w-full bg-gray-50 border border-gray-100 rounded-2xl px-5 py-4 focus:outline-none focus:ring-4 focus:ring-purple-500/5 focus:border-purple-500 transition-all text-gray-900 font-semibold text-sm resize-none"
+                        />
+                      </motion.div>
+                    )}
 
                     <div className="flex gap-4">
                       <Button 
