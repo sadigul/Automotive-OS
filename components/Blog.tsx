@@ -42,6 +42,10 @@ export function Blog() {
     });
   };
 
+  if (insightsData.length === 0) {
+    return null;
+  }
+
   return (
     <section id="blog" className="py-20 sm:py-28 bg-white relative overflow-hidden w-full">
       

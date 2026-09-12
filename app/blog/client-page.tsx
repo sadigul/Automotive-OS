@@ -220,17 +220,25 @@ export default function BlogClientPage() {
           ) : (
             <div className="text-center py-20 bg-slate-50 rounded-3xl border border-slate-200 mb-20">
               <BookOpen className="w-10 h-10 text-slate-400 mx-auto mb-3" />
-              <h3 className="text-lg font-bold text-slate-900 mb-1">No articles found</h3>
+              <h3 className="text-lg font-bold text-slate-900 mb-1">
+                {searchQuery || selectedCategory !== 'All Articles'
+                  ? 'No articles found'
+                  : 'Articles Coming Soon'}
+              </h3>
               <p className="text-sm text-slate-500 max-w-sm mx-auto">
-                No articles matched your filter or search query. Try choosing another category or clearing your search.
+                {searchQuery || selectedCategory !== 'All Articles'
+                  ? 'No articles matched your filter or search query. Try choosing another category or clearing your search.'
+                  : 'Our editorial team is preparing comprehensive automotive retail intelligence and operational reports. Check back shortly.'}
               </p>
-              <button
-                type="button"
-                onClick={() => { setSelectedCategory('All Articles'); setSearchQuery(''); }}
-                className="mt-4 px-5 py-2 rounded-full bg-slate-950 text-white text-xs font-bold cursor-pointer"
-              >
-                Reset Filters
-              </button>
+              {(searchQuery || selectedCategory !== 'All Articles') && (
+                <button
+                  type="button"
+                  onClick={() => { setSelectedCategory('All Articles'); setSearchQuery(''); }}
+                  className="mt-4 px-5 py-2 rounded-full bg-slate-950 text-white text-xs font-bold cursor-pointer"
+                >
+                  Reset Filters
+                </button>
+              )}
             </div>
           )}
 
