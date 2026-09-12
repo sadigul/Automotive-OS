@@ -53,12 +53,11 @@ export default function BlogClientPage() {
           
           {/* Hero Header */}
           <div className="max-w-3xl mb-12 text-left">
-
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-[-0.03em] leading-tight mb-4">
-              Insights, Benchmarks &amp; Engineering Reports
+              Automotive Retail Strategy &amp; Engineering
             </h1>
             <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
-              Actionable dealership profitability research, technical architecture deep-dives, and operational playbooks from the front lines of automotive software.
+              Independent benchmarks, dealership profitability economics, and architectural teardowns written by automotive retail practitioners and enterprise systems engineers.
             </p>
           </div>
 
@@ -239,11 +238,11 @@ export default function BlogClientPage() {
           <div className="relative rounded-3xl bg-slate-950 border border-slate-900 p-8 sm:p-14 overflow-hidden shadow-2xl text-center text-white">
             <div className="relative z-10 max-w-2xl mx-auto space-y-5">
               <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
-                Ready to Experience DMSPilot in Action?
+                Connect with Our Automotive Retail Strategy Team
               </h2>
 
               <p className="text-sm sm:text-base text-slate-300 font-normal leading-relaxed">
-                Connect your dealership or service operations with unified real-time lot inventory, sub-second deal desking, and autonomous financial ledgers.
+                Discuss custom cloud architecture, DMS migration timelines, and operational ROI tailored to your rooftop network.
               </p>
 
               <div className="pt-2 flex items-center justify-center">
@@ -254,7 +253,7 @@ export default function BlogClientPage() {
                   >
                     <span className="absolute inset-0 bg-slate-950 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />
                     <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
-                      Book a Live Walkthrough
+                      Let&apos;s Talk
                     </span>
                     <ArrowRight className="relative z-10 w-4 h-4 text-slate-950 transition-all duration-300 group-hover:translate-x-1 group-hover:text-white" />
                   </button>
