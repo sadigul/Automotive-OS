@@ -53,10 +53,6 @@ export default function BlogClientPage() {
           
           {/* Hero Header */}
           <div className="max-w-3xl mb-12 text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-800 text-xs font-bold uppercase tracking-wider mb-4">
-              <BookOpen className="w-3.5 h-3.5 text-blue-600" />
-              <span>Automotive OS Engineering &amp; Retail Strategy Journal</span>
-            </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-[-0.03em] leading-tight mb-4">
               Insights, Benchmarks &amp; Engineering Reports
