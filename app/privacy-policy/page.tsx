@@ -53,8 +53,8 @@ export default function PrivacyPolicyPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-3">6. Contact Us</h2>
             <p className="text-gray-600 leading-relaxed">
               If you have any questions about this Privacy Policy, please contact us at{' '}
-              <a href="mailto:sadigulx05@gmail.com" className="text-purple-600 hover:underline">sadigulx05@gmail.com</a> or call{' '}
-              <a href="tel:+923351345062" className="text-purple-600 hover:underline">+92 335 134 5062</a>.
+              <a href="mailto:sadigulx05@gmail.com" className="text-orange-600 hover:underline">sadigulx05@gmail.com</a> or call{' '}
+              <a href="tel:+923351345062" className="text-orange-600 hover:underline">+92 335 134 5062</a>.
             </p>
           </section>
         </div>

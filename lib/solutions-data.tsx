@@ -6,350 +6,595 @@ import {
   Calculator, 
   PhoneCall, 
   BarChart3, 
-  Briefcase 
+  Briefcase,
+  Sparkles,
+  LayoutDashboard,
+  CarFront,
+  Bot,
+  Zap,
+  PackageCheck,
+  Globe,
+  ShoppingCart,
 } from 'lucide-react';
 
 export const solutionsData = {
-  'service-parts': {
-    title: 'DMSPilot Service & Parts',
-    tagline: 'Stop losing money on missing parts.',
-    description: 'A simple system that tracks every part in your service bay. It knows what you have, what you need, and orders more before you run out. No more lost parts, no more unbilled work.',
-    icon: Wrench,
-    color: 'rose',
-    analytics: [
-      { label: 'Money Saved', value: '$12,400', trend: 'This Month' },
-      { label: 'Stockouts', value: 'Zero', trend: 'Perfect' },
-      { label: 'Tech Speed', value: '+15%', trend: 'Faster' }
-    ],
-    features: [
-      'See your entire warehouse on a visual map',
-      'Scan parts to check out — no paperwork',
-      'Get alerts when parts are sitting too long',
-      'Auto-reorder before you run out'
-    ],
-    snapshots: [
-      { title: 'Parts Warehouse', metric: '2,847', metricLabel: 'Total Parts', status: 'Healthy', items: [
-        { name: 'Brake Pads (OEM)', qty: 142, trend: 'up' },
-        { name: 'Oil Filters', qty: 89, trend: 'down' },
-        { name: 'Spark Plugs', qty: 215, trend: 'up' },
-        { name: 'Transmission Fluid', qty: 34, trend: 'down' },
-      ]},
-      { title: 'Reorder Queue', metric: '7', metricLabel: 'Pending Orders', status: 'Active', items: [
-        { name: 'Air Filters (x50)', qty: 0, trend: 'up' },
-        { name: 'Wiper Blades (x30)', qty: 0, trend: 'up' },
-        { name: 'Coolant 1Gal (x20)', qty: 0, trend: 'up' },
-        { name: 'Battery Terminals (x40)', qty: 0, trend: 'up' },
-      ]},
-      { title: 'Aging Alerts', metric: '18', metricLabel: 'Items Over 90 Days', status: 'Warning', items: [
-        { name: 'Catalytic Converter', qty: 94, trend: 'down' },
-        { name: 'Rear Bumper (2019)', qty: 112, trend: 'down' },
-        { name: 'Headlight Assembly', qty: 97, trend: 'down' },
-        { name: 'Exhaust Manifold', qty: 103, trend: 'down' },
-      ]}
-    ]
-  },
-  'fixed-ops': {
-    title: 'DMSPilot Enterprise ERP',
-    tagline: 'Your entire dealership in one screen.',
-    description: 'The command center for your operation. See inventory, finances, and supply chain all in one place. Make decisions faster because everything you need is right in front of you.',
-    icon: Wrench,
+  'erp': {
+    title: 'Enterprise ERP',
+    tagline: 'One simple system to run your entire automotive business.',
+    description: 'Track inventory, manage money, coordinate teams, and see all your locations in one simple screen. Built for dealerships, repair shops, parts distributors, and fleets.',
+    icon: Database,
     color: 'orange',
     analytics: [
-      { label: 'Efficiency', value: '114%', trend: '+8%' },
-      { label: 'Alerts', value: 'Zero', trend: 'All Clear' },
-      { label: 'Turn Time', value: '18 Days', trend: '-2 Days' }
+      { label: 'Time Saved on Admin', value: '85%', trend: 'Automated' },
+      { label: 'Inventory Visibility', value: '100%', trend: 'Real-time' },
+      { label: 'Sync Across Locations', value: '<50ms', trend: 'Instant' }
     ],
     features: [
-      'One dashboard to control everything',
-      'See your supply chain in real-time',
-      'Track inventory across all locations',
-      'Spot problems before they happen'
+      'See all vehicles, parts, and equipment across all your stores and warehouses',
+      'Track profits, costs, and partner payouts without manual spreadsheets',
+      'Follow jobs from customer arrival to final delivery and payment',
+      'Simple user permissions so staff only see what they need to do their jobs'
     ],
     snapshots: [
-      { title: 'Global Overview', metric: '$8.4M', metricLabel: 'Monthly Revenue', status: 'Healthy', items: [
-        { name: 'NA-East Region', qty: 78, trend: 'up' },
-        { name: 'EMEA-Central', qty: 92, trend: 'down' },
-        { name: 'APAC-South', qty: 45, trend: 'up' },
-        { name: 'LATAM-Brazil', qty: 67, trend: 'up' },
+      { title: 'Global Operations', metric: '$14.8M', metricLabel: 'Monthly Revenue', status: 'Healthy', items: [
+        { name: 'Metro Group North', qty: 94, trend: 'up' },
+        { name: 'Capital City Auto Mall', qty: 88, trend: 'up' },
+        { name: 'South Suburban Dealership', qty: 76, trend: 'down' },
+        { name: 'Harbor City Luxury Imports', qty: 98, trend: 'up' },
       ]},
-      { title: 'Supply Chain', metric: '1.2h', metricLabel: 'Avg Delay', status: 'Active', items: [
-        { name: 'Parts Shipment #4821', qty: 0, trend: 'up' },
-        { name: 'Vehicle Transport #331', qty: 0, trend: 'up' },
-        { name: 'Equipment Order #892', qty: 0, trend: 'down' },
-        { name: 'Bulk Oil Delivery', qty: 0, trend: 'up' },
-      ]},
-      { title: 'Inventory Health', metric: '3,412', metricLabel: 'Active SKUs', status: 'Healthy', items: [
-        { name: 'New Vehicles', qty: 89, trend: 'up' },
-        { name: 'Used Vehicles', qty: 64, trend: 'up' },
-        { name: 'Parts & Accessories', qty: 2847, trend: 'up' },
-        { name: 'Service Equipment', qty: 412, trend: 'down' },
-      ]}
     ]
   },
-  'erp-finance': {
-    title: 'Financial Pulse',
-    tagline: 'See your money moving in real-time.',
-    description: 'No more waiting weeks for financial reports. See exactly where every dollar goes, the moment it moves. Partner splits, supplier payments, and daily revenue — all automatic, all instant.',
+  'enterprise-erp': {
+    title: 'Enterprise ERP',
+    tagline: 'One simple system to run your entire automotive business.',
+    description: 'Track inventory, manage money, coordinate teams, and see all your locations in one simple screen. Built for dealerships, repair shops, parts distributors, and fleets.',
     icon: Database,
-    color: 'purple',
+    color: 'orange',
     analytics: [
-      { label: 'Daily Revenue', value: 'R$ 142k', trend: '+12%' },
-      { label: 'Leakage', value: 'R$ 0', trend: 'Clean' },
-      { label: 'Partner Payouts', value: 'R$ 12.4k', trend: 'Pending' }
+      { label: 'Time Saved on Admin', value: '85%', trend: 'Automated' },
+      { label: 'Inventory Visibility', value: '100%', trend: 'Real-time' },
+      { label: 'Sync Across Locations', value: '<50ms', trend: 'Instant' }
     ],
     features: [
-      'Auto-split revenue between partners (51/49%)',
-      'Every transaction recorded permanently',
-      'Pay suppliers the moment work is done',
-      'See all your stores on one money dashboard'
+      'See all vehicles, parts, and equipment across all your stores and warehouses',
+      'Track profits, costs, and partner payouts without manual spreadsheets',
+      'Follow jobs from customer arrival to final delivery and payment',
+      'Simple user permissions so staff only see what they need to do their jobs'
     ],
     snapshots: [
-      { title: 'Daily Revenue', metric: 'R$ 142k', metricLabel: 'Today So Far', status: 'Healthy', items: [
-        { name: 'Service Revenue', qty: 67, trend: 'up' },
-        { name: 'Parts Sales', qty: 42, trend: 'up' },
-        { name: 'Vehicle Sales', qty: 89, trend: 'up' },
-        { name: 'F&I Products', qty: 31, trend: 'down' },
+      { title: 'Global Operations', metric: '$14.8M', metricLabel: 'Monthly Revenue', status: 'Healthy', items: [
+        { name: 'Metro Group North', qty: 94, trend: 'up' },
+        { name: 'Capital City Auto Mall', qty: 88, trend: 'up' },
+        { name: 'South Suburban Dealership', qty: 76, trend: 'down' },
+        { name: 'Harbor City Luxury Imports', qty: 98, trend: 'up' },
       ]},
-      { title: 'Partner Split', metric: '51/49', metricLabel: 'Revenue Ratio', status: 'Active', items: [
-        { name: 'Dealer Share (51%)', qty: 51, trend: 'up' },
-        { name: 'Firm Share (49%)', qty: 49, trend: 'up' },
-        { name: 'Settled Today', qty: 84, trend: 'up' },
-        { name: 'Pending Settlement', qty: 3, trend: 'down' },
+      { title: 'System Latency & Sync', metric: '18ms', metricLabel: 'Average Sync', status: 'Healthy', items: [
+        { name: 'General Ledger Sync', qty: 100, trend: 'up' },
+        { name: 'Inter-Store Transfer Queue', qty: 12, trend: 'up' },
+        { name: 'OEM Data Feed Status', qty: 100, trend: 'up' },
+        { name: 'Bank Settlement Feed', qty: 100, trend: 'up' },
       ]},
-      { title: 'Ledger Feed', metric: '1,204', metricLabel: 'Transactions Today', status: 'Healthy', items: [
-        { name: 'RO #8842 — Brake Job', qty: 0, trend: 'up' },
-        { name: 'RO #8843 — Oil Change', qty: 0, trend: 'up' },
-        { name: 'Parts Sale #2291', qty: 0, trend: 'up' },
-        { name: 'Vehicle Deal #441', qty: 0, trend: 'up' },
+      { title: 'Enterprise Assets', metric: '4,890', metricLabel: 'Tracked Assets', status: 'Healthy', items: [
+        { name: 'New Inventory Units', qty: 420, trend: 'up' },
+        { name: 'Pre-Owned Inventory Units', qty: 310, trend: 'up' },
+        { name: 'Active Repair Orders', qty: 840, trend: 'up' },
+        { name: 'Parts & Components SKUs', qty: 3320, trend: 'up' },
       ]}
     ]
   },
   'sales-crm': {
     title: 'Sales CRM',
-    tagline: 'Know your customers before they walk in.',
-    description: 'Stop guessing which leads are hot. DMSPilot CRM watches your service drive and tells you exactly who is ready to buy, when to call them, and what to offer. More deals, less cold calls.',
+    tagline: 'Turn more leads into paying customers without the guesswork.',
+    description: 'Help your sales and service teams follow up faster, talk to customers on SMS or WhatsApp, and never let an interested buyer slip through the cracks.',
     icon: Target,
     color: 'indigo',
     analytics: [
-      { label: 'Conversion', value: '18.4%', trend: '+22%' },
-      { label: 'Hot Leads', value: '420', trend: 'Monthly' },
-      { label: 'Retention', value: '92%', trend: '+15%' }
+      { label: 'Lead-to-Sale Rate', value: '24.8%', trend: '+35% Faster' },
+      { label: 'Active Opportunities', value: '580+', trend: 'Ready to Buy' },
+      { label: 'Repeat Customer Upgrades', value: '38%', trend: 'Automatic' }
     ],
     features: [
-      'See which service customers are ready to buy',
-      'Auto-send trade-in offers at the right time',
-      'Route leads to the best salesperson',
-      'Track every customer touchpoint in one place'
+      'Reach customers directly via SMS, WhatsApp, phone, and web chat in one inbox',
+      'Smart alerts tell your team when past customers or fleet clients are ready for an upgrade',
+      'Automatically assign leads to available team members for fast response times',
+      'Keep a complete history of every customer call, quote, and vehicle preference'
     ],
     snapshots: [
-      { title: 'Lead Pipeline', metric: '420', metricLabel: 'Active Leads', status: 'Healthy', items: [
-        { name: 'Hot — Ready to Buy', qty: 38, trend: 'up' },
-        { name: 'Warm — Engaged', qty: 124, trend: 'up' },
-        { name: 'Nurturing', qty: 186, trend: 'down' },
-        { name: 'New This Week', qty: 72, trend: 'up' },
+      { title: 'Active Deal Pipeline', metric: '584', metricLabel: 'Active Opportunities', status: 'Healthy', items: [
+        { name: 'Service Drive Upgrades', qty: 142, trend: 'up' },
+        { name: 'Inbound Digital Inquiries', qty: 198, trend: 'up' },
+        { name: 'Showroom Walk-ins', qty: 114, trend: 'up' },
+        { name: 'Lease Expiration Nurturing', qty: 130, trend: 'down' },
       ]},
-      { title: 'Conversion Funnel', metric: '18.4%', metricLabel: 'Close Rate', status: 'Active', items: [
-        { name: 'Website Leads', qty: 89, trend: 'up' },
-        { name: 'Phone Leads', qty: 67, trend: 'up' },
-        { name: 'Walk-ins', qty: 45, trend: 'down' },
-        { name: 'Service-to-Sales', qty: 34, trend: 'up' },
+      { title: 'Conversion Funnel', metric: '24.8%', metricLabel: 'Close Rate', status: 'Active', items: [
+        { name: 'Test Drive Scheduled', qty: 89, trend: 'up' },
+        { name: 'Desking & F&I Submitted', qty: 74, trend: 'up' },
+        { name: 'Lender Approved Deals', qty: 68, trend: 'up' },
+        { name: 'Contract Signed & Delivered', qty: 52, trend: 'up' },
       ]},
-      { title: 'AI Offers Sent', metric: '156', metricLabel: 'This Month', status: 'Healthy', items: [
-        { name: 'Trade-In Offers', qty: 78, trend: 'up' },
-        { name: 'Lease End Reminders', qty: 42, trend: 'up' },
-        { name: 'Service Upsells', qty: 24, trend: 'up' },
-        { name: 'Loyalty Rewards', qty: 12, trend: 'down' },
+      { title: 'Automated Campaigns', metric: '1,420', metricLabel: 'Personalized Touches', status: 'Healthy', items: [
+        { name: 'Equity Upgrade SMS', qty: 450, trend: 'up' },
+        { name: 'Pre-Approval Reminders', qty: 380, trend: 'up' },
+        { name: 'Maintenance Loyalty Offers', qty: 310, trend: 'up' },
+        { name: 'Post-Delivery Follow-ups', qty: 280, trend: 'up' },
       ]}
     ]
   },
-  'desking-fi': {
-    title: 'Desking & F&I',
-    tagline: 'Close deals faster, right from the chair.',
-    description: 'Show your customer lease, finance, and cash options side by side — in seconds. Get bank approvals while they are still sitting in front of you. No back-and-forth, no waiting.',
+  'digital-retail': {
+    title: 'Digital Retail',
+    tagline: 'Clear pricing and instant buying options online and in-store.',
+    description: 'Let customers easily see payments, compare cash, finance, or lease terms, and get approved quickly—whether they are at home or sitting at your counter.',
     icon: Layers,
     color: 'sky',
     analytics: [
-      { label: 'Per Deal Profit', value: '+$420', trend: '+15%' },
-      { label: 'Product Sales', value: '42%', trend: '+8%' },
-      { label: 'Deal Time', value: '14 min', trend: '-22 min' }
+      { label: 'Average Deal Time', value: '14 Mins', trend: '-45 Mins Saved' },
+      { label: 'Protection Plan Sales', value: '62%', trend: 'Clear Options' },
+      { label: 'Online Deposit Rate', value: '41.2%', trend: 'Instant Lock' }
     ],
     features: [
-      'Compare lease, finance, and cash in one screen',
-      'Get bank approvals in real-time',
-      'Compliance checklists run automatically',
-      'E-sign documents from anywhere'
+      'Compare cash, loan, and lease options side by side with exact penny-perfect numbers',
+      'Instant credit application routing to multiple banks for fast rate approvals',
+      'Simple visual menus for warranties, service contracts, and protection plans',
+      'Secure digital signatures so customers can sign paperwork from any device'
     ],
     snapshots: [
-      { title: 'Payment Options', metric: '3', metricLabel: 'Live Quotes', status: 'Active', items: [
-        { name: 'Lease — $389/mo', qty: 36, trend: 'up' },
-        { name: 'Finance — $512/mo', qty: 72, trend: 'up' },
-        { name: 'Cash — $32,400', qty: 100, trend: 'up' },
-        { name: 'Special — $0 Down', qty: 48, trend: 'up' },
+      { title: 'Active Deal Quotes', metric: '3 Live', metricLabel: 'Real-time Calculations', status: 'Active', items: [
+        { name: 'Lease — $389/mo (36 mo)', qty: 36, trend: 'up' },
+        { name: 'Finance — $512/mo (72 mo)', qty: 72, trend: 'up' },
+        { name: 'Cash Purchase — $32,400', qty: 100, trend: 'up' },
+        { name: 'Special Promotion — $0 Down', qty: 48, trend: 'up' },
       ]},
-      { title: 'Lender Status', metric: '5', metricLabel: 'Banks Connected', status: 'Healthy', items: [
-        { name: 'Capital One — Approved', qty: 95, trend: 'up' },
-        { name: 'Chase — Approved', qty: 88, trend: 'up' },
-        { name: 'Ally — Pending', qty: 60, trend: 'down' },
-        { name: 'Wells Fargo — Approved', qty: 91, trend: 'up' },
+      { title: 'Connected Lenders', metric: '8 Banks', metricLabel: 'Real-time Integrations', status: 'Healthy', items: [
+        { name: 'Capital One Auto Finance', qty: 98, trend: 'up' },
+        { name: 'Chase Auto Lending', qty: 94, trend: 'up' },
+        { name: 'Ally Financial Services', qty: 88, trend: 'up' },
+        { name: 'Wells Fargo Auto', qty: 91, trend: 'up' },
       ]},
-      { title: 'F&I Products', metric: '$420', metricLabel: 'Avg Per Deal', status: 'Healthy', items: [
-        { name: 'Extended Warranty', qty: 68, trend: 'up' },
-        { name: 'GAP Insurance', qty: 42, trend: 'up' },
-        { name: 'Paint Protection', qty: 31, trend: 'down' },
-        { name: 'Tire & Wheel', qty: 24, trend: 'up' },
+      { title: 'F&I Add-on Attachments', metric: '+$1,680', metricLabel: 'Average Per Unit', status: 'Healthy', items: [
+        { name: 'Vehicle Service Contracts', qty: 68, trend: 'up' },
+        { name: 'GAP Total Loss Protection', qty: 54, trend: 'up' },
+        { name: 'Ceramic Coating & Interior Shield', qty: 42, trend: 'up' },
+        { name: 'Tire & Road Hazard Plan', qty: 36, trend: 'up' },
       ]}
     ]
+  },
+  'ai-solutions': {
+    title: 'AI Solutions & Autonomous Ops',
+    tagline: 'Smart assistants that handle routine tasks 24/7.',
+    description: 'Let intelligent AI answer customer calls, schedule service visits, match technicians to jobs, and help balance everyday numbers automatically.',
+    icon: Sparkles,
+    color: 'purple',
+    analytics: [
+      { label: 'Daily Automated Tasks', value: '1,100+', trend: 'Hands-Free' },
+      { label: 'Staff Hours Saved', value: '42 hrs/day', trend: 'More Free Time' },
+      { label: 'Accuracy Rate', value: '99.9%', trend: 'Reliable' }
+    ],
+    features: [
+      '24/7 friendly voice and chat assistant to answer calls and book appointments',
+      'Smart job dispatch that sends repair orders to the right technician automatically',
+      'Market inventory scanner that tells you which vehicles and parts sell fastest',
+      'Automatic transaction checking so daily numbers always balance without manual work'
+    ],
+    snapshots: [
+      { title: 'Autonomous Agent Fleet', metric: '4 Active', metricLabel: 'Intelligent Bots', status: 'Healthy', items: [
+        { name: 'Autonomous Service Dispatcher', qty: 142, trend: 'up' },
+        { name: '24/7 Voice & SMS Receptionist', qty: 389, trend: 'up' },
+        { name: 'Predictive Lot Sourcing Bot', qty: 64, trend: 'up' },
+        { name: 'Automated GL Reconciler', qty: 512, trend: 'up' },
+      ]},
+      { title: 'Human Effort Saved', metric: '42.5 hrs', metricLabel: 'Today Across Group', status: 'Active', items: [
+        { name: 'Phone Calls Handled Autonomously', qty: 92, trend: 'up' },
+        { name: 'RO Dispatches Automated', qty: 88, trend: 'up' },
+        { name: 'GL Invoices Reconciled', qty: 99, trend: 'up' },
+        { name: 'Lead Touches Executed', qty: 85, trend: 'up' },
+      ]},
+      { title: 'Inference SLA & Health', metric: '185ms', metricLabel: 'Mean Response Time', status: 'Healthy', items: [
+        { name: 'Voice Turnaround Latency', qty: 98, trend: 'up' },
+        { name: 'Logic Decision Validation', qty: 100, trend: 'up' },
+        { name: 'Database Read/Write Pipeline', qty: 99, trend: 'up' },
+        { name: 'Zero-Error Compliance Rate', qty: 100, trend: 'up' },
+      ]}
+    ]
+  },
+  'service-bay': {
+    title: 'Service Bay',
+    tagline: 'Keep every bay busy and stop losing track of parts.',
+    description: 'Help technicians inspect vehicles faster with video reports, scan parts from their phones, and bill repair orders accurately without paperwork headaches.',
+    icon: Wrench,
+    color: 'rose',
+    analytics: [
+      { label: 'Lost Parts Cost', value: '$0.00', trend: '100% Tracked' },
+      { label: 'Monthly Parts Savings', value: '$12,400', trend: 'Zero Waste' },
+      { label: 'Repair Speed', value: '+22%', trend: 'Paperless' }
+    ],
+    features: [
+      'Digital video multipoint inspections that customers can approve from their phone',
+      'Live bay status board to see which lifts are open and who is working on what',
+      'Mobile barcode scanning so mechanics can add parts to repair orders in seconds',
+      'Automated warranty and core return tracking so you get all your credits back'
+    ],
+    snapshots: [
+      { title: 'Parts Warehouse', metric: '2,847', metricLabel: 'Cataloged SKUs', status: 'Healthy', items: [
+        { name: 'Brake Pads & Rotors (OEM)', qty: 142, trend: 'up' },
+        { name: 'Synthetic Oil Filters', qty: 89, trend: 'down' },
+        { name: 'Spark Plugs & Ignition Coils', qty: 215, trend: 'up' },
+        { name: 'Transmission Fluids & Gaskets', qty: 34, trend: 'down' },
+      ]},
+      { title: 'Active Bay Allocation', metric: '12 Bays', metricLabel: '100% Occupancy', status: 'Active', items: [
+        { name: 'Bay 1 — Express Lube & Inspection', qty: 100, trend: 'up' },
+        { name: 'Bay 2 — Heavy Engine & Transmission', qty: 100, trend: 'up' },
+        { name: 'Bay 3 — Alignment & Brake Lathe', qty: 95, trend: 'up' },
+        { name: 'Bay 4 — Electrical & Diagnostics', qty: 100, trend: 'up' },
+      ]},
+      { title: 'Aging Parts Prevention', metric: 'Zero', metricLabel: 'Over 90-Day Dead Stock', status: 'Healthy', items: [
+        { name: 'Catalytic Converters Returned', qty: 100, trend: 'up' },
+        { name: 'OEM Warranty Core Returns', qty: 100, trend: 'up' },
+        { name: 'Automated Supplier RMA Queue', qty: 100, trend: 'up' },
+        { name: 'Obsolete SKU Auto-Liquidation', qty: 100, trend: 'up' },
+      ]}
+    ]
+  },
+  'parts-inventory': {
+    title: 'Parts & Inventory',
+    tagline: 'Always have the right parts in stock without overspending.',
+    description: 'Keep track of thousands of parts across multiple shelves and warehouses, speed up wholesale orders, and eliminate dusty dead stock.',
+    icon: PackageCheck,
+    color: 'purple',
+    analytics: [
+      { label: 'In-Stock Accuracy', value: '99.8%', trend: 'Exact Count' },
+      { label: 'Inventory Turnover', value: '8.4x', trend: 'Fast Moving' },
+      { label: 'Dead Stock Reduced', value: '-88%', trend: 'No Lost Money' }
+    ],
+    features: [
+      'Instant part number and fitment lookup for all vehicle makes and models',
+      'Barcode and bin location tracking so staff find parts immediately',
+      'Automatic reorder alerts when fast-selling parts run low',
+      'B2B wholesale portal for simple trade customer orders and billing'
+    ],
+    snapshots: [
+      { title: 'Parts Inventory SKUs', metric: '14,280', metricLabel: 'Active SKUs', status: 'Healthy', items: [
+        { name: 'OEM Brake Rotors & Pads', qty: 240, trend: 'up' },
+        { name: 'Synthetic Oil & Filters', qty: 180, trend: 'up' },
+        { name: 'Ignition & Alternators', qty: 95, trend: 'up' },
+        { name: 'Suspension Struts & Shocks', qty: 64, trend: 'up' },
+      ]}
+    ]
+  },
+  'dms': {
+    title: 'DMS (Dealer Management System)',
+    tagline: 'A fast, modern operating system to run your automotive business.',
+    description: 'Connect sales, service bays, parts inventory, and financial accounting in one easy cloud platform that works on any laptop, tablet, or phone.',
+    icon: LayoutDashboard,
+    color: 'emerald',
+    analytics: [
+      { label: 'Cost vs Old Systems', value: '-60%', trend: 'Fair Pricing' },
+      { label: 'Daily Books Balanced', value: '100%', trend: 'Automatic' },
+      { label: 'System Uptime', value: '99.99%', trend: 'Always On' }
+    ],
+    features: [
+      'Books balance themselves daily with automatic bank feed matching',
+      'Real-time vehicle and equipment inventory tracking with lot mapping',
+      'Built-in compliance and security rules to protect customer data',
+      'Open system that easily connects to your favorite tools and supplier feeds'
+    ],
+    snapshots: [
+      { title: 'Dealership Health Pulse', metric: '$2.4M', metricLabel: 'Monthly Cash Flow', status: 'Healthy', items: [
+        { name: 'Vehicle Sales Gross', qty: 89, trend: 'up' },
+        { name: 'Service Bay Gross', qty: 94, trend: 'up' },
+        { name: 'Parts Department Sales', qty: 78, trend: 'up' },
+        { name: 'F&I Product Settlement', qty: 82, trend: 'up' },
+      ]},
+      { title: 'Accounting Reconciliation', metric: '100%', metricLabel: 'Balanced Daily', status: 'Healthy', items: [
+        { name: 'Operating Account (JPMorgan)', qty: 100, trend: 'up' },
+        { name: 'Floorplan Line of Credit', qty: 100, trend: 'up' },
+        { name: 'Credit Card Merchant Settlement', qty: 100, trend: 'up' },
+        { name: 'Payroll & Technician Commissions', qty: 100, trend: 'up' },
+      ]},
+      { title: 'Compliance & Audit Shield', metric: 'Clean', metricLabel: 'FTC & IRS Certified', status: 'Healthy', items: [
+        { name: 'OFAC Real-Time Screening', qty: 100, trend: 'up' },
+        { name: 'FTC Safeguards Encryption', qty: 100, trend: 'up' },
+        { name: 'Form 8300 Cash Reporting', qty: 100, trend: 'up' },
+        { name: 'Automated Disaster Recovery', qty: 100, trend: 'up' },
+      ]}
+    ]
+  },
+
+  /* ─── Backwards-Compatible Aliases ─── */
+  'fixed-ops': {
+    title: 'Enterprise ERP',
+    tagline: 'One simple system to run your entire automotive business.',
+    description: 'Track inventory, manage money, coordinate teams, and see all your locations in one simple screen. Built for dealerships, repair shops, parts distributors, and fleets.',
+    icon: Database,
+    color: 'orange',
+    analytics: [
+      { label: 'Time Saved on Admin', value: '85%', trend: 'Automated' },
+      { label: 'Inventory Visibility', value: '100%', trend: 'Real-time' },
+      { label: 'Sync Across Locations', value: '<50ms', trend: 'Instant' }
+    ],
+    features: [
+      'See all vehicles, parts, and equipment across all your stores and warehouses',
+      'Track profits, costs, and partner payouts without manual spreadsheets',
+      'Follow jobs from customer arrival to final delivery and payment',
+      'Simple user permissions so staff only see what they need to do their jobs'
+    ],
+    snapshots: [
+      { title: 'Global Operations', metric: '$14.8M', metricLabel: 'Monthly Revenue', status: 'Healthy', items: [
+        { name: 'Metro Group North', qty: 94, trend: 'up' },
+        { name: 'Capital City Auto Mall', qty: 88, trend: 'up' },
+        { name: 'South Suburban Dealership', qty: 76, trend: 'down' },
+        { name: 'Harbor City Luxury Imports', qty: 98, trend: 'up' },
+      ]}
+    ]
+  },
+  'service-parts': {
+    title: 'Service Bay',
+    tagline: 'Keep every bay busy and stop losing track of parts.',
+    description: 'Help technicians inspect vehicles faster with video reports, scan parts from their phones, and bill repair orders accurately without paperwork headaches.',
+    icon: Wrench,
+    color: 'rose',
+    analytics: [
+      { label: 'Lost Parts Cost', value: '$0.00', trend: '100% Tracked' },
+      { label: 'Monthly Parts Savings', value: '$12,400', trend: 'Zero Waste' },
+      { label: 'Repair Speed', value: '+22%', trend: 'Paperless' }
+    ],
+    features: [
+      'Digital video multipoint inspections that customers can approve from their phone',
+      'Live bay status board to see which lifts are open and who is working on what',
+      'Mobile barcode scanning so mechanics can add parts to repair orders in seconds',
+      'Automated warranty and core return tracking so you get all your credits back'
+    ],
+    snapshots: [
+      { title: 'Parts Warehouse', metric: '2,847', metricLabel: 'Cataloged SKUs', status: 'Healthy', items: [
+        { name: 'Brake Pads & Rotors (OEM)', qty: 142, trend: 'up' },
+        { name: 'Synthetic Oil Filters', qty: 89, trend: 'down' },
+      ]}
+    ]
+  },
+  'erp-finance': {
+    title: 'Financial Pulse & DMS',
+    tagline: 'See your money moving in real-time with zero guesswork.',
+    description: 'Every dollar tracked the moment it moves. Split revenue between partners, pay suppliers on time, and balance your books automatically every day.',
+    icon: Database,
+    color: 'purple',
+    analytics: [
+      { label: 'Daily Revenue', value: '$142k', trend: '+12%' },
+      { label: 'Unaccounted Dollars', value: '$0', trend: 'Clean Books' },
+      { label: 'Pending Payouts', value: '$12.4k', trend: 'On Schedule' }
+    ],
+    features: [
+      'Automatically split revenue and profits between business partners',
+      'Every sale, repair order, and expense is recorded immediately',
+      'Pay vendors and suppliers the moment work is approved',
+      'See cash flow across all your stores and repair bays on one screen'
+    ],
+    snapshots: []
+  },
+  'desking-fi': {
+    title: 'Digital Retail & Desking',
+    tagline: 'Clear pricing and instant buying options online and in-store.',
+    description: 'Show your customers lease, finance, and cash options side by side in seconds. Get bank approvals quickly while the customer is ready to buy.',
+    icon: Layers,
+    color: 'sky',
+    analytics: [
+      { label: 'Average Deal Time', value: '14 min', trend: '-22 min' },
+      { label: 'Protection Plan Sales', value: '62%', trend: '+8%' },
+      { label: 'Approval Speed', value: '<2 min', trend: 'Instant' }
+    ],
+    features: [
+      'Compare cash, loan, and lease options with exact penny-perfect numbers',
+      'Fast credit approvals with multiple integrated lending partners',
+      'Interactive menus for warranties and protection packages',
+      'Sign all contracts electronically from any computer or mobile device'
+    ],
+    snapshots: []
   },
   'accounting': {
     title: 'Auto Accounting',
-    tagline: 'Your books close themselves. Every day.',
-    description: 'Every repair order, every parts sale, every vehicle deal gets booked the moment it happens. No more month-end scramble. Your books are always ready for an audit.',
+    tagline: 'Clean, accurate books that balance themselves every day.',
+    description: 'Connect your bank accounts, track every dollar moving through your business, and stop wasting days on month-end spreadsheets.',
     icon: Calculator,
-    color: 'rose',
+    color: 'emerald',
     analytics: [
-      { label: 'Audit Ready', value: '100%', trend: 'Always' },
-      { label: 'Errors', value: '0.00%', trend: 'Zero' },
-      { label: 'Days to Collect', value: '1.2', trend: '-4.5 Days' }
+      { label: 'Books Balanced', value: '100%', trend: 'Daily' },
+      { label: 'Data Entry Errors', value: '0.00%', trend: 'Clean' },
+      { label: 'Time to Close Month', value: '1 Day', trend: 'Instant' }
     ],
     features: [
-      'Bank feeds match themselves automatically',
-      'Bills get paid on schedule, no manual work',
-      'AI sorts every expense into the right category',
-      'See your tax bill update in real-time'
+      'Automatic daily bank and card payment matching',
+      'Real-time profit & loss statements for every shop, department, or store',
+      'Match supplier invoices to purchase orders so you never overpay',
+      'Always ready for taxes with clean records and automated calculations'
     ],
-    snapshots: [
-      { title: 'Bank Reconciliation', metric: '100%', metricLabel: 'Matched', status: 'Healthy', items: [
-        { name: 'Checking — Chase', qty: 100, trend: 'up' },
-        { name: 'Operating — BofA', qty: 100, trend: 'up' },
-        { name: 'Reserve — Wells', qty: 98, trend: 'up' },
-        { name: 'Payroll — ADP', qty: 100, trend: 'up' },
-      ]},
-      { title: 'Balance Sheet', metric: '$2.4M', metricLabel: 'Total Assets', status: 'Active', items: [
-        { name: 'Cash & Equivalents', qty: 82, trend: 'up' },
-        { name: 'Inventory Value', qty: 71, trend: 'down' },
-        { name: 'Accounts Receivable', qty: 45, trend: 'up' },
-        { name: 'Fixed Assets', qty: 93, trend: 'up' },
-      ]},
-      { title: 'Vendor Payouts', metric: '24', metricLabel: 'Due This Week', status: 'Active', items: [
-        { name: 'OEM Parts Supplier', qty: 0, trend: 'up' },
-        { name: 'Cleaning Service', qty: 0, trend: 'up' },
-        { name: 'Marketing Agency', qty: 0, trend: 'down' },
-        { name: 'IT Support', qty: 0, trend: 'up' },
-      ]}
-    ]
+    snapshots: []
   },
   'comm-center': {
-    title: 'Comm-Center',
-    tagline: 'Every call, text, and message in one place.',
-    description: 'Phone calls, WhatsApp, SMS — all in one screen, all tied to the customer. AI listens to every conversation and tells you when someone is unhappy or ready to buy.',
+    title: 'Comm-Center & Voice AI',
+    tagline: 'Every customer phone call, text, and chat in one easy inbox.',
+    description: 'Keep all customer conversations organized in one place, respond faster, and send automated service reminders that bring customers back.',
     icon: PhoneCall,
     color: 'blue',
     analytics: [
-      { label: 'Response Time', value: '2.4 min', trend: '-40%' },
-      { label: 'Satisfaction', value: '8.4/10', trend: '+1.2' },
-      { label: 'Calls → Appts', value: '31%', trend: '+9%' }
+      { label: 'Response Time', value: '2.4 min', trend: '-40% Faster' },
+      { label: 'Customer Rating', value: '4.8 / 5', trend: 'Satisfied' },
+      { label: 'Appointments Booked', value: '+31%', trend: 'Automatic' }
     ],
     features: [
-      'Phone, WhatsApp, and SMS all in one inbox',
-      'Auto-send follow-up messages',
-      'AI reads the mood of every conversation',
-      'Route angry callers to your best people'
+      'Phone, WhatsApp, SMS, and web chats together in one shared inbox',
+      'Send automatic appointment reminders and vehicle pickup notifications',
+      'Smart summaries of customer phone calls and message history',
+      'Route customer calls directly to available staff members'
     ],
-    snapshots: [
-      { title: 'Live Calls', metric: '8', metricLabel: 'Active Now', status: 'Active', items: [
-        { name: 'Service Desk — Line 1', qty: 0, trend: 'up' },
-        { name: 'Sales Floor — Line 3', qty: 0, trend: 'up' },
-        { name: 'Parts Counter — Line 2', qty: 0, trend: 'up' },
-        { name: 'BDC Agent — Maria', qty: 0, trend: 'up' },
-      ]},
-      { title: 'Customer Mood', metric: '8.4', metricLabel: 'Avg Score / 10', status: 'Healthy', items: [
-        { name: 'Happy Calls', qty: 72, trend: 'up' },
-        { name: 'Neutral Calls', qty: 21, trend: 'down' },
-        { name: 'Frustrated Calls', qty: 5, trend: 'down' },
-        { name: 'Escalated', qty: 2, trend: 'down' },
-      ]},
-      { title: 'Team Stats', metric: '94%', metricLabel: 'Answer Rate', status: 'Healthy', items: [
-        { name: 'Maria — 48 calls', qty: 96, trend: 'up' },
-        { name: 'James — 41 calls', qty: 92, trend: 'up' },
-        { name: 'Sarah — 37 calls', qty: 89, trend: 'down' },
-        { name: 'Mike — 35 calls', qty: 94, trend: 'up' },
-      ]}
-    ]
+    snapshots: []
   },
   'inventory': {
     title: 'Inventory Intelligence',
     tagline: 'Know what to buy and when to sell.',
-    description: 'Stop guessing which cars will sell. DMSPilot looks at your market, your sales history, and tells you exactly which vehicles to stock and which ones to wholesale — before they age out.',
+    description: 'Simple inventory tools that help you stock the most profitable vehicles and parts while clearing out slow-moving stock before it loses value.',
     icon: BarChart3,
     color: 'emerald',
     analytics: [
-      { label: 'Turn Days', value: '28.5', trend: '-5.2 Days' },
-      { label: 'Profit/Unit', value: '+$312', trend: '+12%' },
-      { label: 'Aging Risk', value: '4%', trend: '-8%' }
+      { label: 'Days in Stock', value: '28.5', trend: '-5.2 Days' },
+      { label: 'Profit Per Unit', value: '+$312', trend: '+12%' },
+      { label: 'Slow Stock Risk', value: '4%', trend: 'Minimal' }
     ],
     features: [
-      'AI tells you which cars to buy next',
-      'Prices adjust based on local market',
-      'See which cars are aging on a visual lot map',
-      'Auto-send old cars to wholesale'
+      'Smart recommendations on which vehicles or parts are in high demand',
+      'See all inventory and aging units on an easy visual map',
+      'Automatic warnings when units stay in stock longer than 60 days',
+      'Price adjustments based on local market supply and demand'
     ],
-    snapshots: [
-      { title: 'Market Demand', metric: '1.04', metricLabel: 'Supply Index', status: 'Healthy', items: [
-        { name: 'SUVs — High Demand', qty: 92, trend: 'up' },
-        { name: 'Trucks — Strong', qty: 84, trend: 'up' },
-        { name: 'Sedans — Moderate', qty: 56, trend: 'down' },
-        { name: 'EVs — Growing', qty: 71, trend: 'up' },
-      ]},
-      { title: 'Lot Overview', metric: '153', metricLabel: 'Total Units', status: 'Active', items: [
-        { name: 'Under 30 Days', qty: 89, trend: 'up' },
-        { name: '30-45 Days', qty: 42, trend: 'down' },
-        { name: '45-60 Days', qty: 16, trend: 'down' },
-        { name: 'Over 60 Days', qty: 6, trend: 'down' },
-      ]},
-      { title: 'Buy Recommendations', metric: '12', metricLabel: 'Vehicles to Source', status: 'Active', items: [
-        { name: 'RAV4 2023 — $28k', qty: 0, trend: 'up' },
-        { name: 'F-150 2024 — $42k', qty: 0, trend: 'up' },
-        { name: 'CR-V 2023 — $31k', qty: 0, trend: 'up' },
-        { name: 'Camry 2024 — $27k', qty: 0, trend: 'up' },
-      ]}
-    ]
+    snapshots: []
   },
   'stagg-portal': {
-    title: 'Stagg Portal',
-    tagline: 'Manage outside teams like they are in-house.',
-    description: 'Send jobs to partner firms, track their work, and pay them automatically when the job is done. Everyone sees the same information. No phone tag, no spreadsheets.',
+    title: 'Vendor & Partner Portal',
+    tagline: 'Work with outside vendors, sublet shops, and transport teams easily.',
+    description: 'Send work orders to external detailers, painters, tow trucks, and repair partners, track their progress, and approve payments without the paperwork chaos.',
     icon: Briefcase,
     color: 'teal',
     analytics: [
-      { label: 'Active Firms', value: '12', trend: '+2 New' },
-      { label: 'Satisfaction', value: '4.9/5', trend: 'High' },
-      { label: 'Payouts', value: 'Instant', trend: 'Auto' }
+      { label: 'Active Partners', value: '12', trend: 'Connected' },
+      { label: 'On-Time Completion', value: '98%', trend: 'Reliable' },
+      { label: 'Payment Approvals', value: 'Instant', trend: 'Paperless' }
     ],
     features: [
-      'Send jobs to partners with one click',
-      'Partners see their own profit dashboard',
-      'Track mechanic performance by the numbers',
-      'Pay partners the moment the job closes'
+      'Assign jobs to outside vendors and sublet specialists in one click',
+      'Partners can view work orders and upload completion photos from their phones',
+      'Match vendor bills to authorized prices before sending payments',
+      'Track which vehicles are currently off-site and when they will be returned'
+    ],
+    snapshots: []
+  },
+  'ai-front-desk': {
+    title: 'AI Front Desk',
+    tagline: '24/7 intelligent call answering and appointment booking.',
+    description: 'Friendly voice and text assistance that answers customer questions, books service appointments, and connects urgent calls to staff.',
+    icon: PhoneCall,
+    color: 'blue',
+    analytics: [
+      { label: 'Calls Answered', value: '100%', trend: 'Zero Missed' },
+      { label: 'Booking Time', value: '<45s', trend: 'Instant' },
+      { label: 'After-Hours Bookings', value: '+44%', trend: '24/7 Open' }
+    ],
+    features: [
+      'Answers incoming customer phone calls and texts 24 hours a day',
+      'Books appointments directly on your shop calendar',
+      'Sends instant text confirmations and repair status updates to customers',
+      'Transfers urgent customer questions directly to on-duty staff'
+    ],
+    snapshots: []
+  },
+  'analytics': {
+    title: 'Enterprise Analytics',
+    tagline: 'Clear, real-time reports on sales, profits, and team performance.',
+    description: 'See how your business is performing right now. Get clear numbers on sales profits, shop efficiency, inventory turn rates, and cash flow.',
+    icon: BarChart3,
+    color: 'emerald',
+    analytics: [
+      { label: 'Live Data Updates', value: '<50ms', trend: 'Real-time' },
+      { label: 'Forecast Accuracy', value: '98.4%', trend: 'Reliable' },
+      { label: 'Hours Saved on Reports', value: '18 hrs/mo', trend: 'Automated' }
+    ],
+    features: [
+      'Simple executive summaries across all your locations and departments',
+      'Track profit margins on vehicle sales, repair orders, and parts counters',
+      'See technician billable hours and shop throughput at a glance',
+      'Automatic daily summary reports sent straight to your phone or email'
+    ],
+    snapshots: []
+  },
+  'ecommerce': {
+    title: 'E-Commerce & Digital Storefronts',
+    tagline: 'High-converting digital storefronts built for automotive retail.',
+    description: 'Launch fast, beautiful websites that showcase your inventory, let buyers reserve vehicles or parts online, and sync prices across popular marketplaces.',
+    icon: Globe,
+    color: 'sky',
+    analytics: [
+      { label: 'Page Load Speed', value: '99/100', trend: 'Instant Load' },
+      { label: 'Online Reservations', value: '+310%', trend: 'Direct Orders' },
+      { label: 'Google Search Traffic', value: '+74%', trend: 'Optimized' }
+    ],
+    features: [
+      'Fast, mobile-friendly websites with your custom branding and logo',
+      'Live vehicle and parts listings that update the moment inventory changes',
+      'Allow customers to place deposits and reserve items online anytime',
+      'Automatic Google and search engine optimization so local buyers find you first'
     ],
     snapshots: [
-      { title: 'Active Jobs', metric: '34', metricLabel: 'In Progress', status: 'Active', items: [
-        { name: 'AutoFix Co — 12 jobs', qty: 0, trend: 'up' },
-        { name: 'QuickLube Pro — 8 jobs', qty: 0, trend: 'up' },
-        { name: 'BrakeMax — 9 jobs', qty: 0, trend: 'up' },
-        { name: 'TireWorld — 5 jobs', qty: 0, trend: 'down' },
+      { title: 'Storefront Performance', metric: '42.8k', metricLabel: 'Monthly Web Visitors', status: 'Healthy', items: [
+        { name: 'Vehicle Detail Page (VDP) Views', qty: 96, trend: 'up' },
+        { name: 'Online Deposit Reservations', qty: 78, trend: 'up' },
+        { name: 'Custom Finance Applications', qty: 84, trend: 'up' },
+        { name: 'Mobile Checkout Velocity', qty: 92, trend: 'up' },
       ]},
-      { title: 'Partner Payouts', metric: '$48.2k', metricLabel: 'This Month', status: 'Healthy', items: [
-        { name: 'AutoFix Co', qty: 38, trend: 'up' },
-        { name: 'QuickLube Pro', qty: 24, trend: 'up' },
-        { name: 'BrakeMax', qty: 22, trend: 'up' },
-        { name: 'TireWorld', qty: 16, trend: 'down' },
+      { title: 'Digital Checkout Pipeline', metric: '$1.8M', metricLabel: 'Online Vehicle Orders', status: 'Active', items: [
+        { name: 'New EV Model Pre-Orders', qty: 100, trend: 'up' },
+        { name: 'Certified Pre-Owned Holds', qty: 89, trend: 'up' },
+        { name: 'Home Delivery Reservations', qty: 72, trend: 'up' },
+        { name: 'Online Trade-In Submissions', qty: 94, trend: 'up' },
       ]},
-      { title: 'Performance', metric: '4.9', metricLabel: 'Avg Rating', status: 'Healthy', items: [
-        { name: 'On-Time Completion', qty: 96, trend: 'up' },
-        { name: 'Quality Score', qty: 94, trend: 'up' },
-        { name: 'Customer Reviews', qty: 91, trend: 'up' },
-        { name: 'Callback Rate', qty: 4, trend: 'down' },
+      { title: 'SEO & Core Web Vitals', metric: '100%', metricLabel: 'Green CWV Score', status: 'Healthy', items: [
+        { name: 'Largest Contentful Paint (0.6s)', qty: 100, trend: 'up' },
+        { name: 'Cumulative Layout Shift (0.00)', qty: 100, trend: 'up' },
+        { name: 'Structured Vehicle Schema Markup', qty: 100, trend: 'up' },
+        { name: 'Automated Local Dealer SEO', qty: 100, trend: 'up' },
       ]}
     ]
+  },
+  'e-commerce': {
+    title: 'E-Commerce & Digital Storefronts',
+    tagline: 'High-converting digital storefronts built for automotive retail.',
+    description: 'Launch fast, beautiful websites that showcase your inventory, let buyers reserve vehicles or parts online, and sync prices across popular marketplaces.',
+    icon: Globe,
+    color: 'sky',
+    analytics: [
+      { label: 'Page Load Speed', value: '99/100', trend: 'Instant Load' },
+      { label: 'Online Reservations', value: '+310%', trend: 'Direct Orders' },
+      { label: 'Google Search Traffic', value: '+74%', trend: 'Optimized' }
+    ],
+    features: [
+      'Fast, mobile-friendly websites with your custom branding and logo',
+      'Live vehicle and parts listings that update the moment inventory changes',
+      'Allow customers to place deposits and reserve items online anytime',
+      'Automatic Google and search engine optimization so local buyers find you first'
+    ],
+    snapshots: []
+  },
+  'storefront': {
+    title: 'E-Commerce & Digital Storefronts',
+    tagline: 'High-converting digital storefronts built for automotive retail.',
+    description: 'Launch fast, beautiful websites that showcase your inventory, let buyers reserve vehicles or parts online, and sync prices across popular marketplaces.',
+    icon: Globe,
+    color: 'sky',
+    analytics: [
+      { label: 'Page Load Speed', value: '99/100', trend: 'Instant Load' },
+      { label: 'Online Reservations', value: '+310%', trend: 'Direct Orders' },
+      { label: 'Google Search Traffic', value: '+74%', trend: 'Optimized' }
+    ],
+    features: [
+      'Fast, mobile-friendly websites with your custom branding and logo',
+      'Live vehicle and parts listings that update the moment inventory changes',
+      'Allow customers to place deposits and reserve items online anytime',
+      'Automatic Google and search engine optimization so local buyers find you first'
+    ],
+    snapshots: []
+  },
+  'digital-storefront': {
+    title: 'E-Commerce & Digital Storefronts',
+    tagline: 'High-converting digital storefronts built for automotive retail.',
+    description: 'Launch fast, beautiful websites that showcase your inventory, let buyers reserve vehicles or parts online, and sync prices across popular marketplaces.',
+    icon: Globe,
+    color: 'sky',
+    analytics: [
+      { label: 'Page Load Speed', value: '99/100', trend: 'Instant Load' },
+      { label: 'Online Reservations', value: '+310%', trend: 'Direct Orders' },
+      { label: 'Google Search Traffic', value: '+74%', trend: 'Optimized' }
+    ],
+    features: [
+      'Fast, mobile-friendly websites with your custom branding and logo',
+      'Live vehicle and parts listings that update the moment inventory changes',
+      'Allow customers to place deposits and reserve items online anytime',
+      'Automatic Google and search engine optimization so local buyers find you first'
+    ],
+    snapshots: []
   }
 };

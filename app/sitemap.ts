@@ -22,6 +22,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const sectors = [
+    'dealerships',
+    'manufacturers',
+    'service-centers',
+    'retailers-parts',
+    'logistics-transport',
+    'commercial-fleets',
+  ];
+
+  const sectorPages = sectors.map((slug) => ({
+    url: `${baseUrl}/who-we-serve/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.85,
+  }));
+
   return [
     {
       url: baseUrl,
@@ -35,7 +51,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/migration`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/contact-us`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
     ...solutionPages,
+    ...sectorPages,
     {
       url: `${baseUrl}/privacy-policy`,
       lastModified: new Date(),

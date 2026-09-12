@@ -24,15 +24,12 @@ import {
 } from 'lucide-react';
 
 const MODULES = [
-  { slug: 'service-parts', label: 'Service Parts' },
-  { slug: 'fixed-ops', label: 'Enterprise ERP' },
-  { slug: 'erp-finance', label: 'ERP & Finance' },
+  { slug: 'enterprise-erp', label: 'Enterprise ERP' },
   { slug: 'sales-crm', label: 'Sales CRM' },
-  { slug: 'desking-fi', label: 'Desking & F&I' },
-  { slug: 'accounting', label: 'Accounting' },
-  { slug: 'comm-center', label: 'Comm-Center' },
-  { slug: 'inventory', label: 'Inventory Intel' },
-  { slug: 'stagg-portal', label: 'Stagg Portal' },
+  { slug: 'digital-retail', label: 'Digital Retail' },
+  { slug: 'ai-solutions', label: 'AI Solutions & Autonomous Ops' },
+  { slug: 'service-bay', label: 'Service Bay' },
+  { slug: 'dms', label: 'DMS (Dealer Management System)' },
   { slug: 'custom', label: 'Custom Solution' },
 ];
 
@@ -138,17 +135,8 @@ export default function RequestAccessClientPage() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <Header />
-      
-      {/* Crumble Navigation */}
-      <div className="pt-32 pb-6">
-        <div className="max-w-6xl mx-auto px-8 flex items-center gap-2 text-sm font-bold">
-          <Link href="/" className="text-gray-400 hover:text-gray-900 transition-colors">Home</Link>
-          <ChevronRight className="w-4 h-4 text-gray-300" />
-          <span className="text-gray-900 font-black">Request Access</span>
-        </div>
-      </div>
 
-      <main className="flex-1 flex flex-col items-center justify-center p-6 pb-32">
+      <main className="flex-1 flex flex-col items-center justify-center p-6 pt-32 pb-32">
         <div className="w-full max-w-2xl">
           {!submitted ? (
             <motion.div

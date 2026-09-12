@@ -1,271 +1,245 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { 
-  Database, 
-  Users, 
-  CarFront, 
-  History, 
-  FileCheck, 
-  ReplaceAll,
-  Zap,
-  ShieldCheck,
-  Server,
-  Cpu
-} from 'lucide-react';
-import { useRef, useState, useEffect } from 'react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import Link from 'next/link';
 
 export function Migration() {
-  const containerRef = useRef(null);
-  
-  const steps = [
-    {
-      icon: Database,
-      title: 'Legacy Ingestion',
-      description: 'Zero-latency extraction from existing DMS/CRM systems including old SQL backups or raw logs.',
-      colorClass: 'bg-blue-500/10 text-blue-500'
-    },
-    {
-      icon: Cpu,
-      title: 'Parallel Normalization',
-      description: 'Distributed compute engines map disparate data schemas into the DMSPilot standard in seconds.',
-      colorClass: 'bg-purple-500/10 text-purple-500'
-    },
-    {
-      icon: ShieldCheck,
-      title: 'Integrity Verification',
-      description: 'Every record passes cross-reference validation ensuring bit-perfect historical accuracy.',
-      colorClass: 'bg-emerald-500/10 text-emerald-500'
-    }
-  ];
-
-  const dataPoints = [
-    { label: 'Customers', status: 'Verified', icon: Users },
-    { label: 'Inventory', status: 'Mapped', icon: CarFront },
-    { label: 'History', status: 'Streaming', icon: History },
-  ];
-
-  const [records, setRecords] = useState(48290);
-  const [currentTime, setCurrentTime] = useState('00:00:00');
-  const [logs, setLogs] = useState<string[]>([
-    'Initializing secure bridge...',
-    'Found legacy SQL instance at 172.0.0.1',
-    'Ingesting customer records...',
-  ]);
-
-  useEffect(() => {
-    const recordInterval = setInterval(() => {
-      setRecords(prev => prev + Math.floor(Math.random() * 5));
-    }, 100);
-
-    const logMessages = [
-      'Normalizing UUID schema...',
-      'Mapping vehicle history logs...',
-      'Verifying RO integrity...',
-      'Streaming to DMSPilot cloud...',
-      'Validating record checksum...',
-      'Indexing search cache...',
-    ];
-
-    const timeInterval = setInterval(() => {
-      setCurrentTime(new Date().toLocaleTimeString('en-GB'));
-    }, 1000);
-    setCurrentTime(new Date().toLocaleTimeString('en-GB'));
-
-    const logInterval = setInterval(() => {
-      setLogs(prev => {
-        const next = [...prev, logMessages[Math.floor(Math.random() * logMessages.length)]];
-        return next.slice(-4);
-      });
-    }, 2000);
-
-    return () => {
-      clearInterval(recordInterval);
-      clearInterval(timeInterval);
-      clearInterval(logInterval);
-    };
-  }, []);
-
   return (
-    <section 
-      id="migration" 
-      ref={containerRef}
-      className="py-32 bg-white relative overflow-hidden"
-    >
-      {/* Dynamic Background Grid */}
-      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
-      
+    <section id="migration" className="py-16 sm:py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        
+        {/* Seamless 2-Column Grid (No outer box / No outer border) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
-          <div className="order-2 lg:order-1">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-black uppercase tracking-wider mb-8"
-            >
-              <Zap className="w-3 h-3 fill-current" />
-              Advanced Data Bridge
-            </motion.div>
-            
-            <h2 className="text-4xl md:text-6xl font-sans font-bold text-gray-900 tracking-tight leading-[1.1] mb-8">
-              Migrate History <br />
-              <span className="text-blue-600">Without Friction.</span>
+          {/* Left Column: Headline, Narrative & Direct Action */}
+          <div className="lg:col-span-6 flex flex-col justify-center">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-[-0.03em] leading-[1.15] mb-5">
+              Migrate 100% of your history. <br className="hidden sm:inline" />
+              <span className="text-slate-400">Without missing a single deal.</span>
             </h2>
-            
-            <p className="text-xl font-medium text-gray-500 mb-10 leading-relaxed max-w-xl">
-              Don&apos;t let ten years of data hold you hostage. DMSPilot utilizes a proprietary ETL pipeline that transforms legacy chaos into actionable enterprise intelligence automatically.
+
+            <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed mb-8 max-w-lg">
+              Never let legacy software hold your enterprise back. Our migration pipeline safely extracts, validates, and synchronizes your entire historical record directly into DMSPilot cloud servers.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
-              {steps.map((step, i) => (
-                <motion.div 
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="p-6 rounded-3xl bg-gray-50 border border-gray-100 hover:border-blue-200 transition-all group"
-                >
-                  <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110 ${step.colorClass}`}>
-                    <step.icon className="w-6 h-6" />
-                  </div>
-                  <h4 className="font-bold text-gray-900 text-lg mb-2">{step.title}</h4>
-                  <p className="text-sm font-medium text-gray-500 leading-relaxed">{step.description}</p>
-                </motion.div>
-              ))}
-            </div>
+            {/* Clean CTA Action Area */}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+              <Link href="/contact-us?module=migration" className="w-full sm:w-auto">
+                <button className="relative group overflow-hidden w-full sm:w-auto h-12 px-7 rounded-full bg-slate-950 text-white text-sm font-bold border-2 border-slate-950 flex items-center justify-center gap-2 transition-all duration-300 shadow-md">
+                  {/* Smooth White Fill Sweep on Hover */}
+                  <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />
 
+                  <span className="relative z-10 transition-colors duration-300 group-hover:text-slate-950">
+                    Plan Your Migration
+                  </span>
+                  <ArrowRight className="relative z-10 w-4 h-4 text-white transition-all duration-300 group-hover:translate-x-1 group-hover:text-slate-950" />
+                </button>
+              </Link>
+            </div>
           </div>
 
-          {/* Visual Migration Engine */}
-          <div className="order-1 lg:order-2">
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative p-2"
-            >
-              <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 opacity-10 blur-3xl rounded-[3rem]"></div>
+          {/* Right Column: Clean Cloud-to-Cloud Animation */}
+          <div className="lg:col-span-6 flex items-center justify-center">
+            <div className="relative w-full max-w-[440px] h-[320px] sm:h-[360px] flex items-center justify-center overflow-hidden">
               
-              <div className="relative bg-gray-900 rounded-[2.5rem] p-8 shadow-2xl overflow-hidden border border-white/10">
-                <div className="flex items-center justify-between mb-12">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center border border-blue-500/30">
-                      <ReplaceAll className="w-5 h-5 text-blue-400" />
-                    </div>
-                    <div>
-                      <div className="text-white font-bold tracking-tight">Active Stream</div>
-                      <div className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">TLS 1.3 Encryption Active</div>
-                    </div>
-                  </div>
-                  <div className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <span className="text-[10px] font-black text-emerald-400 uppercase tracking-widest">Processing</span>
-                  </div>
-                </div>
-
-                <div className="space-y-6">
-                  {dataPoints.map((dp, i) => (
-                    <div key={i} className="relative group">
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="flex items-center gap-3">
-                          <dp.icon className="w-4 h-4 text-gray-500" />
-                          <span className="text-xs font-bold text-gray-300 uppercase tracking-wider">{dp.label}</span>
-                        </div>
-                        <span className="text-[10px] font-black text-blue-400 uppercase tracking-widest">{dp.status}</span>
-                      </div>
-                      <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                        <motion.div
-                          initial={{ width: "30%" }}
-                          whileInView={{ width: "100%" }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 2, delay: i * 0.4, ease: "easeInOut" }}
-                          className="h-full bg-gradient-to-r from-blue-500 to-blue-400 rounded-full"
-                        />
-                      </div>
-                      
-                      {/* Streaming particles effect */}
-                      <div className="absolute -bottom-4 left-0 w-full flex justify-between px-2 overflow-hidden h-px opacity-0 group-hover:opacity-100 transition-opacity">
-                         {[1,2,3,4,5].map(p => (
-                           <motion.div 
-                             key={p}
-                             animate={{ x: [0, 400], opacity: [0, 1, 0] }}
-                             transition={{ duration: 1, repeat: Infinity, delay: p * 0.2 }}
-                             className="w-1 h-[1px] bg-blue-300"
-                           />
-                         ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Log Stream Area */}
-                <div className="mt-8 p-4 rounded-xl bg-black/40 border border-white/5 font-mono text-[10px] space-y-1 h-32 overflow-hidden">
-                  {logs.map((log, i) => (
-                    <motion.div 
-                      key={log + i}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      className="text-gray-400 flex gap-2"
-                    >
-                      <span className="text-blue-500/50">[{currentTime}]</span>
-                      <span>{log}</span>
-                    </motion.div>
-                  ))}
-                </div>
-
-                <div className="mt-8 bg-white shadow-2xl rounded-2xl p-6 relative">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white shadow-lg">
-                    <FileCheck className="w-4 h-4" />
-                  </div>
-                  
-                  <div className="text-center space-y-4">
-                    <div className="flex items-center justify-center gap-4 py-2">
-                      <div className="text-center">
-                        <div className="text-2xl font-black text-gray-900 tabular-nums">{records.toLocaleString()}</div>
-                        <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Records Read</div>
-                      </div>
-                      <div className="w-px h-8 bg-gray-100"></div>
-                      <div className="text-center">
-                        <div className="text-2xl font-black text-blue-600 tabular-nums">0</div>
-                        <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Errors</div>
-                      </div>
-                    </div>
-                    <div className="text-[11px] font-medium text-gray-500 italic">
-                      &quot;DMSPilot pipeline automatically handled formatting variances in legacy CSV logs.&quot;
-                    </div>
-                  </div>
-                </div>
-
-                {/* Background decorative circuits */}
-                <div className="absolute right-[-10%] top-[20%] w-[150px] h-[150px] border border-blue-500/10 rounded-full"></div>
-                <div className="absolute right-[-5%] top-[15%] w-[200px] h-[200px] border border-blue-500/5 rounded-full"></div>
-              </div>
-
-              {/* Float labels */}
+              {/* Top-Left Cloud: Legacy Softwares */}
               <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity }}
-                className="absolute -right-8 top-1/4 bg-white shadow-xl rounded-xl p-4 border border-gray-100 hidden sm:block"
+                animate={{ y: [0, -6, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                className="absolute top-2 left-2 sm:left-6 z-20 flex flex-col items-center"
               >
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center">
-                    <Server className="w-4 h-4 text-emerald-600" />
-                  </div>
-                  <div>
-                    <div className="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-1">Source</div>
-                    <div className="text-xs font-bold text-gray-900 leading-none">Legacy SQL Instance</div>
-                  </div>
+                {/* Decorative rays */}
+                <div className="absolute -top-2 left-3 flex gap-0.5">
+                  <div className="w-0.5 h-2 bg-slate-400 rounded-full rotate-[-25deg]" />
+                  <div className="w-0.5 h-2.5 bg-slate-400 rounded-full" />
+                </div>
+
+                {/* Cloud & Server SVG */}
+                <div className="relative w-36 sm:w-44 h-24 sm:h-28">
+                  <svg viewBox="0 0 220 160" className="w-full h-full drop-shadow-sm">
+                    {/* Cloud Body */}
+                    <path
+                      d="M50 130 H170 C192 130 205 112 200 95 C196 78 180 70 165 72 C158 50 135 35 110 38 C90 40 75 52 70 68 C55 68 40 80 40 98 C40 115 50 130 65 130 Z"
+                      fill="#ffffff"
+                      stroke="#1e293b"
+                      strokeWidth="5"
+                      strokeLinejoin="round"
+                      strokeLinecap="round"
+                    />
+
+                    {/* Server Rack Background */}
+                    <rect x="55" y="75" width="110" height="60" rx="12" fill="#e2e8f0" stroke="#1e293b" strokeWidth="5" />
+
+                    {/* Server Blade 1 */}
+                    <rect x="62" y="82" width="62" height="20" rx="4" fill="#f8fafc" />
+                    <rect x="128" y="82" width="30" height="20" rx="4" fill="#f97316" />
+                    <circle cx="143" cy="92" r="3.5" fill="#ffffff" />
+                    <line x1="72" y1="92" x2="76" y2="92" stroke="#64748b" strokeWidth="3" strokeLinecap="round" />
+                    <line x1="84" y1="92" x2="88" y2="92" stroke="#64748b" strokeWidth="3" strokeLinecap="round" />
+                    <line x1="96" y1="92" x2="100" y2="92" stroke="#64748b" strokeWidth="3" strokeLinecap="round" />
+
+                    {/* Divider */}
+                    <line x1="58" y1="105" x2="162" y2="105" stroke="#1e293b" strokeWidth="3" />
+
+                    {/* Server Blade 2 */}
+                    <rect x="62" y="109" width="62" height="20" rx="4" fill="#f8fafc" />
+                    <rect x="128" y="109" width="30" height="20" rx="4" fill="#f97316" />
+                    <circle cx="143" cy="119" r="3.5" fill="#ffffff" />
+                    <line x1="72" y1="119" x2="76" y2="119" stroke="#64748b" strokeWidth="3" strokeLinecap="round" />
+                    <line x1="84" y1="119" x2="88" y2="119" stroke="#64748b" strokeWidth="3" strokeLinecap="round" />
+                    <line x1="96" y1="119" x2="100" y2="119" stroke="#64748b" strokeWidth="3" strokeLinecap="round" />
+
+                    {/* Server Feet */}
+                    <rect x="70" y="138" width="8" height="6" rx="2" fill="#1e293b" />
+                    <rect x="142" y="138" width="8" height="6" rx="2" fill="#1e293b" />
+                  </svg>
+                </div>
+
+                <div className="mt-1 px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-200 text-[10px] font-bold text-slate-800">
+                  Legacy Softwares
                 </div>
               </motion.div>
-            </motion.div>
+
+              {/* Top Curved Directional Arrow */}
+              <div className="absolute top-8 right-8 sm:right-14 w-32 sm:w-40 h-24 pointer-events-none z-10">
+                <svg viewBox="0 0 200 120" className="w-full h-full overflow-visible">
+                  <path
+                    d="M 10 20 H 130 Q 170 20 170 60 V 95"
+                    fill="none"
+                    stroke="#f97316"
+                    strokeWidth="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <polygon points="158,90 170,108 182,90" fill="#f97316" />
+
+                  {/* Animated Data Pulse */}
+                  <motion.circle
+                    r="6"
+                    fill="#ffffff"
+                    stroke="#f97316"
+                    strokeWidth="2.5"
+                    animate={{
+                      offsetDistance: ['0%', '100%'],
+                      opacity: [0, 1, 1, 0]
+                    }}
+                    transition={{
+                      duration: 2.2,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    }}
+                    style={{
+                      offsetPath: "path('M 10 20 H 130 Q 170 20 170 60 V 95')",
+                    }}
+                  />
+                </svg>
+                {/* Decorative circles */}
+                <div className="absolute -top-2 right-6 w-3 h-3 rounded-full border-2 border-slate-400" />
+                <div className="absolute top-3 right-1 w-2 h-2 rounded-full border-2 border-slate-400" />
+              </div>
+
+              {/* Bottom Curved Directional Arrow */}
+              <div className="absolute bottom-6 left-6 sm:left-12 w-32 sm:w-40 h-24 pointer-events-none z-10">
+                <svg viewBox="0 0 200 120" className="w-full h-full overflow-visible">
+                  <path
+                    d="M 20 20 V 60 Q 20 100 60 100 H 175"
+                    fill="none"
+                    stroke="#f97316"
+                    strokeWidth="10"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <polygon points="170,88 188,100 170,112" fill="#f97316" />
+
+                  {/* Animated Data Pulse */}
+                  <motion.circle
+                    r="6"
+                    fill="#ffffff"
+                    stroke="#f97316"
+                    strokeWidth="2.5"
+                    animate={{
+                      offsetDistance: ['0%', '100%'],
+                      opacity: [0, 1, 1, 0]
+                    }}
+                    transition={{
+                      duration: 2.2,
+                      repeat: Infinity,
+                      delay: 1.1,
+                      ease: 'easeInOut',
+                    }}
+                    style={{
+                      offsetPath: "path('M 20 20 V 60 Q 20 100 60 100 H 175')",
+                    }}
+                  />
+                </svg>
+              </div>
+
+              {/* Bottom-Right Cloud: DMSPilot Cloud Server */}
+              <motion.div
+                animate={{ y: [0, 6, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                className="absolute bottom-2 right-2 sm:right-6 z-20 flex flex-col items-center"
+              >
+                {/* Accent dots */}
+                <div className="absolute -top-1 -right-2 flex flex-col gap-0.5 items-center rotate-45">
+                  <div className="w-1 h-1 bg-slate-400 rounded-full" />
+                  <div className="w-1 h-1 bg-slate-400 rounded-full" />
+                </div>
+
+                {/* Cloud & Server SVG */}
+                <div className="relative w-36 sm:w-44 h-24 sm:h-28">
+                  <svg viewBox="0 0 220 160" className="w-full h-full drop-shadow-sm">
+                    {/* Cloud Body */}
+                    <path
+                      d="M50 130 H170 C192 130 205 112 200 95 C196 78 180 70 165 72 C158 50 135 35 110 38 C90 40 75 52 70 68 C55 68 40 80 40 98 C40 115 50 130 65 130 Z"
+                      fill="#ffffff"
+                      stroke="#1e293b"
+                      strokeWidth="5"
+                      strokeLinejoin="round"
+                      strokeLinecap="round"
+                    />
+
+                    {/* Server Rack Background */}
+                    <rect x="55" y="75" width="110" height="60" rx="12" fill="#e2e8f0" stroke="#1e293b" strokeWidth="5" />
+
+                    {/* Server Blade 1 */}
+                    <rect x="62" y="82" width="62" height="20" rx="4" fill="#f8fafc" />
+                    <rect x="128" y="82" width="30" height="20" rx="4" fill="#f97316" />
+                    <circle cx="143" cy="92" r="3.5" fill="#ffffff" />
+                    <line x1="72" y1="92" x2="76" y2="92" stroke="#64748b" strokeWidth="3" strokeLinecap="round" />
+                    <line x1="84" y1="92" x2="88" y2="92" stroke="#64748b" strokeWidth="3" strokeLinecap="round" />
+                    <line x1="96" y1="92" x2="100" y2="92" stroke="#64748b" strokeWidth="3" strokeLinecap="round" />
+
+                    {/* Divider */}
+                    <line x1="58" y1="105" x2="162" y2="105" stroke="#1e293b" strokeWidth="3" />
+
+                    {/* Server Blade 2 */}
+                    <rect x="62" y="109" width="62" height="20" rx="4" fill="#f8fafc" />
+                    <rect x="128" y="109" width="30" height="20" rx="4" fill="#f97316" />
+                    <circle cx="143" cy="119" r="3.5" fill="#ffffff" />
+                    <line x1="72" y1="119" x2="76" y2="119" stroke="#64748b" strokeWidth="3" strokeLinecap="round" />
+                    <line x1="84" y1="119" x2="88" y2="119" stroke="#64748b" strokeWidth="3" strokeLinecap="round" />
+                    <line x1="96" y1="119" x2="100" y2="119" stroke="#64748b" strokeWidth="3" strokeLinecap="round" />
+
+                    {/* Server Feet */}
+                    <rect x="70" y="138" width="8" height="6" rx="2" fill="#1e293b" />
+                    <rect x="142" y="138" width="8" height="6" rx="2" fill="#1e293b" />
+                  </svg>
+                </div>
+
+                <div className="mt-1 px-3 py-0.5 rounded-full bg-slate-950 text-white text-[10px] font-bold shadow-sm flex items-center gap-1">
+                  <CheckCircle2 className="w-3 h-3 text-emerald-400" />
+                  <span>DMSPilot Cloud</span>
+                </div>
+              </motion.div>
+
+            </div>
           </div>
 
         </div>
+
       </div>
     </section>
   );
 }
-
