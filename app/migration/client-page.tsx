@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { MigrationGraphic } from '@/components/Migration';
 
 // 4-Phase Circular Migration Process Data
 const transitionPhases = [
@@ -38,171 +39,6 @@ const transitionPhases = [
   }
 ];
 
-// Vector Graphic Component replicating user's screenshot 100%
-function MigrationHeroGraphic() {
-  return (
-    <div className="relative w-full max-w-[540px] mx-auto aspect-[4/3] flex items-center justify-center select-none">
-      <svg 
-        viewBox="0 0 500 360" 
-        className="w-full h-full"
-        fill="none" 
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        {/* Tiny decorative marks from screenshot */}
-        <path d="M 52 64 Q 54 58 58 61" stroke="#94A3B8" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-        
-        {/* Top right floating bubbles */}
-        <circle cx="395" cy="40" r="4.5" stroke="#CBD5E1" strokeWidth="1.5" fill="none" />
-        <circle cx="410" cy="54" r="2.5" stroke="#CBD5E1" strokeWidth="1.5" fill="none" />
-        <circle cx="380" cy="35" r="1.5" fill="#94A3B8" />
-        
-        {/* Middle right floating diamond/sparkle */}
-        <path d="M 450 200 L 452 206 L 458 208 L 452 210 L 450 216 L 448 210 L 442 208 L 448 206 Z" fill="#CBD5E1" />
-
-        {/* ─── TOP ORANGE CURVED ARROW ─── */}
-        {/* Dot at start */}
-        <circle cx="260" cy="58" r="4" fill="#FF6B00" />
-        {/* Curved Path */}
-        <path
-          d="M 260 58 H 370 Q 395 58 395 83 V 125"
-          stroke="#FF6B00"
-          strokeWidth="7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          fill="none"
-        />
-        {/* Arrowhead pointing DOWN */}
-        <path
-          d="M 387 122 L 395 134 L 403 122"
-          stroke="#FF6B00"
-          strokeWidth="7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          fill="none"
-        />
-
-        {/* ─── BOTTOM ORANGE CURVED ARROW ─── */}
-        {/* Dot at start */}
-        <circle cx="155" cy="188" r="4" fill="#FF6B00" />
-        {/* Curved Path */}
-        <path
-          d="M 155 188 V 252 Q 155 277 180 277 H 262"
-          stroke="#FF6B00"
-          strokeWidth="7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          fill="none"
-        />
-        {/* Orange Circular Node with White Interior */}
-        <circle cx="215" cy="277" r="5" fill="#FFFFFF" stroke="#FF6B00" strokeWidth="3" />
-        {/* Arrowhead pointing RIGHT */}
-        <path
-          d="M 256 270 L 268 277 L 256 284"
-          stroke="#FF6B00"
-          strokeWidth="7"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          fill="none"
-        />
-
-        {/* ─── TOP-LEFT CLOUD & SERVER (LEGACY SOFTWARES) ─── */}
-        <g transform="translate(50, 36)">
-          {/* Cloud Outline */}
-          <path
-            d="M 36 78 
-               A 22 22 0 0 1 54 44 
-               A 28 28 0 0 1 100 36 
-               A 32 32 0 0 1 144 54 
-               A 22 22 0 0 1 164 78 
-               A 16 16 0 0 1 154 98 
-               L 32 98 
-               A 18 18 0 0 1 36 78 Z"
-            fill="#FFFFFF"
-            stroke="#0B132B"
-            strokeWidth="3.2"
-            strokeLinejoin="round"
-          />
-
-          {/* Server Box */}
-          <rect x="42" y="52" width="102" height="52" rx="7" fill="#FFFFFF" stroke="#0B132B" strokeWidth="3.2" />
-          
-          {/* Server Feet */}
-          <rect x="52" y="104" width="8" height="5" rx="1.5" fill="#0B132B" />
-          <rect x="126" y="104" width="8" height="5" rx="1.5" fill="#0B132B" />
-
-          {/* Upper Bay */}
-          <rect x="48" y="58" width="90" height="18" rx="4" fill="#F8FAFC" stroke="#E2E8F0" strokeWidth="1.2" />
-          <line x1="56" y1="67" x2="63" y2="67" stroke="#94A3B8" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="68" y1="67" x2="75" y2="67" stroke="#94A3B8" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="80" y1="67" x2="87" y2="67" stroke="#94A3B8" strokeWidth="2.5" strokeLinecap="round" />
-          <rect x="114" y="62" width="18" height="10" rx="2" fill="#FF6B00" />
-
-          {/* Lower Bay */}
-          <rect x="48" y="80" width="90" height="18" rx="4" fill="#F8FAFC" stroke="#E2E8F0" strokeWidth="1.2" />
-          <line x1="56" y1="89" x2="63" y2="89" stroke="#94A3B8" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="68" y1="89" x2="75" y2="89" stroke="#94A3B8" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="80" y1="89" x2="87" y2="89" stroke="#94A3B8" strokeWidth="2.5" strokeLinecap="round" />
-          <rect x="114" y="84" width="18" height="10" rx="2" fill="#FF6B00" />
-        </g>
-
-        {/* Badge: Legacy Softwares */}
-        <rect x="92" y="152" width="124" height="26" rx="13" fill="#F1F5F9" stroke="#E2E8F0" strokeWidth="1" />
-        <text x="154" y="169" textAnchor="middle" fill="#334155" fontSize="11" fontWeight="600" fontFamily="system-ui, -apple-system, sans-serif">
-          Legacy Softwares
-        </text>
-
-        {/* ─── BOTTOM-RIGHT CLOUD & SERVER (DMSPILOT CLOUD) ─── */}
-        <g transform="translate(265, 165)">
-          {/* Cloud Outline */}
-          <path
-            d="M 36 78 
-               A 22 22 0 0 1 54 44 
-               A 28 28 0 0 1 100 36 
-               A 32 32 0 0 1 144 54 
-               A 22 22 0 0 1 164 78 
-               A 16 16 0 0 1 154 98 
-               L 32 98 
-               A 18 18 0 0 1 36 78 Z"
-            fill="#FFFFFF"
-            stroke="#0B132B"
-            strokeWidth="3.2"
-            strokeLinejoin="round"
-          />
-
-          {/* Server Box */}
-          <rect x="42" y="52" width="102" height="52" rx="7" fill="#FFFFFF" stroke="#0B132B" strokeWidth="3.2" />
-          
-          {/* Server Feet */}
-          <rect x="52" y="104" width="8" height="5" rx="1.5" fill="#0B132B" />
-          <rect x="126" y="104" width="8" height="5" rx="1.5" fill="#0B132B" />
-
-          {/* Upper Bay */}
-          <rect x="48" y="58" width="90" height="18" rx="4" fill="#F8FAFC" stroke="#E2E8F0" strokeWidth="1.2" />
-          <line x1="56" y1="67" x2="63" y2="67" stroke="#94A3B8" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="68" y1="67" x2="75" y2="67" stroke="#94A3B8" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="80" y1="67" x2="87" y2="67" stroke="#94A3B8" strokeWidth="2.5" strokeLinecap="round" />
-          <rect x="114" y="62" width="18" height="10" rx="2" fill="#FF6B00" />
-
-          {/* Lower Bay */}
-          <rect x="48" y="80" width="90" height="18" rx="4" fill="#F8FAFC" stroke="#E2E8F0" strokeWidth="1.2" />
-          <line x1="56" y1="89" x2="63" y2="89" stroke="#94A3B8" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="68" y1="89" x2="75" y2="89" stroke="#94A3B8" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="80" y1="89" x2="87" y2="89" stroke="#94A3B8" strokeWidth="2.5" strokeLinecap="round" />
-          <rect x="114" y="84" width="18" height="10" rx="2" fill="#FF6B00" />
-        </g>
-
-        {/* Badge: DMSPilot Cloud */}
-        <rect x="306" y="281" width="124" height="26" rx="13" fill="#0B0F19" />
-        <circle cx="323" cy="294" r="3.5" fill="#22C55E" />
-        <circle cx="323" cy="294" r="5.5" fill="none" stroke="#22C55E" strokeWidth="1" opacity="0.4" />
-        <text x="372" y="298" textAnchor="middle" fill="#FFFFFF" fontSize="11" fontWeight="700" fontFamily="system-ui, -apple-system, sans-serif">
-          DMSPilot Cloud
-        </text>
-      </svg>
-    </div>
-  );
-}
-
 export default function MigrationClientPage() {
   const [activePhase, setActivePhase] = useState<number>(0);
 
@@ -213,41 +49,47 @@ export default function MigrationClientPage() {
       <main className="flex-1">
 
         {/* ══════════════════════════════════════════════════════════════════
-            1. HERO SECTION: 100% REPLICATION OF USER DESIGN
+            1. HERO SECTION: MATCHING LANDING PAGE SIZE, HEIGHT & ANIMATION
         ══════════════════════════════════════════════════════════════════ */}
-        <section className="pt-32 sm:pt-40 lg:pt-44 pb-20 sm:pb-28 bg-white overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <section className="pt-28 sm:pt-32 pb-16 sm:pb-24 bg-white relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            {/* Seamless 2-Column Grid (No outer box / No outer border) */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
               
-              {/* Left Column: Typography & Button */}
-              <div className="lg:col-span-6 space-y-6 text-left">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-[-0.03em] leading-[1.08]">
-                  Migrate 100% of your <br />
-                  history. <br />
-                  <span className="text-[#8899A8] block">Without missing a single</span>
-                  <span className="text-[#8899A8] block">deal.</span>
+              {/* Left Column: Headline, Narrative & Direct Action */}
+              <div className="lg:col-span-6 flex flex-col justify-center">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-[-0.03em] leading-[1.15] mb-5">
+                  Migrate 100% of your history. <br className="hidden sm:inline" />
+                  <span className="text-slate-400">Without missing a single deal.</span>
                 </h1>
 
-                <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-lg">
+                <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed mb-8 max-w-lg">
                   Never let legacy software hold your enterprise back. Our migration pipeline safely extracts, validates, and synchronizes your entire historical record directly into DMSPilot cloud servers.
                 </p>
 
-                <div className="pt-2">
-                  <Link href="/contact-us?module=migration" className="inline-block">
+                {/* Clean CTA Action Area */}
+                <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                  <Link href="/contact-us?module=migration" className="w-full sm:w-auto">
                     <button 
                       type="button"
-                      className="h-12 px-7 rounded-full bg-[#0B0F19] hover:bg-slate-800 text-white text-sm font-bold flex items-center justify-center gap-2 transition-all duration-300 shadow-md cursor-pointer group"
+                      className="relative group overflow-hidden w-full sm:w-auto h-12 px-7 rounded-full bg-slate-950 text-white text-sm font-bold border-2 border-slate-950 flex items-center justify-center gap-2 transition-all duration-300 shadow-md cursor-pointer"
                     >
-                      <span>Plan Your Migration</span>
-                      <ArrowRight className="w-4 h-4 text-white transition-transform duration-300 group-hover:translate-x-1" />
+                      {/* Smooth White Fill Sweep on Hover */}
+                      <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />
+
+                      <span className="relative z-10 transition-colors duration-300 group-hover:text-slate-950">
+                        Plan Your Migration
+                      </span>
+                      <ArrowRight className="relative z-10 w-4 h-4 text-white transition-all duration-300 group-hover:translate-x-1 group-hover:text-slate-950" />
                     </button>
                   </Link>
                 </div>
               </div>
 
-              {/* Right Column: Exact Vector Illustration */}
-              <div className="lg:col-span-6 flex justify-center">
-                <MigrationHeroGraphic />
+              {/* Right Column: Clean Cloud-to-Cloud Animation */}
+              <div className="lg:col-span-6 flex items-center justify-center">
+                <MigrationGraphic />
               </div>
 
             </div>
