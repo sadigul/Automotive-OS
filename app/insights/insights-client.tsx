@@ -89,10 +89,10 @@ export default function InsightsClient() {
               <Link
                 key={post.slug}
                 href={`/insights/${post.slug}`}
-                className="bg-[#f4f5f7] rounded-[28px] overflow-hidden p-3 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group cursor-pointer block"
+                className="bg-[#f4f5f7] rounded-xl overflow-hidden p-3 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group cursor-pointer block"
               >
                 {/* Media Thumbnail */}
-                <div className="relative h-52 sm:h-56 w-full rounded-2xl overflow-hidden bg-slate-900">
+                <div className="relative h-52 sm:h-56 w-full rounded-lg overflow-hidden bg-slate-900">
                   {post.isCustomGraphic ? (
                     <div className="absolute inset-0 bg-slate-950 p-6 flex flex-col justify-between overflow-hidden">
                       <div 

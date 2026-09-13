@@ -109,7 +109,7 @@ export default function BlogDetailClient({ article }: Props) {
           </div>
 
           {/* Featured Cover Graphic or Image */}
-          <div className="relative w-full h-[300px] sm:h-[420px] lg:h-[480px] rounded-3xl overflow-hidden mb-12 bg-slate-950 border border-slate-900 shadow-md">
+          <div className="relative w-full h-[300px] sm:h-[420px] lg:h-[480px] rounded-xl overflow-hidden mb-12 bg-slate-950 border border-slate-900 shadow-md">
             <Image
               src={article.featuredImage}
               alt={article.title}
@@ -131,7 +131,7 @@ export default function BlogDetailClient({ article }: Props) {
 
           {/* Executive Summary & Key Findings Box */}
           {article.keyTakeaways && article.keyTakeaways.length > 0 && (
-            <div className="w-full rounded-2xl bg-slate-50/90 border border-slate-200/90 p-6 sm:p-8 lg:p-10 mb-14 shadow-xs">
+            <div className="w-full rounded-xl bg-slate-50/90 border border-slate-200/90 p-6 sm:p-8 lg:p-10 mb-14 shadow-xs">
               <div className="flex items-center justify-between pb-5 mb-6 border-b border-slate-200">
                 <h3 className="text-xs sm:text-sm font-black uppercase tracking-wider text-slate-900">
                   Executive Summary &amp; Key Findings
@@ -144,9 +144,9 @@ export default function BlogDetailClient({ article }: Props) {
                 {article.keyTakeaways.map((takeaway, idx) => (
                   <div
                     key={idx}
-                    className="flex items-start gap-4 p-5 rounded-xl bg-white border border-slate-200/80 shadow-xs hover:border-slate-300 transition-colors"
+                    className="flex items-start gap-4 p-5 rounded-lg bg-white border border-slate-200/80 shadow-xs hover:border-slate-300 transition-colors"
                   >
-                    <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-slate-950 text-white font-mono text-xs font-bold shrink-0 mt-0.5">
+                    <span className="flex items-center justify-center w-7 h-7 rounded-md bg-slate-950 text-white font-mono text-xs font-bold shrink-0 mt-0.5">
                       0{idx + 1}
                     </span>
                     <p className="text-sm sm:text-[15px] text-slate-800 font-medium leading-relaxed">
@@ -174,7 +174,7 @@ export default function BlogDetailClient({ article }: Props) {
                     </p>
                   ))}
                   {section.bulletList && section.bulletList.length > 0 && (
-                    <div className="my-6 space-y-3 bg-slate-50/90 rounded-2xl p-6 sm:p-7 border border-slate-200">
+                    <div className="my-6 space-y-3 bg-slate-50/90 rounded-xl p-6 sm:p-7 border border-slate-200">
                       {section.bulletList.map((item, bIdx) => (
                         <div key={bIdx} className="flex items-start gap-3.5">
                           <span className="w-2 h-2 rounded-full bg-slate-900 mt-2.5 shrink-0" />
@@ -186,7 +186,7 @@ export default function BlogDetailClient({ article }: Props) {
                     </div>
                   )}
                   {section.callout && (
-                    <div className="my-7 p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white shadow-md border border-slate-800">
+                    <div className="my-7 p-6 sm:p-7 rounded-xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white shadow-md border border-slate-800">
                       <div className="text-[11px] font-mono font-bold tracking-wider uppercase text-blue-400 mb-2">
                         {section.callout.label}
                       </div>
@@ -221,7 +221,7 @@ export default function BlogDetailClient({ article }: Props) {
                   <Link
                     key={rel.slug}
                     href={`/blog/${rel.slug}`}
-                    className="group flex flex-col bg-slate-50/70 rounded-2xl border border-slate-200/80 hover:border-slate-400 p-5 transition-all"
+                    className="group flex flex-col bg-slate-50/70 rounded-xl border border-slate-200/80 hover:border-slate-400 p-5 transition-all"
                   >
                     <div className="text-[10px] font-bold text-blue-600 uppercase tracking-wider mb-2">
                       {rel.category}
