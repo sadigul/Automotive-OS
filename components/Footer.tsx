@@ -52,7 +52,7 @@ export function Footer() {
                   href="https://facebook.com" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white hover:bg-slate-100 text-slate-800 hover:text-blue-600 border border-slate-200 transition-colors font-semibold"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-slate-700 hover:text-blue-600 hover:bg-slate-200/50 transition-colors font-semibold"
                   aria-label="Follow DMSPilot on Facebook"
                 >
                   <svg className="w-3.5 h-3.5 fill-current text-[#1877F2]" viewBox="0 0 24 24" aria-hidden="true">
@@ -64,7 +64,7 @@ export function Footer() {
                   href="https://linkedin.com" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white hover:bg-slate-100 text-slate-800 hover:text-blue-700 border border-slate-200 transition-colors font-semibold"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-slate-700 hover:text-blue-700 hover:bg-slate-200/50 transition-colors font-semibold"
                   aria-label="Follow DMSPilot on LinkedIn"
                 >
                   <svg className="w-3.5 h-3.5 fill-current text-[#0A66C2]" viewBox="0 0 24 24" aria-hidden="true">
