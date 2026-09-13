@@ -65,7 +65,7 @@ export function Reviews() {
           {marqueeItems.map((review, i) => (
             <div 
               key={i}
-              className="w-[400px] shrink-0 bg-white border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-8 rounded-3xl flex flex-col justify-between mx-4 whitespace-normal transition-all duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:scale-[1.02] cursor-default"
+              className="w-[400px] shrink-0 bg-white border border-gray-100 p-8 rounded-3xl flex flex-col justify-between mx-4 whitespace-normal transition-all duration-300 hover:scale-[1.02] cursor-default"
             >
               <div>
                 <div className="flex gap-1 mb-6">

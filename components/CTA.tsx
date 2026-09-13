@@ -7,7 +7,7 @@ export function CTA() {
   return (
     <section className="py-24 sm:py-32 bg-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="bg-slate-950 rounded-[36px] sm:rounded-[48px] p-10 sm:p-20 lg:p-24 text-center relative overflow-hidden shadow-2xl">
+        <div className="bg-slate-950 rounded-[36px] sm:rounded-[48px] p-10 sm:p-20 lg:p-24 text-center relative overflow-hidden">
           
           {/* Subtle gradient glow */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-orange-500/20 via-transparent to-transparent pointer-events-none" />
@@ -28,7 +28,7 @@ export function CTA() {
           {/* Action CTA Button with Signature Sweep Fill Animation */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 relative z-10">
             <Link href="/contact-us" className="w-full sm:w-auto">
-              <button className="relative group overflow-hidden w-full sm:w-auto h-14 px-10 rounded-full bg-white text-slate-950 text-base font-bold border-2 border-white flex items-center justify-center gap-2.5 transition-all duration-300 shadow-lg">
+              <button className="relative group overflow-hidden w-full sm:w-auto h-14 px-10 rounded-full bg-white text-slate-950 text-base font-bold border-2 border-white flex items-center justify-center gap-2.5 transition-all duration-300">
                 {/* Smooth Black Fill Sweep on Hover */}
                 <span className="absolute inset-0 bg-slate-950 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />
 

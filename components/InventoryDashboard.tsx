@@ -16,13 +16,13 @@ import {
 
 export function InventoryDashboard() {
   return (
-    <div className="bg-[#ecfdf5] rounded-3xl md:rounded-[3rem] p-3 md:p-6 w-full shadow-2xl border border-emerald-100 font-sans text-gray-900">
-      <div className="bg-white/80 backdrop-blur-xl rounded-2xl md:rounded-[2.5rem] flex flex-col shadow-sm border border-white">
+    <div className="bg-[#ecfdf5] rounded-3xl md:rounded-[3rem] p-3 md:p-6 w-full border border-emerald-100 font-sans text-gray-900">
+      <div className="bg-white/80 backdrop-blur-xl rounded-2xl md:rounded-[2.5rem] flex flex-col border border-white">
 
         {/* Header */}
         <div className="px-4 md:px-10 py-4 md:py-6 border-b border-emerald-50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 bg-emerald-600 rounded-xl flex shrink-0 items-center justify-center text-white font-black text-xl shadow-lg shadow-emerald-200">
+            <div className="w-10 h-10 bg-emerald-600 rounded-xl flex shrink-0 items-center justify-center text-white font-black text-xl">
               A
             </div>
             <div>
@@ -44,7 +44,7 @@ export function InventoryDashboard() {
               { label: 'Aging Risk', value: '4%', icon: AlertTriangle, color: 'text-amber-600', bg: 'bg-amber-50', trend: '-8% improvement' },
               { label: 'Supply Index', value: '1.04', icon: BarChart3, color: 'text-indigo-600', bg: 'bg-indigo-50', trend: 'Balanced market' },
             ].map((stat, i) => (
-              <div key={i} className="bg-white p-4 sm:p-5 rounded-2xl border border-gray-100 shadow-sm group hover:shadow-md transition-shadow">
+              <div key={i} className="bg-white p-4 sm:p-5 rounded-2xl border border-gray-100 group">
                 <div className="flex items-center gap-2 mb-3">
                   <div className={`p-2 rounded-lg ${stat.bg} ${stat.color}`}>
                     <stat.icon className="w-4 h-4" />
@@ -61,7 +61,7 @@ export function InventoryDashboard() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {/* Lot Age Breakdown */}
-            <div className="lg:col-span-5 bg-white rounded-2xl md:rounded-[2rem] p-5 md:p-6 border border-gray-100 shadow-sm">
+            <div className="lg:col-span-5 bg-white rounded-2xl md:rounded-[2rem] p-5 md:p-6 border border-gray-100">
               <h3 className="text-sm font-bold text-gray-900 mb-5 flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-emerald-600" />
                 Lot Age Breakdown
@@ -100,7 +100,7 @@ export function InventoryDashboard() {
             </div>
 
             {/* Market Demand & Buy Recs */}
-            <div className="lg:col-span-7 bg-white rounded-2xl md:rounded-[2rem] p-5 md:p-6 border border-gray-100 shadow-sm">
+            <div className="lg:col-span-7 bg-white rounded-2xl md:rounded-[2rem] p-5 md:p-6 border border-gray-100">
               <h3 className="text-sm font-bold text-gray-900 mb-5 flex items-center gap-2">
                 <Tag className="w-4 h-4 text-emerald-600" />
                 Market Demand — Your Area

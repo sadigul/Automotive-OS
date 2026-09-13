@@ -26,7 +26,7 @@ export function Migration() {
             {/* Clean CTA Action Area */}
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
               <Link href="/contact-us?module=migration" className="w-full sm:w-auto">
-                <button className="relative group overflow-hidden w-full sm:w-auto h-12 px-7 rounded-full bg-slate-950 text-white text-sm font-bold border-2 border-slate-950 flex items-center justify-center gap-2 transition-all duration-300 shadow-md">
+                <button className="relative group overflow-hidden w-full sm:w-auto h-12 px-7 rounded-full bg-slate-950 text-white text-sm font-bold border-2 border-slate-950 flex items-center justify-center gap-2 transition-all duration-300">
                   {/* Smooth White Fill Sweep on Hover */}
                   <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />
 
@@ -69,7 +69,7 @@ export function MigrationGraphic() {
 
         {/* Cloud & Server SVG */}
         <div className="relative w-36 sm:w-44 h-24 sm:h-28">
-          <svg viewBox="0 0 220 160" className="w-full h-full drop-shadow-sm">
+          <svg viewBox="0 0 220 160" className="w-full h-full">
             {/* Cloud Body */}
             <path
               d="M50 130 H170 C192 130 205 112 200 95 C196 78 180 70 165 72 C158 50 135 35 110 38 C90 40 75 52 70 68 C55 68 40 80 40 98 C40 115 50 130 65 130 Z"
@@ -201,7 +201,7 @@ export function MigrationGraphic() {
 
         {/* Cloud & Server SVG */}
         <div className="relative w-36 sm:w-44 h-24 sm:h-28">
-          <svg viewBox="0 0 220 160" className="w-full h-full drop-shadow-sm">
+          <svg viewBox="0 0 220 160" className="w-full h-full">
             {/* Cloud Body */}
             <path
               d="M50 130 H170 C192 130 205 112 200 95 C196 78 180 70 165 72 C158 50 135 35 110 38 C90 40 75 52 70 68 C55 68 40 80 40 98 C40 115 50 130 65 130 Z"
@@ -240,7 +240,7 @@ export function MigrationGraphic() {
           </svg>
         </div>
 
-        <div className="mt-1 px-3 py-0.5 rounded-full bg-slate-950 text-white text-[10px] font-bold shadow-sm flex items-center gap-1">
+        <div className="mt-1 px-3 py-0.5 rounded-full bg-slate-950 text-white text-[10px] font-bold flex items-center gap-1">
           <CheckCircle2 className="w-3 h-3 text-emerald-400" />
           <span>DMSPilot Cloud</span>
         </div>

@@ -158,7 +158,7 @@ export function CaseStudies() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition-all duration-200 ${
                   activeCategory === cat
-                    ? 'bg-slate-900 text-white shadow-sm'
+                    ? 'bg-slate-900 text-white '
                     : 'bg-slate-50 text-slate-600 hover:text-slate-900 border border-slate-200 hover:border-slate-300'
                 }`}
               >
@@ -178,7 +178,7 @@ export function CaseStudies() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
               onClick={() => setSelectedStudy(study)}
-              className="bg-white rounded-3xl border border-slate-200/90 p-7 sm:p-8 shadow-xs hover:shadow-xl hover:border-orange-200 transition-all duration-300 flex flex-col justify-between cursor-pointer group"
+              className="bg-white rounded-3xl border border-slate-200/90 p-7 sm:p-8 hover:border-orange-200 transition-all duration-300 flex flex-col justify-between cursor-pointer group"
             >
               <div>
                 {/* Header Tag */}
@@ -255,7 +255,7 @@ export function CaseStudies() {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto border border-slate-200 shadow-2xl p-6 sm:p-10 relative"
+              className="bg-white rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto border border-slate-200 p-6 sm:p-10 relative"
             >
               <button
                 onClick={() => setSelectedStudy(null)}

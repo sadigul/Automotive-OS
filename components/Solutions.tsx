@@ -291,7 +291,7 @@ function GraphicElement({ type }: { type: SolutionItem['graphicType'] }) {
           />
 
           {/* Core Central Node */}
-          <circle cx="220" cy="120" r="28" fill="#ffffff" stroke="currentColor" strokeWidth="2" className="shadow-lg" />
+          <circle cx="220" cy="120" r="28" fill="#ffffff" stroke="currentColor" strokeWidth="2" className="" />
           <circle cx="220" cy="120" r="14" fill="currentColor" fillOpacity="0.25" />
           <circle cx="220" cy="120" r="6" fill="currentColor" className="transition-colors duration-300 group-hover:text-sky-500" />
 
@@ -443,7 +443,7 @@ function GraphicElement({ type }: { type: SolutionItem['graphicType'] }) {
     <div className="w-full h-full flex items-center justify-end">
       <svg className="w-[320px] sm:w-[440px] h-[220px] sm:h-[260px] text-slate-300/80" viewBox="0 0 440 260" fill="none">
         {/* Browser Window Frame */}
-        <rect x="40" y="25" width="360" height="210" rx="14" fill="#ffffff" fillOpacity="0.95" stroke="currentColor" strokeWidth="1.5" className="shadow-lg" />
+        <rect x="40" y="25" width="360" height="210" rx="14" fill="#ffffff" fillOpacity="0.95" stroke="currentColor" strokeWidth="1.5" className="" />
         
         {/* Browser Top Bar */}
         <line x1="40" y1="62" x2="400" y2="62" stroke="currentColor" strokeWidth="1.2" opacity="0.6" />
@@ -485,7 +485,7 @@ function GraphicElement({ type }: { type: SolutionItem['graphicType'] }) {
           animate={{ y: [-3, 3, -3] }}
           transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut" }}
         >
-          <rect x="280" y="78" width="105" height="142" rx="10" fill="#ffffff" stroke="currentColor" strokeWidth="1.4" className="shadow-md" />
+          <rect x="280" y="78" width="105" height="142" rx="10" fill="#ffffff" stroke="currentColor" strokeWidth="1.4" className="" />
           
           {/* Live Pricing Tag */}
           <rect x="294" y="92" width="76" height="16" rx="4" fill="currentColor" fillOpacity="0.1" />
@@ -534,7 +534,7 @@ export function Solutions() {
               >
                 <Link
                   href={`/solutions/${item.slug}`}
-                  className="group relative w-full bg-[#f4f5f7] hover:bg-[#eff1f4] rounded-[28px] sm:rounded-[36px] p-8 sm:p-11 border border-slate-200/60 shadow-[0_2px_12px_rgba(15,23,42,0.015)] hover:shadow-[0_20px_45px_rgba(15,23,42,0.06)] hover:border-slate-300 transition-all duration-300 overflow-hidden flex flex-col justify-end min-h-[280px] sm:min-h-[320px]"
+                  className="group relative w-full bg-[#f4f5f7] hover:bg-[#eff1f4] rounded-[28px] sm:rounded-[36px] p-8 sm:p-11 border border-slate-200/60 hover:border-slate-300 transition-all duration-300 overflow-hidden flex flex-col justify-end min-h-[280px] sm:min-h-[320px]"
                 >
                   {/* Big Animated Graphic in the Background */}
                   <div className="absolute right-0 top-0 bottom-0 w-3/5 sm:w-1/2 pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-end pr-2 sm:pr-6">
@@ -553,7 +553,7 @@ export function Solutions() {
 
                   {/* Hover Arrow Indicator in bottom right */}
                   <div className="absolute right-8 bottom-8 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 pointer-events-none">
-                    <div className="w-10 h-10 rounded-full bg-slate-950 text-white flex items-center justify-center shadow-md">
+                    <div className="w-10 h-10 rounded-full bg-slate-950 text-white flex items-center justify-center">
                       <ArrowRight className="w-4 h-4" />
                     </div>
                   </div>

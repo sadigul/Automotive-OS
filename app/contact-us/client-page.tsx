@@ -145,7 +145,7 @@ export default function ContactUsClientPage() {
           
           {/* Header Info Banner */}
           <div className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex items-center gap-3">
+            <div className="bg-white p-5 rounded-2xl border border-gray-100 flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
                 <Headphones className="w-5 h-5" />
               </div>
@@ -155,7 +155,7 @@ export default function ContactUsClientPage() {
               </div>
             </div>
             
-            <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex items-center gap-3">
+            <div className="bg-white p-5 rounded-2xl border border-gray-100 flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
                 <Zap className="w-5 h-5" />
               </div>
@@ -165,7 +165,7 @@ export default function ContactUsClientPage() {
               </div>
             </div>
 
-            <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex items-center gap-3">
+            <div className="bg-white p-5 rounded-2xl border border-gray-100 flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
                 <ShieldCheck className="w-5 h-5" />
               </div>
@@ -180,7 +180,7 @@ export default function ContactUsClientPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-white rounded-[2.5rem] sm:rounded-[3rem] border border-gray-100 p-6 sm:p-12 md:p-16 shadow-[0_30px_100px_rgba(0,0,0,0.04)]"
+              className="bg-white rounded-[2.5rem] sm:rounded-[3rem] border border-gray-100 p-6 sm:p-12 md:p-16"
             >
               <div className="mb-10">
                 <div className="flex items-center gap-3 mb-4">
@@ -509,7 +509,7 @@ export default function ContactUsClientPage() {
                       <Button 
                         type="submit" 
                         disabled={loading}
-                        className="flex-1 h-14 sm:h-16 bg-purple-600 hover:bg-purple-700 text-white rounded-2xl text-base sm:text-lg font-bold flex items-center justify-center gap-2 transition-all shadow-[0_10px_30px_rgba(147,51,234,0.3)] disabled:opacity-50"
+                        className="flex-1 h-14 sm:h-16 bg-purple-600 hover:bg-purple-700 text-white rounded-2xl text-base sm:text-lg font-bold flex items-center justify-center gap-2 transition-all disabled:opacity-50"
                       >
                         {loading ? (
                           <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
@@ -529,7 +529,7 @@ export default function ContactUsClientPage() {
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="bg-white rounded-[3rem] p-10 sm:p-20 text-center shadow-[0_30px_100px_rgba(0,0,0,0.04)] border border-gray-100"
+              className="bg-white rounded-[3rem] p-10 sm:p-20 text-center border border-gray-100"
             >
               <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle2 className="w-10 h-10 text-green-500" />

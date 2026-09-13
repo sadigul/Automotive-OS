@@ -24,7 +24,7 @@ export default function SectorDetailPage({ slug: propSlug }: { slug?: string }) 
   if (!data) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-center p-8 bg-white rounded-3xl border border-slate-200 shadow-xl max-w-md">
+        <div className="text-center p-8 bg-white rounded-3xl border border-slate-200 max-w-md">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Sector Not Found</h2>
           <p className="text-gray-500 mb-6">The requested industry sector does not exist or has moved.</p>
           <Link href="/"><Button variant="outline" className="rounded-xl">Go Home</Button></Link>
@@ -82,12 +82,12 @@ export default function SectorDetailPage({ slug: propSlug }: { slug?: string }) 
               className="max-w-3xl space-y-6"
             >
               {/* Main Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-[-0.03em] leading-[1.08] drop-shadow-md">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-[-0.03em] leading-[1.08]">
                 {data.title}
               </h1>
 
               {/* Short Paragraph */}
-              <p className="text-lg sm:text-xl text-slate-100 font-normal leading-relaxed max-w-2xl drop-shadow-sm">
+              <p className="text-lg sm:text-xl text-slate-100 font-normal leading-relaxed max-w-2xl">
                 {data.tagline}
               </p>
 
@@ -96,7 +96,7 @@ export default function SectorDetailPage({ slug: propSlug }: { slug?: string }) 
                 <Link href={`/contact-us?module=${slug}`} className="inline-block">
                   <button 
                     type="button"
-                    className="relative group overflow-hidden h-12 sm:h-13 px-9 rounded-full bg-white text-slate-950 text-base font-bold border-2 border-white flex items-center justify-center gap-2 transition-all duration-300 shadow-xl cursor-pointer"
+                    className="relative group overflow-hidden h-12 sm:h-13 px-9 rounded-full bg-white text-slate-950 text-base font-bold border-2 border-white flex items-center justify-center gap-2 transition-all duration-300 cursor-pointer"
                   >
                     {/* Smooth Black Fill Sweep on Hover */}
                     <span className="absolute inset-0 bg-slate-950 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />
@@ -110,7 +110,7 @@ export default function SectorDetailPage({ slug: propSlug }: { slug?: string }) 
 
                 <a 
                   href="#operating-suite" 
-                  className="relative group overflow-hidden h-12 sm:h-13 px-8 rounded-full bg-white/10 hover:bg-white/20 text-white text-base font-bold border-2 border-white/30 hover:border-white backdrop-blur-md flex items-center justify-center gap-2.5 transition-all duration-300 shadow-lg cursor-pointer"
+                  className="relative group overflow-hidden h-12 sm:h-13 px-8 rounded-full bg-white/10 hover:bg-white/20 text-white text-base font-bold border-2 border-white/30 hover:border-white backdrop-blur-md flex items-center justify-center gap-2.5 transition-all duration-300 cursor-pointer"
                 >
                   {/* Smooth White Fill Sweep on Hover */}
                   <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />
@@ -148,7 +148,7 @@ export default function SectorDetailPage({ slug: propSlug }: { slug?: string }) 
                 <Link
                   key={idx}
                   href={`/solutions/${sol.slug}`}
-                  className="group bg-white rounded-[24px] sm:rounded-[28px] p-7 sm:p-8 border border-slate-200/90 hover:border-slate-300 hover:shadow-md transition-all duration-300 flex flex-col justify-between cursor-pointer"
+                  className="group bg-white rounded-[24px] sm:rounded-[28px] p-7 sm:p-8 border border-slate-200/90 hover:border-slate-300 transition-all duration-300 flex flex-col justify-between cursor-pointer"
                 >
                   <div className="space-y-4">
                     {/* Module Header Bar */}
@@ -199,7 +199,7 @@ export default function SectorDetailPage({ slug: propSlug }: { slug?: string }) 
             </div>
 
             {/* Suite Deployment Architecture Banner - Centered Black Card with Sweep Filling Buttons */}
-            <div className="mt-16 sm:mt-20 p-8 sm:p-12 md:p-16 rounded-[28px] sm:rounded-[40px] bg-slate-950 text-white border border-slate-900 shadow-2xl text-center">
+            <div className="mt-16 sm:mt-20 p-8 sm:p-12 md:p-16 rounded-[28px] sm:rounded-[40px] bg-slate-950 text-white border border-slate-900 text-center">
               <div className="max-w-3xl mx-auto space-y-4">
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight">
                   Deploy Turnkey or Ingest Modules Side-by-Side
@@ -212,7 +212,7 @@ export default function SectorDetailPage({ slug: propSlug }: { slug?: string }) 
                   <Link href={`/contact-us?module=${slug}&mode=suite`} className="w-full sm:w-auto">
                     <button 
                       type="button"
-                      className="relative group overflow-hidden w-full sm:w-auto h-12 sm:h-13 px-9 rounded-full bg-white text-slate-950 text-sm sm:text-base font-bold border-2 border-white flex items-center justify-center gap-2 transition-all duration-300 shadow-xl cursor-pointer"
+                      className="relative group overflow-hidden w-full sm:w-auto h-12 sm:h-13 px-9 rounded-full bg-white text-slate-950 text-sm sm:text-base font-bold border-2 border-white flex items-center justify-center gap-2 transition-all duration-300 cursor-pointer"
                     >
                       {/* Smooth Black Fill Sweep on Hover */}
                       <span className="absolute inset-0 bg-slate-950 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />

@@ -5,8 +5,8 @@ import { motion } from 'motion/react';
 
 export function MultiRooftopInventoryAnimation() {
   return (
-    <div className="w-full bg-slate-50/70 rounded-2xl sm:rounded-3xl border border-slate-200/90 p-3 sm:p-4 shadow-sm select-none overflow-hidden transition-all duration-300 hover:border-slate-300 hover:shadow-md">
-      <div className="relative w-full aspect-[2/1] bg-white rounded-xl sm:rounded-2xl border border-slate-200/70 overflow-hidden flex items-center justify-center shadow-inner">
+    <div className="w-full bg-slate-50/70 rounded-2xl sm:rounded-3xl border border-slate-200/90 p-3 sm:p-4 select-none overflow-hidden transition-all duration-300 hover:border-slate-300">
+      <div className="relative w-full aspect-[2/1] bg-white rounded-xl sm:rounded-2xl border border-slate-200/70 overflow-hidden flex items-center justify-center">
         {/* ── Pure Vector Animated Figure Diagram (2 Warehouses Connected to iPad in Hands) ── */}
         <svg
           viewBox="0 0 680 340"

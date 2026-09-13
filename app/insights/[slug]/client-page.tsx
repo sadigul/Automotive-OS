@@ -64,7 +64,7 @@ export default function InsightDetailClient({ article }: Props) {
           </div>
 
           {/* Featured Media / Visual */}
-          <div className="relative h-[300px] sm:h-[420px] w-full rounded-3xl overflow-hidden mb-12 bg-slate-950 shadow-md">
+          <div className="relative h-[300px] sm:h-[420px] w-full rounded-3xl overflow-hidden mb-12 bg-slate-950">
             {article.isCustomGraphic ? (
               <div className="absolute inset-0 bg-slate-950 p-8 sm:p-12 flex flex-col justify-between overflow-hidden">
                 <div 
@@ -163,7 +163,7 @@ export default function InsightDetailClient({ article }: Props) {
                 <Link
                   key={rel.slug}
                   href={`/insights/${rel.slug}`}
-                  className="bg-[#f4f5f7] rounded-2xl p-3 flex flex-col justify-between hover:shadow-md transition-all group block"
+                  className="bg-[#f4f5f7] rounded-2xl p-3 flex flex-col justify-between transition-all group block"
                 >
                   <div className="relative h-36 w-full rounded-xl overflow-hidden bg-slate-900 mb-3">
                     <Image

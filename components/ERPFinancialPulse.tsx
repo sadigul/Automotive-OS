@@ -17,12 +17,12 @@ import {
 
 export function ERPFinancialPulse() {
   return (
-    <div className="bg-[#f8f9ff] rounded-3xl md:rounded-[3rem] p-3 md:p-6 w-full shadow-2xl border border-white/50 font-sans text-gray-900 border-gray-200">
-      <div className="bg-white/70 backdrop-blur-xl rounded-2xl md:rounded-[2.5rem] flex flex-col md:flex-row shadow-inner border border-white/80">
+    <div className="bg-[#f8f9ff] rounded-3xl md:rounded-[3rem] p-3 md:p-6 w-full border border-white/50 font-sans text-gray-900 border-gray-200">
+      <div className="bg-white/70 backdrop-blur-xl rounded-2xl md:rounded-[2.5rem] flex flex-col md:flex-row border border-white/80">
         
         {/* Navigation Sidebar (DMSPilot Standard) */}
         <div className="w-full md:w-16 xl:w-20 border-b md:border-b-0 md:border-r border-gray-100 flex flex-row md:flex-col items-center justify-between md:justify-start px-4 py-3 md:px-0 md:py-8 gap-4 md:gap-8 shrink-0 bg-white/40">
-           <div className="w-8 h-8 md:w-10 md:h-10 bg-[#7C3AED] rounded-xl md:rounded-2xl flex shrink-0 items-center justify-center text-white font-black text-lg md:text-xl shadow-lg shadow-purple-200 md:mb-4">
+           <div className="w-8 h-8 md:w-10 md:h-10 bg-[#7C3AED] rounded-xl md:rounded-2xl flex shrink-0 items-center justify-center text-white font-black text-lg md:text-xl md:mb-4">
             D
           </div>
           
@@ -54,7 +54,7 @@ export function ERPFinancialPulse() {
             <div className="flex items-center gap-4 text-xs md:text-sm">
               <div className="flex -space-x-2">
                 {[1, 2, 3].map((_, i) => (
-                  <div key={i} className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-white overflow-hidden shadow-sm shrink-0 relative">
+                  <div key={i} className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-white overflow-hidden shrink-0 relative">
                     <Image src={`https://picsum.photos/seed/${i + 12}/100/100`} alt="Member" fill className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                   </div>
                 ))}
@@ -75,7 +75,7 @@ export function ERPFinancialPulse() {
                 { label: 'Unbilled Parts Leakage', value: 'R$ 0.00', color: 'text-emerald-600', icon: Package, trend: 'Clean' },
                 { label: 'Partner Payouts Due', value: 'R$ 12.400', color: 'text-amber-600', icon: HandCoins, trend: 'Pending' }
               ].map((stat, i) => (
-                <div key={i} className="bg-white rounded-xl sm:rounded-[1.5rem] md:rounded-[2rem] p-4 sm:p-5 md:p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+                <div key={i} className="bg-white rounded-xl sm:rounded-[1.5rem] md:rounded-[2rem] p-4 sm:p-5 md:p-6 border border-gray-100 relative overflow-hidden group">
                    <div className="absolute top-0 right-0 p-4 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
                       <stat.icon className="w-20 h-20" />
                    </div>
@@ -90,7 +90,7 @@ export function ERPFinancialPulse() {
 
             <div className="grid grid-cols-12 gap-4 sm:gap-6 md:gap-8">
               {/* Profit Split Visualization */}
-              <div className="col-span-12 lg:col-span-5 bg-white rounded-xl sm:rounded-[1.5rem] md:rounded-[2rem] p-4 sm:p-6 md:p-8 border border-gray-100 shadow-sm">
+              <div className="col-span-12 lg:col-span-5 bg-white rounded-xl sm:rounded-[1.5rem] md:rounded-[2rem] p-4 sm:p-6 md:p-8 border border-gray-100">
                  <h3 className="text-sm font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8 flex items-center gap-2">
                     <PieChart className="w-4 h-4 text-[#7C3AED]" />
                     Revenue Logic Split
@@ -109,7 +109,7 @@ export function ERPFinancialPulse() {
                             initial={{ strokeDashoffset: 251.2 }}
                             animate={{ strokeDashoffset: 251.2 * (1 - 0.51) }}
                             transition={{ duration: 1.5, ease: "easeOut" }}
-                            className="drop-shadow-sm"
+                            className=""
                           />
                           {/* 49% Segment (Firm Partner) - Offset by the 51% */}
                           <motion.circle 
@@ -150,7 +150,7 @@ export function ERPFinancialPulse() {
               </div>
 
               {/* Ledger Activity Feed */}
-              <div className="col-span-12 lg:col-span-7 bg-white rounded-xl sm:rounded-[1.5rem] md:rounded-[2rem] p-4 sm:p-6 md:p-8 border border-gray-100 shadow-sm flex flex-col">
+              <div className="col-span-12 lg:col-span-7 bg-white rounded-xl sm:rounded-[1.5rem] md:rounded-[2rem] p-4 sm:p-6 md:p-8 border border-gray-100 flex flex-col">
                  <div className="flex items-center justify-between mb-4 sm:mb-6 md:mb-8">
                     <h3 className="text-xs sm:text-sm font-bold text-gray-900 flex items-center gap-2">
                        <History className="w-4 h-4 text-[#7C3AED]" />

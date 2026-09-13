@@ -61,8 +61,11 @@
 }
 
 @layer base {
-  * {
+  *, *::before, *::after {
     @apply border-[var(--border)];
+    box-shadow: none !important;
+    text-shadow: none !important;
+    -webkit-box-shadow: none !important;
   }
   html {
     -webkit-font-smoothing: antialiased;

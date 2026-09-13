@@ -10,7 +10,7 @@ export function CustomSolutions() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Clean Luxury Container */}
-        <div className="relative rounded-[32px] sm:rounded-[44px] bg-slate-950 text-white p-10 sm:p-20 lg:p-24 overflow-hidden shadow-[0_24px_70px_rgba(15,23,42,0.18)]">
+        <div className="relative rounded-[32px] sm:rounded-[44px] bg-slate-950 text-white p-10 sm:p-20 lg:p-24 overflow-hidden">
           
           {/* Subtle Ambient Radial Glow */}
           <div className="absolute -top-32 -right-32 w-96 h-96 bg-orange-500/20 rounded-full blur-[120px] pointer-events-none" />
@@ -49,7 +49,7 @@ export function CustomSolutions() {
               transition={{ delay: 0.15 }}
             >
               <Link href="/contact-us?module=custom" className="inline-block">
-                <button className="relative group overflow-hidden rounded-full px-9 sm:px-12 py-4 sm:py-5 bg-white text-slate-950 font-bold text-base sm:text-lg border-2 border-white shadow-[0_0_35px_rgba(255,255,255,0.25)] hover:shadow-[0_0_50px_rgba(255,255,255,0.4)] transition-all duration-300 flex items-center gap-3">
+                <button className="relative group overflow-hidden rounded-full px-9 sm:px-12 py-4 sm:py-5 bg-white text-slate-950 font-bold text-base sm:text-lg border-2 border-white transition-all duration-300 flex items-center gap-3">
                   {/* Smooth Black Fill Sweep on Hover */}
                   <span className="absolute inset-0 bg-slate-950 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />
 

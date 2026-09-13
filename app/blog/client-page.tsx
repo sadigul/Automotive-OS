@@ -73,7 +73,7 @@ export default function BlogClientPage() {
                     onClick={() => setSelectedCategory(cat)}
                     className={`px-4 py-2 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer ${
                       isActive
-                        ? 'bg-slate-950 text-white shadow-sm'
+                        ? 'bg-slate-950 text-white '
                         : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
                     }`}
                   >
@@ -101,12 +101,12 @@ export default function BlogClientPage() {
             <div className="mb-16">
               <Link 
                 href={`/blog/${featuredArticle.slug}`}
-                className="group block rounded-xl bg-slate-50/70 border border-slate-200/90 p-5 sm:p-7 lg:p-8 hover:border-slate-300 hover:bg-slate-50 transition-all duration-300 shadow-xs cursor-pointer"
+                className="group block rounded-xl bg-slate-50/70 border border-slate-200/90 p-5 sm:p-7 lg:p-8 hover:border-slate-300 hover:bg-slate-50 transition-all duration-300 cursor-pointer"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
                   
                   {/* Left Column: Cover Image */}
-                  <div className="lg:col-span-7 relative h-72 sm:h-96 lg:h-[420px] w-full rounded-lg overflow-hidden bg-slate-100 border border-slate-200/80 shadow-xs">
+                  <div className="lg:col-span-7 relative h-72 sm:h-96 lg:h-[420px] w-full rounded-lg overflow-hidden bg-slate-100 border border-slate-200/80">
                     <Image
                       src={featuredArticle.featuredImage}
                       alt={featuredArticle.title}
@@ -121,7 +121,7 @@ export default function BlogClientPage() {
                     <div>
                       {/* Meta Kicker */}
                       <div className="flex items-center gap-2.5 text-xs mb-4">
-                        <span className="px-2.5 py-1 rounded-md bg-white border border-slate-200/80 text-slate-900 font-bold text-[11px] uppercase tracking-wider shadow-xs">
+                        <span className="px-2.5 py-1 rounded-md bg-white border border-slate-200/80 text-slate-900 font-bold text-[11px] uppercase tracking-wider">
                           {featuredArticle.category}
                         </span>
                         <span className="text-slate-300">·</span>
@@ -142,7 +142,7 @@ export default function BlogClientPage() {
 
                       {/* Strategic Key Finding Callout */}
                       {featuredArticle.keyTakeaways && featuredArticle.keyTakeaways.length > 0 && (
-                        <div className="mb-6 p-4 sm:p-5 rounded-lg bg-white border-l-4 border-slate-950 border-y border-r border-slate-200/80 shadow-xs">
+                        <div className="mb-6 p-4 sm:p-5 rounded-lg bg-white border-l-4 border-slate-950 border-y border-r border-slate-200/80">
                           <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 mb-1">
                             Key Strategic Finding
                           </div>
@@ -178,7 +178,7 @@ export default function BlogClientPage() {
                 <Link
                   key={article.slug}
                   href={`/blog/${article.slug}`}
-                  className="group flex flex-col bg-white rounded-xl border border-slate-200/90 hover:border-slate-400 hover:shadow-lg transition-all duration-300 overflow-hidden cursor-pointer"
+                  className="group flex flex-col bg-white rounded-xl border border-slate-200/90 hover:border-slate-400 transition-all duration-300 overflow-hidden cursor-pointer"
                 >
                   {/* Card Image */}
                   <div className="relative h-48 sm:h-52 w-full overflow-hidden bg-slate-100">
@@ -189,7 +189,7 @@ export default function BlogClientPage() {
                       className="object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
                     />
                     <div className="absolute top-3 left-3">
-                      <span className="px-3 py-1 rounded-md bg-white/95 backdrop-blur-md text-slate-900 text-[10px] font-black uppercase tracking-wider shadow-xs">
+                      <span className="px-3 py-1 rounded-md bg-white/95 backdrop-blur-md text-slate-900 text-[10px] font-black uppercase tracking-wider">
                         {article.category}
                       </span>
                     </div>
@@ -251,7 +251,7 @@ export default function BlogClientPage() {
           )}
 
           {/* Bottom Platform Consultation Banner */}
-          <div className="relative rounded-xl bg-slate-950 border border-slate-900 p-8 sm:p-14 overflow-hidden shadow-2xl text-center text-white">
+          <div className="relative rounded-xl bg-slate-950 border border-slate-900 p-8 sm:p-14 overflow-hidden text-center text-white">
             <div className="relative z-10 max-w-2xl mx-auto space-y-5">
               <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
                 Connect with Our Automotive Retail Strategy Team
@@ -265,7 +265,7 @@ export default function BlogClientPage() {
                 <Link href="/contact-us">
                   <button 
                     type="button"
-                    className="relative group overflow-hidden h-12 sm:h-13 px-9 rounded-full bg-white text-slate-950 text-sm sm:text-base font-bold border-2 border-white flex items-center justify-center gap-2 transition-all duration-300 shadow-xl cursor-pointer"
+                    className="relative group overflow-hidden h-12 sm:h-13 px-9 rounded-full bg-white text-slate-950 text-sm sm:text-base font-bold border-2 border-white flex items-center justify-center gap-2 transition-all duration-300 cursor-pointer"
                   >
                     <span className="absolute inset-0 bg-slate-950 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />
                     <span className="relative z-10 transition-colors duration-300 group-hover:text-white">

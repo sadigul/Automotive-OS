@@ -137,7 +137,7 @@ export function WhoWeServe() {
               >
                 <Link
                   href={item.href}
-                  className="group relative w-full rounded-[28px] sm:rounded-[36px] overflow-hidden min-h-[380px] sm:min-h-[440px] flex flex-col justify-end p-8 sm:p-11 border border-slate-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_24px_50px_rgba(0,0,0,0.22)] transition-all duration-500"
+                  className="group relative w-full rounded-[28px] sm:rounded-[36px] overflow-hidden min-h-[380px] sm:min-h-[440px] flex flex-col justify-end p-8 sm:p-11 border border-slate-200/80 transition-all duration-500"
                 >
                   {/* Background Image with Cinematic Hover Zoom */}
                   <div className="absolute inset-0 bg-slate-950">
@@ -178,7 +178,7 @@ export function WhoWeServe() {
                     </div>
 
                     {/* Animated Circular Button */}
-                    <div className="shrink-0 w-12 h-12 rounded-full bg-white text-slate-950 flex items-center justify-center shadow-lg group-hover:bg-purple-600 group-hover:text-white group-hover:scale-110 transition-all duration-300">
+                    <div className="shrink-0 w-12 h-12 rounded-full bg-white text-slate-950 flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white group-hover:scale-110 transition-all duration-300">
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
                     </div>
                   </div>

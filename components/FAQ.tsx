@@ -45,7 +45,7 @@ export function FAQ() {
               return (
                 <div 
                   key={i} 
-                  className="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group"
+                  className="bg-white border border-gray-200 rounded-3xl overflow-hidden transition-all duration-300 relative group"
                   onMouseEnter={() => setOpenIndex(i)}
                   onMouseLeave={() => setOpenIndex(null)}
                 >

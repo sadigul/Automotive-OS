@@ -79,7 +79,7 @@ export function Blog() {
                 aria-label="Scroll left"
                 className={`w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center transition-all duration-200 ${
                   canScrollLeft
-                    ? 'bg-white hover:bg-slate-950 hover:text-white hover:border-slate-950 text-slate-900 shadow-sm cursor-pointer'
+                    ? 'bg-white hover:bg-slate-950 hover:text-white hover:border-slate-950 text-slate-900  cursor-pointer'
                     : 'bg-slate-50 text-slate-300 border-slate-100 cursor-not-allowed opacity-50'
                 }`}
               >
@@ -92,7 +92,7 @@ export function Blog() {
                 aria-label="Scroll right"
                 className={`w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center transition-all duration-200 ${
                   canScrollRight
-                    ? 'bg-white hover:bg-slate-950 hover:text-white hover:border-slate-950 text-slate-900 shadow-sm cursor-pointer'
+                    ? 'bg-white hover:bg-slate-950 hover:text-white hover:border-slate-950 text-slate-900  cursor-pointer'
                     : 'bg-slate-50 text-slate-300 border-slate-100 cursor-not-allowed opacity-50'
                 }`}
               >
@@ -114,7 +114,7 @@ export function Blog() {
             <Link
               key={post.slug}
               href={`/insights/${post.slug}`}
-              className="w-[320px] sm:w-[420px] lg:w-[480px] shrink-0 bg-[#f4f5f7] rounded-xl overflow-hidden p-3.5 sm:p-4 flex flex-col justify-between hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 group cursor-pointer block"
+              className="w-[320px] sm:w-[420px] lg:w-[480px] shrink-0 bg-[#f4f5f7] rounded-xl overflow-hidden p-3.5 sm:p-4 flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300 group cursor-pointer block"
             >
               {/* Media Thumbnail */}
               <div className="relative h-52 sm:h-64 w-full rounded-lg overflow-hidden bg-slate-900">

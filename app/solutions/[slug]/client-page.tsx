@@ -471,7 +471,7 @@ export default function SolutionDetailPage({ slug: propSlug }: { slug?: string }
   if (!data) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-white font-sans">
-        <div className="text-center p-8 bg-white rounded-3xl border border-slate-200 shadow-xl max-w-md">
+        <div className="text-center p-8 bg-white rounded-3xl border border-slate-200 max-w-md">
           <h2 className="text-2xl font-black text-slate-950 mb-2">Solution Not Found</h2>
           <p className="text-slate-500 text-sm mb-6">The requested automotive solution does not exist or has moved.</p>
           <Link href="/#solutions">
@@ -531,7 +531,7 @@ export default function SolutionDetailPage({ slug: propSlug }: { slug?: string }
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             >
               {/* Distinctive Color Badge for Solution */}
-              <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border text-xs font-bold uppercase tracking-wider mb-5 shadow-2xs ${theme.badgeBg} ${theme.badgeText} ${theme.badgeBorder}`}>
+              <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border text-xs font-bold uppercase tracking-wider mb-5  ${theme.badgeBg} ${theme.badgeText} ${theme.badgeBorder}`}>
                 <span className={`w-2 h-2 rounded-full ${theme.badgeDot} animate-pulse`} />
                 <span>{theme.badgeLabel}</span>
               </div>
@@ -551,7 +551,7 @@ export default function SolutionDetailPage({ slug: propSlug }: { slug?: string }
                 <Link href={`/contact-us?module=${slug}`} className="w-full sm:w-auto">
                   <button 
                     type="button"
-                    className="relative group overflow-hidden w-full sm:w-auto h-12 sm:h-13 px-8 rounded-full bg-slate-950 text-white text-sm font-bold border-2 border-slate-950 flex items-center justify-center gap-2 transition-all duration-300 shadow-sm cursor-pointer"
+                    className="relative group overflow-hidden w-full sm:w-auto h-12 sm:h-13 px-8 rounded-full bg-slate-950 text-white text-sm font-bold border-2 border-slate-950 flex items-center justify-center gap-2 transition-all duration-300 cursor-pointer"
                   >
                     {/* Smooth White Fill Sweep on Hover */}
                     <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />
@@ -565,7 +565,7 @@ export default function SolutionDetailPage({ slug: propSlug }: { slug?: string }
                 <Link href="#capabilities" className="w-full sm:w-auto">
                   <button 
                     type="button"
-                    className="relative group overflow-hidden w-full sm:w-auto h-12 sm:h-13 px-8 rounded-full bg-white text-slate-900 text-sm font-bold border-2 border-slate-200/90 hover:border-slate-950 flex items-center justify-center gap-2 transition-all duration-300 shadow-2xs cursor-pointer"
+                    className="relative group overflow-hidden w-full sm:w-auto h-12 sm:h-13 px-8 rounded-full bg-white text-slate-900 text-sm font-bold border-2 border-slate-200/90 hover:border-slate-950 flex items-center justify-center gap-2 transition-all duration-300 cursor-pointer"
                   >
                     {/* Smooth Black Fill Sweep on Hover */}
                     <span className="absolute inset-0 bg-slate-950 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />
@@ -713,7 +713,7 @@ export default function SolutionDetailPage({ slug: propSlug }: { slug?: string }
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="rounded-[28px] sm:rounded-[40px] bg-slate-950 text-white p-10 sm:p-16 md:p-20 relative overflow-hidden shadow-2xl text-center border border-slate-900 flex flex-col items-center justify-center"
+              className="rounded-[28px] sm:rounded-[40px] bg-slate-950 text-white p-10 sm:p-16 md:p-20 relative overflow-hidden text-center border border-slate-900 flex flex-col items-center justify-center"
             >
               {/* Ambient radial glow */}
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-orange-500/10 via-transparent to-transparent pointer-events-none" />
@@ -729,7 +729,7 @@ export default function SolutionDetailPage({ slug: propSlug }: { slug?: string }
                   <Link href={`/contact-us?module=${slug}`} className="w-full sm:w-auto">
                     <button 
                       type="button"
-                      className="relative group overflow-hidden w-full sm:w-auto h-13 sm:h-14 px-10 rounded-full bg-white text-slate-950 text-base font-bold border-2 border-white flex items-center justify-center gap-2.5 transition-all duration-300 shadow-xl cursor-pointer"
+                      className="relative group overflow-hidden w-full sm:w-auto h-13 sm:h-14 px-10 rounded-full bg-white text-slate-950 text-base font-bold border-2 border-white flex items-center justify-center gap-2.5 transition-all duration-300 cursor-pointer"
                     >
                       {/* Smooth Black Fill Sweep on Hover */}
                       <span className="absolute inset-0 bg-slate-950 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />

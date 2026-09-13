@@ -73,7 +73,7 @@ export default function MigrationClientPage() {
                   <Link href="/contact-us?module=migration" className="w-full sm:w-auto">
                     <button 
                       type="button"
-                      className="relative group overflow-hidden w-full sm:w-auto h-12 px-7 rounded-full bg-slate-950 text-white text-sm font-bold border-2 border-slate-950 flex items-center justify-center gap-2 transition-all duration-300 shadow-md cursor-pointer"
+                      className="relative group overflow-hidden w-full sm:w-auto h-12 px-7 rounded-full bg-slate-950 text-white text-sm font-bold border-2 border-slate-950 flex items-center justify-center gap-2 transition-all duration-300 cursor-pointer"
                     >
                       {/* Smooth White Fill Sweep on Hover */}
                       <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />
@@ -128,14 +128,14 @@ export default function MigrationClientPage() {
                         onMouseEnter={() => setActivePhase(idx)}
                         className={`p-4 sm:p-5 rounded-2xl border transition-all duration-200 cursor-pointer text-left select-none ${
                           isActive 
-                            ? 'bg-white border-[#FF6B00] shadow-md ring-2 ring-[#FF6B00]/15' 
-                            : 'bg-white/70 hover:bg-white border-slate-200/90 hover:border-slate-300 shadow-xs'
+                            ? 'bg-white border-[#FF6B00]  ring-2 ring-[#FF6B00]/15' 
+                            : 'bg-white/70 hover:bg-white border-slate-200/90 hover:border-slate-300 '
                         }`}
                       >
                         <div className="flex items-center justify-between mb-1.5">
                           <div className="flex items-center gap-3">
                             <span className={`w-7 h-7 rounded-lg text-xs font-black flex items-center justify-center transition-colors ${
-                              isActive ? 'bg-[#FF6B00] text-white shadow-xs' : 'bg-[#0B0F19] text-white'
+                              isActive ? 'bg-[#FF6B00] text-white ' : 'bg-[#0B0F19] text-white'
                             }`}>
                               {phaseItem.phase}
                             </span>
@@ -275,7 +275,7 @@ export default function MigrationClientPage() {
 
                   {/* ── CENTER HUB ── */}
                   {/* ── CENTER HUB ── */}
-                  <div className="w-44 h-44 sm:w-52 sm:h-52 md:w-56 md:h-56 rounded-full bg-[#0B0F19] text-white flex flex-col items-center justify-center p-5 text-center shadow-2xl border-4 border-white relative z-20 cursor-default select-none">
+                  <div className="w-44 h-44 sm:w-52 sm:h-52 md:w-56 md:h-56 rounded-full bg-[#0B0F19] text-white flex flex-col items-center justify-center p-5 text-center border-4 border-white relative z-20 cursor-default select-none">
                     {/* Live Status indicator */}
                     <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-emerald-400 text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-2 border border-white/10 backdrop-blur-xs">
                       <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
@@ -306,12 +306,12 @@ export default function MigrationClientPage() {
                     onMouseEnter={() => setActivePhase(0)}
                     className={`absolute -top-4 sm:-top-6 left-1/2 -translate-x-1/2 p-2.5 sm:p-3.5 rounded-2xl border transition-all duration-200 z-30 flex items-center gap-2.5 sm:gap-3 cursor-pointer select-none ${
                       activePhase === 0 
-                        ? 'bg-white border-[#FF6B00] shadow-xl ring-2 ring-[#FF6B00]/25' 
-                        : 'bg-white/95 hover:bg-white border-slate-200/90 shadow-md hover:border-slate-300'
+                        ? 'bg-white border-[#FF6B00]  ring-2 ring-[#FF6B00]/25' 
+                        : 'bg-white/95 hover:bg-white border-slate-200/90  hover:border-slate-300'
                     }`}
                   >
                     <div className={`w-7 h-7 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center font-black text-xs sm:text-sm transition-colors ${
-                      activePhase === 0 ? 'bg-[#FF6B00] text-white shadow-xs' : 'bg-[#0B0F19] text-white'
+                      activePhase === 0 ? 'bg-[#FF6B00] text-white ' : 'bg-[#0B0F19] text-white'
                     }`}>
                       01
                     </div>
@@ -327,12 +327,12 @@ export default function MigrationClientPage() {
                     onMouseEnter={() => setActivePhase(1)}
                     className={`absolute top-1/2 -right-4 sm:-right-6 -translate-y-1/2 p-2.5 sm:p-3.5 rounded-2xl border transition-all duration-200 z-30 flex items-center gap-2.5 sm:gap-3 cursor-pointer select-none ${
                       activePhase === 1 
-                        ? 'bg-white border-[#FF6B00] shadow-xl ring-2 ring-[#FF6B00]/25' 
-                        : 'bg-white/95 hover:bg-white border-slate-200/90 shadow-md hover:border-slate-300'
+                        ? 'bg-white border-[#FF6B00]  ring-2 ring-[#FF6B00]/25' 
+                        : 'bg-white/95 hover:bg-white border-slate-200/90  hover:border-slate-300'
                     }`}
                   >
                     <div className={`w-7 h-7 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center font-black text-xs sm:text-sm transition-colors ${
-                      activePhase === 1 ? 'bg-[#FF6B00] text-white shadow-xs' : 'bg-[#0B0F19] text-white'
+                      activePhase === 1 ? 'bg-[#FF6B00] text-white ' : 'bg-[#0B0F19] text-white'
                     }`}>
                       02
                     </div>
@@ -348,12 +348,12 @@ export default function MigrationClientPage() {
                     onMouseEnter={() => setActivePhase(2)}
                     className={`absolute -bottom-4 sm:-bottom-6 left-1/2 -translate-x-1/2 p-2.5 sm:p-3.5 rounded-2xl border transition-all duration-200 z-30 flex items-center gap-2.5 sm:gap-3 cursor-pointer select-none ${
                       activePhase === 2 
-                        ? 'bg-white border-[#FF6B00] shadow-xl ring-2 ring-[#FF6B00]/25' 
-                        : 'bg-white/95 hover:bg-white border-slate-200/90 shadow-md hover:border-slate-300'
+                        ? 'bg-white border-[#FF6B00]  ring-2 ring-[#FF6B00]/25' 
+                        : 'bg-white/95 hover:bg-white border-slate-200/90  hover:border-slate-300'
                     }`}
                   >
                     <div className={`w-7 h-7 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center font-black text-xs sm:text-sm transition-colors ${
-                      activePhase === 2 ? 'bg-[#FF6B00] text-white shadow-xs' : 'bg-[#0B0F19] text-white'
+                      activePhase === 2 ? 'bg-[#FF6B00] text-white ' : 'bg-[#0B0F19] text-white'
                     }`}>
                       03
                     </div>
@@ -369,12 +369,12 @@ export default function MigrationClientPage() {
                     onMouseEnter={() => setActivePhase(3)}
                     className={`absolute top-1/2 -left-4 sm:-left-6 -translate-y-1/2 p-2.5 sm:p-3.5 rounded-2xl border transition-all duration-200 z-30 flex items-center gap-2.5 sm:gap-3 cursor-pointer select-none ${
                       activePhase === 3 
-                        ? 'bg-white border-[#FF6B00] shadow-xl ring-2 ring-[#FF6B00]/25' 
-                        : 'bg-white/95 hover:bg-white border-slate-200/90 shadow-md hover:border-slate-300'
+                        ? 'bg-white border-[#FF6B00]  ring-2 ring-[#FF6B00]/25' 
+                        : 'bg-white/95 hover:bg-white border-slate-200/90  hover:border-slate-300'
                     }`}
                   >
                     <div className={`w-7 h-7 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center font-black text-xs sm:text-sm transition-colors ${
-                      activePhase === 3 ? 'bg-[#FF6B00] text-white shadow-xs' : 'bg-[#0B0F19] text-white'
+                      activePhase === 3 ? 'bg-[#FF6B00] text-white ' : 'bg-[#0B0F19] text-white'
                     }`}>
                       04
                     </div>
@@ -396,7 +396,7 @@ export default function MigrationClientPage() {
         ══════════════════════════════════════════════════════════════════ */}
         <section className="py-20 sm:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="relative rounded-3xl bg-slate-950 border border-slate-900 p-8 sm:p-14 lg:p-16 overflow-hidden shadow-2xl text-center">
+            <div className="relative rounded-3xl bg-slate-950 border border-slate-900 p-8 sm:p-14 lg:p-16 overflow-hidden text-center">
               
               {/* Subtle Ambient Radial Glow */}
               <div className="absolute inset-0 bg-radial-[circle_at_top] from-slate-900/60 via-slate-950 to-slate-950 pointer-events-none" />
@@ -414,7 +414,7 @@ export default function MigrationClientPage() {
                   <Link href="/contact-us?module=migration" className="w-full sm:w-auto">
                     <button 
                       type="button"
-                      className="w-full sm:w-auto h-12 sm:h-13 px-9 rounded-full bg-white hover:bg-slate-100 text-slate-950 text-sm sm:text-base font-bold flex items-center justify-center gap-2 transition-colors duration-200 shadow-xl cursor-pointer"
+                      className="w-full sm:w-auto h-12 sm:h-13 px-9 rounded-full bg-white hover:bg-slate-100 text-slate-950 text-sm sm:text-base font-bold flex items-center justify-center gap-2 transition-colors duration-200 cursor-pointer"
                     >
                       <span>Plan Your Migration Audit</span>
                       <ArrowRight className="w-4 h-4 text-slate-950" />

@@ -33,7 +33,7 @@ export function ERPLaptopMockup({ children }: ERPLaptopMockupProps) {
     <div className="w-full flex flex-col items-center">
       {/* ── EXPANDED CINEMATIC LAPTOP MOCKUP VIEW (Full Section Width) ── */}
       <div
-        className="relative w-full max-w-7xl mx-auto aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden bg-[#070714] shadow-2xl border border-slate-800/80 select-none group"
+        className="relative w-full max-w-7xl mx-auto aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden bg-[#070714] border border-slate-800/80 select-none group"
       >
         {/* ── High-Res Pristine MacBook Pro Studio Base Image ── */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -73,7 +73,7 @@ export function ERPLaptopMockup({ children }: ERPLaptopMockupProps) {
 
           {/* Apple MacBook Camera Notch */}
           <div 
-            className="absolute top-0 left-1/2 -translate-x-1/2 z-30 bg-[#0a0a0c] rounded-b-md flex items-center justify-center shadow-md pointer-events-none"
+            className="absolute top-0 left-1/2 -translate-x-1/2 z-30 bg-[#0a0a0c] rounded-b-md flex items-center justify-center pointer-events-none"
             style={{
               width: '10.5%',
               height: '2.5%',

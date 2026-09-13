@@ -142,7 +142,7 @@ export default function RequestAccessClientPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-white rounded-[3rem] border border-gray-100 p-8 md:p-16 shadow-[0_30px_100px_rgba(0,0,0,0.04)]"
+              className="bg-white rounded-[3rem] border border-gray-100 p-8 md:p-16"
             >
               <div className="mb-12">
                 <div className="flex items-center gap-4 mb-4">
@@ -474,7 +474,7 @@ export default function RequestAccessClientPage() {
                       <Button 
                         type="submit" 
                         disabled={loading}
-                        className="flex-1 h-16 bg-purple-600 hover:bg-purple-700 text-white rounded-[1.25rem] text-lg font-bold flex items-center justify-center gap-2 transition-all shadow-[0_10px_30px_rgba(147,51,234,0.3)] disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="flex-1 h-16 bg-purple-600 hover:bg-purple-700 text-white rounded-[1.25rem] text-lg font-bold flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         {loading ? (
                           <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
@@ -494,7 +494,7 @@ export default function RequestAccessClientPage() {
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="bg-white rounded-[3rem] p-12 md:p-24 text-center shadow-[0_30px_100px_rgba(0,0,0,0.04)] border border-gray-100"
+              className="bg-white rounded-[3rem] p-12 md:p-24 text-center border border-gray-100"
             >
               <div className="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-8">
                 <CheckCircle2 className="w-12 h-12 text-green-500" />

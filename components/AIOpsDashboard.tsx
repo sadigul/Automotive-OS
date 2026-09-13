@@ -34,7 +34,7 @@ export function AIOpsDashboard() {
           {/* ══════════════════════════════════════════════════════════════════ */}
           {/* ── CARD 1: ERP & GENERAL LEDGER AUTOMATION ── */}
           {/* ══════════════════════════════════════════════════════════════════ */}
-          <div className="w-[450px] bg-white rounded-xl border border-slate-200 shadow-xs p-5">
+          <div className="w-[450px] bg-white rounded-xl border border-slate-200 p-5">
             
             {/* Header */}
             <div className="flex items-center justify-between pb-3 mb-3.5 border-b border-slate-100">
@@ -110,7 +110,7 @@ export function AIOpsDashboard() {
           {/* ══════════════════════════════════════════════════════════════════ */}
           {/* ── CARD 2: SALES DESKING & DEAL STRUCTURING ── */}
           {/* ══════════════════════════════════════════════════════════════════ */}
-          <div className="w-[470px] bg-white rounded-xl border border-slate-200 shadow-xs p-5">
+          <div className="w-[470px] bg-white rounded-xl border border-slate-200 p-5">
             
             {/* Header */}
             <div className="flex items-center justify-between pb-3 mb-3.5 border-b border-slate-100">
@@ -196,7 +196,7 @@ export function AIOpsDashboard() {
           {/* ══════════════════════════════════════════════════════════════════ */}
           {/* ── CARD 3: SERVICE BAY TECHNICIAN & JOB DISPATCH ── */}
           {/* ══════════════════════════════════════════════════════════════════ */}
-          <div className="w-[580px] bg-white rounded-xl border border-slate-200 shadow-xs p-5">
+          <div className="w-[580px] bg-white rounded-xl border border-slate-200 p-5">
             
             {/* Header */}
             <div className="flex items-center justify-between pb-3 mb-3.5 border-b border-slate-100">

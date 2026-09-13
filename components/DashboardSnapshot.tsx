@@ -46,13 +46,13 @@ export function DashboardSnapshot() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative w-full rounded-2xl md:rounded-[2rem] border border-gray-200/80 bg-white shadow-[0_20px_50px_rgba(15,23,42,0.08)] overflow-hidden flex flex-col lg:flex-row"
+        className="relative w-full rounded-2xl md:rounded-[2rem] border border-gray-200/80 bg-white overflow-hidden flex flex-col lg:flex-row"
       >
         {/* Sidebar */}
         <div className="hidden lg:flex w-64 bg-gray-50/50 border-r border-gray-100 p-6 flex-col justify-between shrink-0">
           <div>
             <div className="flex items-center gap-2 mb-10 pl-2">
-              <div className="w-8 h-8 rounded-lg bg-orange-600 flex items-center justify-center shadow-sm">
+              <div className="w-8 h-8 rounded-lg bg-orange-600 flex items-center justify-center">
                 <span className="text-white font-mono font-bold text-sm tracking-tight">D</span>
               </div>
               <span className="font-sans font-bold text-lg tracking-tighter text-gray-900">DMSPilot</span>
@@ -65,7 +65,7 @@ export function DashboardSnapshot() {
                 { icon: Users, label: "CRM & Customers" },
                 { icon: LineChart, label: "Reports & P&L" },
               ].map((item, i) => (
-                <div key={i} className={`flex items-center gap-3 px-3 py-2.5 rounded-xl cursor-pointer transition-colors ${item.active ? 'bg-white shadow-sm border border-gray-100 text-orange-600' : 'text-gray-500 hover:bg-gray-100/80 hover:text-gray-900'}`}>
+                <div key={i} className={`flex items-center gap-3 px-3 py-2.5 rounded-xl cursor-pointer transition-colors ${item.active ? 'bg-white  border border-gray-100 text-orange-600' : 'text-gray-500 hover:bg-gray-100/80 hover:text-gray-900'}`}>
                   <item.icon className="w-5 h-5" />
                   <span className="text-sm font-medium">{item.label}</span>
                 </div>
@@ -115,8 +115,8 @@ export function DashboardSnapshot() {
                 <p className="text-gray-500 text-sm mt-1">Real-time metrics for October 2026</p>
               </div>
               <div className="flex gap-2">
-                <button className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 shadow-sm transition-all focus:outline-none">Export</button>
-                <button className="px-4 py-2 bg-orange-600 border border-transparent rounded-lg text-sm font-medium text-white hover:bg-orange-700 shadow-sm shadow-orange-200 transition-all focus:outline-none">New Deal</button>
+                <button className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-all focus:outline-none">Export</button>
+                <button className="px-4 py-2 bg-orange-600 border border-transparent rounded-lg text-sm font-medium text-white hover:bg-orange-700 transition-all focus:outline-none">New Deal</button>
               </div>
             </div>
 
@@ -128,7 +128,7 @@ export function DashboardSnapshot() {
                 { title: "Avg Front Gross", val: "$3,150", change: "-2.1%", pos: false, icon: LineChart },
                 { title: "Active Leads", val: "284", change: "+45", pos: true, icon: Users },
               ].map((kpi, i) => (
-                <div key={i} className="bg-white border border-gray-100 shadow-sm rounded-xl p-5 flex flex-col justify-between group hover:border-orange-200 transition-colors">
+                <div key={i} className="bg-white border border-gray-100 rounded-xl p-5 flex flex-col justify-between group hover:border-orange-200 transition-colors">
                   <div className="flex justify-between items-start mb-4">
                     <div className="p-2 bg-gray-50 rounded-lg group-hover:bg-orange-50 transition-colors">
                       <kpi.icon className="w-5 h-5 text-gray-400 group-hover:text-orange-600 transition-colors" />
@@ -148,7 +148,7 @@ export function DashboardSnapshot() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Chart Area */}
-              <div className="lg:col-span-2 bg-white border border-gray-100 shadow-sm rounded-xl p-6 relative overflow-hidden">
+              <div className="lg:col-span-2 bg-white border border-gray-100 rounded-xl p-6 relative overflow-hidden">
                  <div className="flex justify-between items-center mb-8">
                   <h3 className="font-semibold text-gray-900 border-b-2 border-orange-600 pb-1">Revenue Overview</h3>
                   <MoreHorizontal className="w-5 h-5 text-gray-400 cursor-pointer" />
@@ -181,7 +181,7 @@ export function DashboardSnapshot() {
               </div>
 
               {/* Right Column: Pending Approvals/Tasks */}
-              <div className="bg-white border border-gray-100 shadow-sm rounded-xl p-6">
+              <div className="bg-white border border-gray-100 rounded-xl p-6">
                 <div className="flex justify-between items-center mb-6">
                   <h3 className="font-semibold text-gray-900">Pipeline Status</h3>
                   <span className="text-xs font-bold bg-gray-100 text-gray-600 px-2 py-1 rounded-full">Live</span>
@@ -210,7 +210,7 @@ export function DashboardSnapshot() {
 
                   <div className="mt-8 pt-6 border-t border-gray-100">
                     <div className="flex items-center gap-3 p-3 bg-indigo-50/50 border border-indigo-100 rounded-lg">
-                      <ShieldCheck className="w-8 h-8 text-indigo-600 p-1.5 bg-white rounded-md shadow-sm" />
+                      <ShieldCheck className="w-8 h-8 text-indigo-600 p-1.5 bg-white rounded-md" />
                       <div>
                         <div className="text-sm font-semibold text-gray-900">Compliance Audit</div>
                         <div className="text-xs text-gray-500">All deals passed OFAC</div>
@@ -222,7 +222,7 @@ export function DashboardSnapshot() {
             </div>
 
             {/* Transactions Table */}
-            <div className="bg-white border border-gray-100 shadow-sm rounded-xl overflow-hidden mt-8 hidden md:block">
+            <div className="bg-white border border-gray-100 rounded-xl overflow-hidden mt-8 hidden md:block">
               <div className="px-6 py-5 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
                 <h3 className="font-semibold text-gray-900">Recent Deals</h3>
                 <div className="text-sm text-orange-600 font-medium cursor-pointer hover:text-orange-700">View All</div>

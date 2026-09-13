@@ -16,7 +16,7 @@ import {
 
 export function MultiRooftopNetworkDiagram() {
   return (
-    <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-br from-[#eef9f2] via-[#f4fbf7] to-[#e6f4ea] border border-emerald-100/90 shadow-[0_4px_24px_rgba(16,185,129,0.06)] p-3.5 sm:p-5 flex items-center justify-center select-none">
+    <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-br from-[#eef9f2] via-[#f4fbf7] to-[#e6f4ea] border border-emerald-100/90 p-3.5 sm:p-5 flex items-center justify-center select-none">
       
       {/* ── Background Soft Grid ── */}
       <div className="absolute inset-0 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:20px_20px] opacity-[0.07] pointer-events-none" />
@@ -25,7 +25,7 @@ export function MultiRooftopNetworkDiagram() {
       <div className="relative w-full h-full max-w-lg mx-auto flex items-center justify-center">
         
         {/* ── 1. MAIN CARD (Left / Back): Multi-Rooftop Allocation List ── */}
-        <div className="absolute left-0 top-2 bottom-2 w-[62%] sm:w-[60%] bg-white rounded-2xl border border-slate-200/80 shadow-[0_10px_30px_rgba(15,23,42,0.08)] p-3.5 sm:p-4 flex flex-col justify-between z-10">
+        <div className="absolute left-0 top-2 bottom-2 w-[62%] sm:w-[60%] bg-white rounded-2xl border border-slate-200/80 p-3.5 sm:p-4 flex flex-col justify-between z-10">
           
           {/* Card Header */}
           <div>
@@ -92,7 +92,7 @@ export function MultiRooftopNetworkDiagram() {
 
 
         {/* ── 2. TOP RIGHT FLOATING CARD: Stock Breakdown Donut ── */}
-        <div className="absolute right-0 top-2 w-[42%] sm:w-[44%] bg-white rounded-2xl border border-slate-200/80 shadow-[0_10px_30px_rgba(15,23,42,0.08)] p-3 sm:p-3.5 z-20">
+        <div className="absolute right-0 top-2 w-[42%] sm:w-[44%] bg-white rounded-2xl border border-slate-200/80 p-3 sm:p-3.5 z-20">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[11px] font-bold text-slate-900">
               Lot Allocation
@@ -164,7 +164,7 @@ export function MultiRooftopNetworkDiagram() {
 
 
         {/* ── 3. BOTTOM RIGHT OVERLAPPING CARD: Instant Rooftop Transfer ── */}
-        <div className="absolute right-0 bottom-2 w-[52%] sm:w-[50%] bg-white rounded-2xl border border-slate-200/80 shadow-[0_12px_36px_rgba(15,23,42,0.12)] p-3.5 z-30">
+        <div className="absolute right-0 bottom-2 w-[52%] sm:w-[50%] bg-white rounded-2xl border border-slate-200/80 p-3.5 z-30">
           
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-1.5">
@@ -198,7 +198,7 @@ export function MultiRooftopNetworkDiagram() {
           </div>
 
           {/* Action Button */}
-          <button className="w-full flex items-center justify-center gap-1 py-1 rounded-lg bg-emerald-600 text-white text-[10px] font-bold shadow-xs hover:bg-emerald-700 transition-colors">
+          <button className="w-full flex items-center justify-center gap-1 py-1 rounded-lg bg-emerald-600 text-white text-[10px] font-bold hover:bg-emerald-700 transition-colors">
             <CheckCircle2 className="w-3 h-3" />
             <span>Approve Lot Transfer</span>
           </button>

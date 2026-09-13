@@ -25,18 +25,18 @@ export function ERPDashboardSnapshot({ module = 'erp' }: { module?: string }) {
   const isFixedOps = module === 'fixed-ops';
   
   return (
-    <div className="bg-[#eff4ff] rounded-[2.5rem] p-4 lg:p-6 w-full shadow-2xl border border-white/50 font-sans text-gray-900">
-      <div className="bg-white rounded-[2rem] flex shadow-sm border border-gray-100">
+    <div className="bg-[#eff4ff] rounded-[2.5rem] p-4 lg:p-6 w-full border border-white/50 font-sans text-gray-900">
+      <div className="bg-white rounded-[2rem] flex border border-gray-100">
         
         {/* Navigation Sidebar (Mini) */}
         <div className="w-16 lg:w-20 border-r border-gray-50 flex flex-col items-center py-6 gap-6 shrink-0 bg-gray-50/30">
-          <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-blue-200 mb-4">
+          <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-black text-xl mb-4">
             {isFixedOps ? 'S' : 'A'}.
           </div>
           
           <nav className="flex flex-col gap-5">
             {[LayoutGrid, Calendar, Users, ClipboardList, FileText, HelpCircle].map((Icon, i) => (
-              <div key={i} className={`p-2.5 rounded-xl cursor-pointer transition-all ${i === 0 ? 'bg-blue-50 text-blue-600 shadow-sm' : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'}`}>
+              <div key={i} className={`p-2.5 rounded-xl cursor-pointer transition-all ${i === 0 ? 'bg-blue-50 text-blue-600 ' : 'text-gray-400 hover:text-gray-600 hover:bg-gray-100'}`}>
                 <Icon className="w-6 h-6" />
               </div>
             ))}
@@ -46,7 +46,7 @@ export function ERPDashboardSnapshot({ module = 'erp' }: { module?: string }) {
             <div className="p-2.5 text-gray-400 hover:text-red-500 cursor-pointer">
               <LogOut className="w-6 h-6" />
             </div>
-            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white shadow-sm relative">
+            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white relative">
               <Image src={`https://picsum.photos/seed/${isFixedOps ? 'service' : 'finance'}/100/100`} alt="Avatar" fill className="w-full h-full object-cover" referrerPolicy="no-referrer" />
             </div>
           </div>
@@ -68,7 +68,7 @@ export function ERPDashboardSnapshot({ module = 'erp' }: { module?: string }) {
                 <span className="text-xs font-bold text-gray-600">01 Dec 2024 - 30 Dec 2024</span>
                 <ChevronDown className="w-3 h-3 text-gray-400" />
               </div>
-              <button className="bg-blue-600 text-white px-5 py-2 rounded-xl text-xs font-bold shadow-md shadow-blue-100 hover:bg-blue-700 transition-all">
+              <button className="bg-blue-600 text-white px-5 py-2 rounded-xl text-xs font-bold hover:bg-blue-700 transition-all">
                 {isFixedOps ? 'Daily Service Log' : 'Financial Statement'}
               </button>
               <div className="relative">
@@ -90,7 +90,7 @@ export function ERPDashboardSnapshot({ module = 'erp' }: { module?: string }) {
 
             <div className="grid grid-cols-12 gap-6">
               {/* Top Stats */}
-              <div className="col-span-12 md:col-span-6 lg:col-span-5 bg-white p-6 rounded-3xl border border-gray-100 shadow-sm relative overflow-hidden group">
+              <div className="col-span-12 md:col-span-6 lg:col-span-5 bg-white p-6 rounded-3xl border border-gray-100 relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
                   <TrendingUp className="w-24 h-24 text-blue-600" />
                 </div>
@@ -118,7 +118,7 @@ export function ERPDashboardSnapshot({ module = 'erp' }: { module?: string }) {
                 </div>
               </div>
 
-              <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-white p-6 rounded-3xl border border-gray-100 shadow-sm flex flex-col justify-between">
+              <div className="col-span-12 md:col-span-6 lg:col-span-4 bg-white p-6 rounded-3xl border border-gray-100 flex flex-col justify-between">
                 <div>
                   <div className="text-sm font-bold text-gray-400 mb-1 uppercase tracking-wider">{isFixedOps ? 'Open Job Cards' : 'Active Sessions'}</div>
                   <div className="text-3xl sm:text-4xl font-black tracking-tighter">{isFixedOps ? '142' : '58'}</div>
@@ -132,14 +132,14 @@ export function ERPDashboardSnapshot({ module = 'erp' }: { module?: string }) {
                 </div>
               </div>
 
-              <div className="col-span-12 lg:col-span-3 bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
+              <div className="col-span-12 lg:col-span-3 bg-white p-6 rounded-3xl border border-gray-100">
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-xs font-black uppercase tracking-widest text-gray-400">Next Action</div>
                   <MoreHorizontal className="w-4 h-4 text-gray-300" />
                 </div>
                 <div className="space-y-4">
                   <div className="flex gap-3">
-                    <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-500 shadow-sm border border-blue-100">
+                    <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-500 border border-blue-100">
                       {isFixedOps ? <Wrench className="w-5 h-5" /> : <Calendar className="w-5 h-5" />}
                     </div>
                     <div>
@@ -154,7 +154,7 @@ export function ERPDashboardSnapshot({ module = 'erp' }: { module?: string }) {
               </div>
 
               {/* Chart Sections */}
-              <div className="col-span-12 lg:col-span-8 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
+              <div className="col-span-12 lg:col-span-8 bg-white p-8 rounded-3xl border border-gray-100">
                 <div className="flex items-center justify-between mb-8">
                   <h3 className="font-bold text-gray-900">{isFixedOps ? 'Throughput Efficiency' : 'Revenue Performance'}</h3>
                   <div className="flex items-center gap-6">
@@ -205,7 +205,7 @@ export function ERPDashboardSnapshot({ module = 'erp' }: { module?: string }) {
 
               {/* Right Panel Mini Widgets */}
               <div className="col-span-12 lg:col-span-4 space-y-6">
-                <div className="bg-blue-600 rounded-3xl p-6 text-white shadow-lg shadow-blue-100 flex items-center justify-between relative overflow-hidden group">
+                <div className="bg-blue-600 rounded-3xl p-6 text-white flex items-center justify-between relative overflow-hidden group">
                   <div className="absolute -right-8 -top-8 w-24 h-24 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform"></div>
                   <div>
                     <div className="text-[10px] font-black uppercase tracking-widest opacity-60 mb-1">{isFixedOps ? 'Effective Labor Rate' : 'Average P&L'}</div>
@@ -219,7 +219,7 @@ export function ERPDashboardSnapshot({ module = 'erp' }: { module?: string }) {
                   </div>
                 </div>
 
-                <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
+                <div className="bg-white rounded-3xl p-6 border border-gray-100">
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-2">
                        <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white">

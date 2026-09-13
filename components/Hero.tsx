@@ -101,7 +101,7 @@ export function Hero() {
             <Link href="/contact-us" className="w-full sm:w-auto">
               <button 
                 type="button"
-                className="relative group overflow-hidden w-full sm:w-auto h-12 sm:h-13 px-8 sm:px-9 rounded-full bg-slate-950 text-white text-[15px] sm:text-base font-bold border-2 border-slate-950 flex items-center justify-center gap-2 transition-all duration-300 shadow-sm"
+                className="relative group overflow-hidden w-full sm:w-auto h-12 sm:h-13 px-8 sm:px-9 rounded-full bg-slate-950 text-white text-[15px] sm:text-base font-bold border-2 border-slate-950 flex items-center justify-center gap-2 transition-all duration-300"
               >
                 {/* Smooth White Fill Sweep on Hover */}
                 <span className="absolute inset-0 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />
@@ -116,7 +116,7 @@ export function Hero() {
             <Button 
               size="lg" 
               variant="outline" 
-              className="group w-full sm:w-auto h-12 sm:h-13 border-slate-200 bg-white hover:bg-slate-50 text-slate-800 hover:border-slate-300 rounded-full px-8 sm:px-9 text-[15px] sm:text-base font-semibold shadow-none hover:shadow-none transition-colors flex items-center justify-center"
+              className="group w-full sm:w-auto h-12 sm:h-13 border-slate-200 bg-white hover:bg-slate-50 text-slate-800 hover:border-slate-300 rounded-full px-8 sm:px-9 text-[15px] sm:text-base font-semibold transition-colors flex items-center justify-center"
               onClick={scrollToSolutions}
             >
               <span className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-black">Explore Platform</span>

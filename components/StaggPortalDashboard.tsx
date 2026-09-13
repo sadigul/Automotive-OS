@@ -14,13 +14,13 @@ import {
 
 export function StaggPortalDashboard() {
   return (
-    <div className="bg-[#f0fdfa] rounded-3xl md:rounded-[3rem] p-3 md:p-6 w-full shadow-2xl border border-teal-100 font-sans text-gray-900">
-      <div className="bg-white/80 backdrop-blur-xl rounded-2xl md:rounded-[2.5rem] flex flex-col shadow-sm border border-white">
+    <div className="bg-[#f0fdfa] rounded-3xl md:rounded-[3rem] p-3 md:p-6 w-full border border-teal-100 font-sans text-gray-900">
+      <div className="bg-white/80 backdrop-blur-xl rounded-2xl md:rounded-[2.5rem] flex flex-col border border-white">
 
         {/* Header */}
         <div className="px-4 md:px-10 py-4 md:py-6 border-b border-teal-50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 bg-teal-600 rounded-xl flex shrink-0 items-center justify-center text-white font-black text-xl shadow-lg shadow-teal-200">
+            <div className="w-10 h-10 bg-teal-600 rounded-xl flex shrink-0 items-center justify-center text-white font-black text-xl">
               A
             </div>
             <div>
@@ -46,7 +46,7 @@ export function StaggPortalDashboard() {
               { label: 'On-Time Rate', value: '96%', icon: Clock, color: 'text-blue-600', bg: 'bg-blue-50', trend: 'Above 90% target' },
               { label: 'Satisfaction', value: '4.9/5', icon: Star, color: 'text-amber-600', bg: 'bg-amber-50', trend: 'All-time high' },
             ].map((stat, i) => (
-              <div key={i} className="bg-white p-4 sm:p-5 rounded-2xl border border-gray-100 shadow-sm group hover:shadow-md transition-shadow">
+              <div key={i} className="bg-white p-4 sm:p-5 rounded-2xl border border-gray-100 group">
                 <div className="flex items-center gap-2 mb-3">
                   <div className={`p-2 rounded-lg ${stat.bg} ${stat.color}`}>
                     <stat.icon className="w-4 h-4" />
@@ -63,7 +63,7 @@ export function StaggPortalDashboard() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {/* Active Jobs by Partner */}
-            <div className="lg:col-span-7 bg-white rounded-2xl md:rounded-[2rem] p-5 md:p-6 border border-gray-100 shadow-sm">
+            <div className="lg:col-span-7 bg-white rounded-2xl md:rounded-[2rem] p-5 md:p-6 border border-gray-100">
               <div className="flex items-center justify-between mb-5">
                 <h3 className="text-sm font-bold text-gray-900 flex items-center gap-2">
                   <Briefcase className="w-4 h-4 text-teal-600" />
@@ -110,7 +110,7 @@ export function StaggPortalDashboard() {
             </div>
 
             {/* Partner Scorecards */}
-            <div className="lg:col-span-5 bg-white rounded-2xl md:rounded-[2rem] p-5 md:p-6 border border-gray-100 shadow-sm">
+            <div className="lg:col-span-5 bg-white rounded-2xl md:rounded-[2rem] p-5 md:p-6 border border-gray-100">
               <h3 className="text-sm font-bold text-gray-900 mb-5 flex items-center gap-2">
                 <Award className="w-4 h-4 text-teal-600" />
                 Partner Scorecards
@@ -154,7 +154,7 @@ export function StaggPortalDashboard() {
           </div>
 
           {/* Auto-Pay Banner */}
-          <div className="mt-6 bg-teal-600 rounded-2xl md:rounded-[2rem] p-5 md:p-6 text-white shadow-xl shadow-teal-200/50 relative overflow-hidden">
+          <div className="mt-6 bg-teal-600 rounded-2xl md:rounded-[2rem] p-5 md:p-6 text-white relative overflow-hidden">
             <div className="absolute -right-8 -top-8 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 relative z-10">
               <div>

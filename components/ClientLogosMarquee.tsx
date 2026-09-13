@@ -119,7 +119,7 @@ const clientLogos: ClientLogo[] = [
     colorHex: '#D52B1E',
     renderLogo: () => (
       <div className="flex items-center gap-3">
-        <div className="px-3.5 py-1 rounded bg-[#D52B1E] flex items-center justify-center shadow-sm">
+        <div className="px-3.5 py-1 rounded bg-[#D52B1E] flex items-center justify-center">
           <span className="text-[#FFC72C] font-black italic text-lg sm:text-xl tracking-tighter">AZ</span>
         </div>
         <span className="font-black italic text-2xl sm:text-3xl md:text-[30px] tracking-tight text-slate-900 group-hover:text-[#D52B1E] transition-colors">
@@ -135,7 +135,7 @@ const clientLogos: ClientLogo[] = [
     colorHex: '#CC0000',
     renderLogo: () => (
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#CC0000] flex items-center justify-center text-white font-black text-lg tracking-tight shadow-sm">
+        <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#CC0000] flex items-center justify-center text-white font-black text-lg tracking-tight">
           <span>H</span>
         </div>
         <span className="font-black text-xl sm:text-2xl md:text-[25px] tracking-tight text-slate-900 group-hover:text-[#CC0000] transition-colors whitespace-nowrap">
@@ -168,7 +168,7 @@ const clientLogos: ClientLogo[] = [
     colorHex: '#002D62',
     renderLogo: () => (
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#002D62] flex items-center justify-center text-white font-black text-base shadow-sm">
+        <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#002D62] flex items-center justify-center text-white font-black text-base">
           <span className="text-[#00A859] mr-0.5 font-bold text-lg">G</span>
           <span className="text-lg">1</span>
         </div>
@@ -184,7 +184,7 @@ const clientLogos: ClientLogo[] = [
     name: 'Midas',
     colorHex: '#FFA300',
     renderLogo: () => (
-      <div className="px-5 sm:px-6 py-2 rounded-xl bg-[#FFA300] text-black font-black text-xl sm:text-2xl md:text-[26px] tracking-wider shadow-sm">
+      <div className="px-5 sm:px-6 py-2 rounded-xl bg-[#FFA300] text-black font-black text-xl sm:text-2xl md:text-[26px] tracking-wider">
         MIDAS
       </div>
     ),
@@ -213,7 +213,7 @@ const clientLogos: ClientLogo[] = [
     colorHex: '#007A3D',
     renderLogo: () => (
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#007A3D] flex items-center justify-center text-white font-black text-xl shadow-sm">
+        <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#007A3D] flex items-center justify-center text-white font-black text-xl">
           <span>☘</span>
         </div>
         <span className="font-black italic text-2xl sm:text-3xl md:text-[28px] tracking-tight text-slate-900 group-hover:text-[#007A3D] transition-colors whitespace-nowrap">
@@ -228,7 +228,7 @@ const clientLogos: ClientLogo[] = [
     name: 'Pep Boys',
     colorHex: '#D0021B',
     renderLogo: () => (
-      <div className="px-5 sm:px-6 py-2 rounded-xl bg-[#D0021B] text-[#FFC20E] font-black text-lg sm:text-xl md:text-[22px] uppercase tracking-wider shadow-sm border border-[#FFC20E]/40">
+      <div className="px-5 sm:px-6 py-2 rounded-xl bg-[#D0021B] text-[#FFC20E] font-black text-lg sm:text-xl md:text-[22px] uppercase tracking-wider border border-[#FFC20E]/40">
         PEP BOYS
       </div>
     ),
@@ -240,7 +240,7 @@ const clientLogos: ClientLogo[] = [
     colorHex: '#D0202F',
     renderLogo: () => (
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#D0202F] flex items-center justify-center text-[#FFCC00] font-black text-lg shadow-sm">
+        <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#D0202F] flex items-center justify-center text-[#FFCC00] font-black text-lg">
           <span>▲</span>
         </div>
         <span className="font-black text-xl sm:text-2xl md:text-[26px] text-slate-900 group-hover:text-[#D0202F] transition-colors whitespace-nowrap">
@@ -256,7 +256,7 @@ const clientLogos: ClientLogo[] = [
     colorHex: '#00A3E0',
     renderLogo: () => (
       <div className="flex items-center gap-3">
-        <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#00A3E0] flex items-center justify-center text-white font-bold text-base shadow-sm">
+        <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#00A3E0] flex items-center justify-center text-white font-bold text-base">
           <span>◎</span>
         </div>
         <span className="font-black text-2xl sm:text-3xl md:text-[30px] tracking-wider text-slate-900 group-hover:text-[#00A3E0] transition-colors">

@@ -309,7 +309,7 @@ export function DeskingFIDashboard() {
               : 'bg-slate-50 border-slate-200'
           }`}>
             <div className="flex items-center gap-2 min-w-0">
-              <div className="relative w-7 h-7 rounded-full overflow-hidden border border-slate-300 dark:border-slate-700 shrink-0 shadow-sm">
+              <div className="relative w-7 h-7 rounded-full overflow-hidden border border-slate-300 dark:border-slate-700 shrink-0">
                 <Image
                   src="/images/george-thomas.jpg"
                   alt="George Thomas"
@@ -380,7 +380,7 @@ export function DeskingFIDashboard() {
             </button>
 
             {/* George Thomas Top Header Avatar */}
-            <div className="relative w-7 h-7 rounded-full overflow-hidden border border-slate-300 dark:border-slate-700 shrink-0 ml-0.5 shadow-sm">
+            <div className="relative w-7 h-7 rounded-full overflow-hidden border border-slate-300 dark:border-slate-700 shrink-0 ml-0.5">
               <Image
                 src="/images/george-thomas.jpg"
                 alt="George Thomas"
@@ -426,7 +426,7 @@ export function DeskingFIDashboard() {
               <span>Export</span>
             </button>
 
-            <button className="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-[#0f766e] text-white text-xs font-bold hover:bg-[#115e59] transition-colors shadow-sm">
+            <button className="inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-[#0f766e] text-white text-xs font-bold hover:bg-[#115e59] transition-colors">
               <span>+ Structure Deal</span>
               <ChevronDown className="w-3 h-3" />
             </button>
@@ -617,7 +617,7 @@ export function DeskingFIDashboard() {
                 </svg>
 
                 <div className={`absolute left-[33%] top-[25%] -translate-x-1/2 -translate-y-full mb-1 px-2 py-0.5 rounded-lg border text-center pointer-events-none ${
-                  darkMode ? 'bg-slate-800 border-slate-700 text-white' : 'bg-white border-slate-200 text-slate-900 shadow-sm'
+                  darkMode ? 'bg-slate-800 border-slate-700 text-white' : 'bg-white border-slate-200 text-slate-900 '
                 }`}>
                   <div className="text-[8.5px] text-slate-400 font-medium">Wednesday Peak</div>
                   <div className="text-[10.5px] font-bold text-teal-600 dark:text-teal-400">42 Deals ($210k Funded)</div>
@@ -684,7 +684,7 @@ export function DeskingFIDashboard() {
                   <div className={`w-2.5 h-24 rounded-t-sm ${darkMode ? 'bg-slate-600' : 'bg-slate-950'}`} />
                   <div className="w-2.5 h-20 bg-teal-500 rounded-t-sm" />
                   
-                  <div className={`absolute -top-12 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-lg border text-left w-28 pointer-events-none shadow-sm ${
+                  <div className={`absolute -top-12 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-lg border text-left w-28 pointer-events-none  ${
                     darkMode ? 'bg-slate-800 border-slate-700 text-white' : 'bg-white border-slate-200 text-slate-900'
                   }`}>
                     <div className="flex items-center justify-between text-[8.5px]">

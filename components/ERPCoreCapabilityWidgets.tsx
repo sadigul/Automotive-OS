@@ -170,7 +170,7 @@ export function VehicleLifecycleWidget() {
   const currentDays = stages[activeStage]?.days ?? 2.4;
 
   return (
-    <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 p-5 sm:p-6 shadow-sm font-sans text-xs transition-all duration-300 hover:border-slate-300 hover:shadow-md">
+    <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 p-5 sm:p-6 font-sans text-xs transition-all duration-300 hover:border-slate-300">
       {/* Header */}
       <div className="flex items-center justify-between pb-3.5 border-b border-slate-100 mb-4">
         <div>
@@ -200,8 +200,8 @@ export function VehicleLifecycleWidget() {
               className={`p-2 sm:p-2.5 rounded-xl text-center border transition-all duration-400 ${
                 isCurrent
                   ? s.milestone
-                    ? 'bg-slate-950 text-white shadow-md ring-2 ring-emerald-400/60'
-                    : 'bg-slate-950 text-white shadow-sm'
+                    ? 'bg-slate-950 text-white  ring-2 ring-emerald-400/60'
+                    : 'bg-slate-950 text-white '
                   : isPassed
                   ? 'bg-emerald-50/70 text-emerald-950 border-emerald-200/70'
                   : 'bg-[#f8fafc] text-slate-400 border-slate-200/60'
@@ -297,7 +297,7 @@ export function GMOpsDashboardWidget() {
   const urgentCount = isResolved ? 2 : 3;
 
   return (
-    <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 p-5 sm:p-6 shadow-sm font-sans text-xs transition-all duration-300 hover:border-slate-300 hover:shadow-md">
+    <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 p-5 sm:p-6 font-sans text-xs transition-all duration-300 hover:border-slate-300">
       {/* Header */}
       <div className="flex items-center justify-between pb-3.5 border-b border-slate-100 mb-4">
         <div className="flex items-center gap-2">
@@ -332,7 +332,7 @@ export function GMOpsDashboardWidget() {
             opacity: isResolved ? 0.75 : 1,
           }}
           transition={{ duration: 0.5, ease: EASING }}
-          className="p-3.5 border rounded-xl flex items-center justify-between transition-colors shadow-xs"
+          className="p-3.5 border rounded-xl flex items-center justify-between transition-colors"
         >
           <div className="flex items-center gap-3 min-w-0">
             <div className={`w-2.5 h-2.5 rounded-full shrink-0 transition-colors ${
@@ -374,7 +374,7 @@ export function GMOpsDashboardWidget() {
               <div className="text-[11px] text-slate-500 mt-0.5 truncate">Chase Auto &bull; $84,200 &bull; Stips Cleared</div>
             </div>
           </div>
-          <span className="text-xs font-bold text-slate-900 bg-white border border-slate-200 px-2.5 py-1 rounded-lg shrink-0 ml-2 shadow-2xs">
+          <span className="text-xs font-bold text-slate-900 bg-white border border-slate-200 px-2.5 py-1 rounded-lg shrink-0 ml-2">
             Review
           </span>
         </div>
@@ -388,7 +388,7 @@ export function GMOpsDashboardWidget() {
               <div className="text-[11px] text-slate-500 mt-0.5 truncate">Metro Lexus &bull; 2026 Porsche Macan GTS</div>
             </div>
           </div>
-          <span className="text-xs font-bold text-slate-900 bg-white border border-slate-200 px-2.5 py-1 rounded-lg shrink-0 ml-2 shadow-2xs">
+          <span className="text-xs font-bold text-slate-900 bg-white border border-slate-200 px-2.5 py-1 rounded-lg shrink-0 ml-2">
             Authorize
           </span>
         </div>
@@ -446,7 +446,7 @@ export function FloorPlanWidget() {
   const curtailmentUnits = isDrawdown ? 3 : 4;
 
   return (
-    <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 p-5 sm:p-6 shadow-sm font-sans text-xs transition-all duration-300 hover:border-slate-300 hover:shadow-md">
+    <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 p-5 sm:p-6 font-sans text-xs transition-all duration-300 hover:border-slate-300">
       {/* Header with Live Available Credit Math */}
       <div className="flex items-center justify-between pb-3.5 border-b border-slate-100 mb-4">
         <div className="flex items-center gap-2">
@@ -523,7 +523,7 @@ export function FloorPlanWidget() {
             )}
           </AnimatePresence>
 
-          <span className="font-black text-slate-950 px-2.5 py-1 rounded-lg bg-white border border-slate-200 shadow-2xs">
+          <span className="font-black text-slate-950 px-2.5 py-1 rounded-lg bg-white border border-slate-200">
             <AnimatedNumber value={curtailmentUnits} suffix=" Units" />
           </span>
         </div>
@@ -577,7 +577,7 @@ export function RoleBasedAccessWidget() {
   const curr = permissions[activeRole];
 
   return (
-    <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 p-5 sm:p-6 shadow-sm font-sans text-xs transition-all duration-300 hover:border-slate-300 hover:shadow-md">
+    <div className="bg-white rounded-2xl sm:rounded-3xl border border-slate-200/90 p-5 sm:p-6 font-sans text-xs transition-all duration-300 hover:border-slate-300">
       {/* Header */}
       <div className="flex items-center justify-between pb-3.5 border-b border-slate-100 mb-4">
         <div className="flex items-center gap-2">
@@ -607,7 +607,7 @@ export function RoleBasedAccessWidget() {
             onClick={() => setActiveRole(r.id as any)}
             className={`flex-1 py-1.5 px-2 rounded-lg font-bold text-[10px] sm:text-[11px] transition-all cursor-pointer truncate ${
               activeRole === r.id
-                ? 'bg-slate-950 text-white shadow-xs'
+                ? 'bg-slate-950 text-white '
                 : 'text-slate-600 hover:text-slate-950 hover:bg-slate-200/60'
             }`}
           >

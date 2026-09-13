@@ -17,13 +17,13 @@ import {
 
 export function CommCenterDashboard() {
   return (
-    <div className="bg-[#eff6ff] rounded-3xl md:rounded-[3rem] p-3 md:p-6 w-full shadow-2xl border border-blue-100 font-sans text-gray-900">
-      <div className="bg-white/80 backdrop-blur-xl rounded-2xl md:rounded-[2.5rem] flex flex-col shadow-sm border border-white">
+    <div className="bg-[#eff6ff] rounded-3xl md:rounded-[3rem] p-3 md:p-6 w-full border border-blue-100 font-sans text-gray-900">
+      <div className="bg-white/80 backdrop-blur-xl rounded-2xl md:rounded-[2.5rem] flex flex-col border border-white">
 
         {/* Header */}
         <div className="px-4 md:px-10 py-4 md:py-6 border-b border-blue-50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 bg-blue-600 rounded-xl flex shrink-0 items-center justify-center text-white font-black text-xl shadow-lg shadow-blue-200">
+            <div className="w-10 h-10 bg-blue-600 rounded-xl flex shrink-0 items-center justify-center text-white font-black text-xl">
               A
             </div>
             <div>
@@ -48,7 +48,7 @@ export function CommCenterDashboard() {
               { label: 'Calls → Appts', value: '31%', icon: PhoneCall, color: 'text-indigo-600', bg: 'bg-indigo-50', trend: '+9% conversion' },
               { label: 'Answer Rate', value: '94%', icon: Headphones, color: 'text-amber-600', bg: 'bg-amber-50', trend: 'Above 90% goal' },
             ].map((stat, i) => (
-              <div key={i} className="bg-white p-4 sm:p-5 rounded-2xl border border-gray-100 shadow-sm group hover:shadow-md transition-shadow">
+              <div key={i} className="bg-white p-4 sm:p-5 rounded-2xl border border-gray-100 group">
                 <div className="flex items-center gap-2 mb-3">
                   <div className={`p-2 rounded-lg ${stat.bg} ${stat.color}`}>
                     <stat.icon className="w-4 h-4" />
@@ -65,7 +65,7 @@ export function CommCenterDashboard() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {/* Live Calls Panel */}
-            <div className="lg:col-span-5 bg-gray-950 rounded-2xl md:rounded-[2rem] p-5 md:p-6 text-white shadow-xl relative overflow-hidden">
+            <div className="lg:col-span-5 bg-gray-950 rounded-2xl md:rounded-[2rem] p-5 md:p-6 text-white relative overflow-hidden">
               <div className="absolute top-0 right-0 p-6 opacity-10 pointer-events-none">
                 <Volume2 className="w-24 h-24" />
               </div>
@@ -108,7 +108,7 @@ export function CommCenterDashboard() {
             </div>
 
             {/* Customer Mood Analysis */}
-            <div className="lg:col-span-7 bg-white rounded-2xl md:rounded-[2rem] p-5 md:p-6 border border-gray-100 shadow-sm">
+            <div className="lg:col-span-7 bg-white rounded-2xl md:rounded-[2rem] p-5 md:p-6 border border-gray-100">
               <div className="flex items-center justify-between mb-5">
                 <h3 className="text-sm font-bold text-gray-900 flex items-center gap-2">
                   <MessageSquare className="w-4 h-4 text-blue-600" />
@@ -172,7 +172,7 @@ export function CommCenterDashboard() {
           </div>
 
           {/* Team Performance */}
-          <div className="mt-6 bg-white rounded-2xl md:rounded-[2rem] p-5 md:p-6 border border-gray-100 shadow-sm">
+          <div className="mt-6 bg-white rounded-2xl md:rounded-[2rem] p-5 md:p-6 border border-gray-100">
             <h3 className="text-sm font-bold text-gray-900 mb-4 flex items-center gap-2">
               <Users className="w-4 h-4 text-blue-600" />
               Team Performance — Today

@@ -108,8 +108,8 @@ export function Header() {
         <div 
           className={`w-full h-[70px] sm:h-[76px] rounded-xl px-5 sm:px-7 flex items-center justify-between pointer-events-auto transition-all duration-200 border relative ${
             isScrolled 
-              ? 'bg-white/95 backdrop-blur-md border-slate-200/90 shadow-[0_8px_30px_-6px_rgba(0,0,0,0.08)]' 
-              : 'bg-white/90 backdrop-blur-sm border-slate-200/70 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)]'
+              ? 'bg-white/95 backdrop-blur-md border-slate-200/90 ' 
+              : 'bg-white/90 backdrop-blur-sm border-slate-200/70 '
           }`}
         >
         
@@ -166,7 +166,7 @@ export function Header() {
                   : 'opacity-0 invisible -translate-y-1.5 pointer-events-none'
               }`}
             >
-              <div className="bg-white rounded-xl border border-slate-200/90 shadow-[0_20px_40px_-15px_rgba(15,23,42,0.14),0_0_0_1px_rgba(15,23,42,0.04)] p-5 text-slate-900">
+              <div className="bg-white rounded-xl border border-slate-200/90 p-5 text-slate-900">
                 
                 <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 px-1">
                   <span className="text-[10.5px] font-mono font-bold text-slate-400 tracking-wider uppercase">
@@ -243,7 +243,7 @@ export function Header() {
                   : 'opacity-0 invisible -translate-y-1.5 pointer-events-none'
               }`}
             >
-              <div className="bg-white rounded-xl border border-slate-200/90 shadow-[0_20px_40px_-15px_rgba(15,23,42,0.14),0_0_0_1px_rgba(15,23,42,0.04)] p-5 text-slate-900">
+              <div className="bg-white rounded-xl border border-slate-200/90 p-5 text-slate-900">
                 
                 <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 px-1">
                   <span className="text-[10.5px] font-mono font-bold text-slate-400 tracking-wider uppercase">
@@ -311,7 +311,7 @@ export function Header() {
           <Link href="/contact-us">
             <button 
               type="button"
-              className="relative group overflow-hidden h-10 px-6 rounded-full bg-white text-slate-950 text-[13.5px] font-bold border-2 border-slate-950 flex items-center justify-center transition-all duration-300 shadow-sm"
+              className="relative group overflow-hidden h-10 px-6 rounded-full bg-white text-slate-950 text-[13.5px] font-bold border-2 border-slate-950 flex items-center justify-center transition-all duration-300"
             >
               {/* Smooth Black Fill Sweep on Hover */}
               <span className="absolute inset-0 bg-slate-950 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />
@@ -339,7 +339,7 @@ export function Header() {
         {/* Mobile Menu Dropdown */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-2 pointer-events-auto">
-            <div className="bg-white/98 backdrop-blur-xl rounded-xl border border-slate-200/90 shadow-xl p-5 space-y-5 max-h-[calc(100vh-100px)] overflow-y-auto">
+            <div className="bg-white/98 backdrop-blur-xl rounded-xl border border-slate-200/90 p-5 space-y-5 max-h-[calc(100vh-100px)] overflow-y-auto">
               
               <div className="space-y-1">
                 <p className="text-[10.5px] font-mono font-bold text-slate-400 uppercase tracking-wider px-3 py-1">

@@ -60,7 +60,7 @@ export default function InsightsClient() {
                     onClick={() => setSelectedCategory(cat)}
                     className={`px-4 py-2 rounded-full text-xs font-bold transition-all duration-200 ${
                       isActive
-                        ? 'bg-slate-950 text-white shadow-sm'
+                        ? 'bg-slate-950 text-white '
                         : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
                     }`}
                   >
@@ -89,7 +89,7 @@ export default function InsightsClient() {
               <Link
                 key={post.slug}
                 href={`/insights/${post.slug}`}
-                className="bg-[#f4f5f7] rounded-xl overflow-hidden p-3 flex flex-col justify-between hover:shadow-lg transition-all duration-300 group cursor-pointer block"
+                className="bg-[#f4f5f7] rounded-xl overflow-hidden p-3 flex flex-col justify-between transition-all duration-300 group cursor-pointer block"
               >
                 {/* Media Thumbnail */}
                 <div className="relative h-52 sm:h-56 w-full rounded-lg overflow-hidden bg-slate-900">
