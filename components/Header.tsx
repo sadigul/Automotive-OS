@@ -103,14 +103,15 @@ export function Header() {
   ];
 
   return (
-    <header 
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-200 ${
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)]' 
-          : 'bg-white/90 backdrop-blur-sm border-b border-slate-200/60'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-[68px] flex items-center justify-between relative">
+    <header className="fixed top-0 inset-x-0 z-50 pt-3 sm:pt-4 px-4 sm:px-6 lg:px-8 pointer-events-none transition-all duration-200">
+      <div className="max-w-7xl mx-auto">
+        <div 
+          className={`w-full h-[70px] sm:h-[76px] rounded-xl px-5 sm:px-7 flex items-center justify-between pointer-events-auto transition-all duration-200 border relative ${
+            isScrolled 
+              ? 'bg-white/95 backdrop-blur-md border-slate-200/90 shadow-[0_8px_30px_-6px_rgba(0,0,0,0.08)]' 
+              : 'bg-white/90 backdrop-blur-sm border-slate-200/70 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.03)]'
+          }`}
+        >
         
         {/* Left: Brand Logo */}
         <Link href="/" className="flex items-center gap-3 group shrink-0">
@@ -333,79 +334,81 @@ export function Header() {
           </button>
         </div>
 
-      </div>
-
-      {/* Mobile Menu Dropdown */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden border-t border-slate-200/90 bg-white/98 backdrop-blur-xl shadow-xl max-h-[calc(100vh-68px)] overflow-y-auto">
-          <div className="p-5 space-y-5">
-            
-            <div className="space-y-1">
-              <p className="text-[10.5px] font-mono font-bold text-slate-400 uppercase tracking-wider px-3 py-1">
-                Platform Solutions
-              </p>
-              {solutionsList.map((sol) => (
-                <Link
-                  key={sol.slug}
-                  href={`/solutions/${sol.slug}`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center justify-between p-2.5 rounded-lg hover:bg-slate-50 text-slate-800 hover:text-blue-600 transition-colors"
-                >
-                  <span className="text-sm font-semibold">{sol.title}</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
-                </Link>
-              ))}
-            </div>
-
-            <div className="pt-3 border-t border-slate-100 space-y-1">
-              <p className="text-[10.5px] font-mono font-bold text-slate-400 uppercase tracking-wider px-3 py-1">
-                Who We Serve
-              </p>
-              {whoWeServeList.map((item) => (
-                <Link
-                  key={item.title}
-                  href={`/who-we-serve/${item.slug}`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center justify-between p-2.5 rounded-lg hover:bg-slate-50 text-slate-800 hover:text-blue-600 transition-colors"
-                >
-                  <span className="text-sm font-semibold">{item.title}</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
-                </Link>
-              ))}
-            </div>
-
-            <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
-              <Link
-                href="/migration"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-blue-600"
-              >
-                Migration
-              </Link>
-              <Link
-                href="/blog"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-blue-600"
-              >
-                Blog
-              </Link>
-              <Link
-                href="/contact-us"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full mt-2"
-              >
-                <button className="relative group overflow-hidden w-full h-11 rounded-full bg-white text-slate-950 text-sm font-bold border-2 border-slate-950 flex items-center justify-center transition-all duration-300">
-                  <span className="absolute inset-0 bg-slate-950 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />
-                  <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
-                    Contact Us
-                  </span>
-                </button>
-              </Link>
-            </div>
-
-          </div>
         </div>
-      )}
+
+        {/* Mobile Menu Dropdown */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden mt-2 pointer-events-auto">
+            <div className="bg-white/98 backdrop-blur-xl rounded-xl border border-slate-200/90 shadow-xl p-5 space-y-5 max-h-[calc(100vh-100px)] overflow-y-auto">
+              
+              <div className="space-y-1">
+                <p className="text-[10.5px] font-mono font-bold text-slate-400 uppercase tracking-wider px-3 py-1">
+                  Platform Solutions
+                </p>
+                {solutionsList.map((sol) => (
+                  <Link
+                    key={sol.slug}
+                    href={`/solutions/${sol.slug}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex items-center justify-between p-2.5 rounded-lg hover:bg-slate-50 text-slate-800 hover:text-blue-600 transition-colors"
+                  >
+                    <span className="text-sm font-semibold">{sol.title}</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
+                  </Link>
+                ))}
+              </div>
+
+              <div className="pt-3 border-t border-slate-100 space-y-1">
+                <p className="text-[10.5px] font-mono font-bold text-slate-400 uppercase tracking-wider px-3 py-1">
+                  Who We Serve
+                </p>
+                {whoWeServeList.map((item) => (
+                  <Link
+                    key={item.title}
+                    href={`/who-we-serve/${item.slug}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex items-center justify-between p-2.5 rounded-lg hover:bg-slate-50 text-slate-800 hover:text-blue-600 transition-colors"
+                  >
+                    <span className="text-sm font-semibold">{item.title}</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
+                  </Link>
+                ))}
+              </div>
+
+              <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
+                <Link
+                  href="/migration"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-blue-600"
+                >
+                  Migration
+                </Link>
+                <Link
+                  href="/blog"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-blue-600"
+                >
+                  Blog
+                </Link>
+                <Link
+                  href="/contact-us"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="w-full mt-2"
+                >
+                  <button className="relative group overflow-hidden w-full h-11 rounded-full bg-white text-slate-950 text-sm font-bold border-2 border-slate-950 flex items-center justify-center transition-all duration-300">
+                    <span className="absolute inset-0 bg-slate-950 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />
+                    <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
+                      Contact Us
+                    </span>
+                  </button>
+                </Link>
+              </div>
+
+            </div>
+          </div>
+        )}
+
+      </div>
     </header>
   );
 }
