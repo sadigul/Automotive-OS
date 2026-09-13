@@ -129,38 +129,54 @@ export default function BlogDetailClient({ article }: Props) {
             )}
           </div>
 
-          {/* Key Takeaways Box */}
+          {/* Executive Summary & Key Findings Box */}
           {article.keyTakeaways && article.keyTakeaways.length > 0 && (
-            <div className="max-w-4xl p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200 mb-12">
-              <h3 className="text-xs font-black uppercase tracking-wider text-slate-900 mb-4 flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                <span>Executive Summary &amp; Key Findings</span>
-              </h3>
-              <ul className="space-y-3">
+            <div className="w-full rounded-2xl bg-slate-50/90 border border-slate-200/90 p-6 sm:p-8 lg:p-10 mb-14 shadow-xs">
+              <div className="flex items-center justify-between pb-5 mb-6 border-b border-slate-200">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
+                  <h3 className="text-xs sm:text-sm font-black uppercase tracking-wider text-slate-900">
+                    Executive Summary &amp; Key Findings
+                  </h3>
+                </div>
+                <span className="text-[11px] font-bold tracking-wider text-slate-400 uppercase font-mono hidden sm:inline">
+                  Strategic Briefing
+                </span>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {article.keyTakeaways.map((takeaway, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm text-slate-700 leading-relaxed font-medium">
-                    <span className="w-1.5 h-1.5 rounded-full bg-slate-950 mt-2 shrink-0" />
-                    <span>{takeaway}</span>
-                  </li>
+                  <div
+                    key={idx}
+                    className="flex items-start gap-4 p-5 rounded-xl bg-white border border-slate-200/80 shadow-xs hover:border-slate-300 transition-colors"
+                  >
+                    <span className="flex items-center justify-center w-7 h-7 rounded-lg bg-slate-950 text-white font-mono text-xs font-bold shrink-0 mt-0.5">
+                      0{idx + 1}
+                    </span>
+                    <p className="text-sm sm:text-[15px] text-slate-800 font-medium leading-relaxed">
+                      {takeaway}
+                    </p>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           )}
 
           {/* Article Body Content */}
-          <div className="max-w-4xl space-y-10 text-slate-800 leading-relaxed text-base sm:text-lg border-b border-slate-200 pb-16 mb-16">
+          <div className="w-full space-y-12 text-slate-800 leading-relaxed text-base sm:text-lg border-b border-slate-200 pb-16 mb-16">
             {article.content.map((section, idx) => (
-              <section key={idx} className="space-y-4">
+              <section key={idx} className="space-y-5">
                 {section.heading && (
-                  <h2 className="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight pt-4">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-950 tracking-tight pt-6 border-t border-slate-100 first:border-0 first:pt-0">
                     {section.heading}
                   </h2>
                 )}
-                {section.paragraphs.map((p, pIdx) => (
-                  <p key={pIdx} className="text-slate-700 font-normal leading-relaxed text-sm sm:text-base md:text-lg">
-                    {p}
-                  </p>
-                ))}
+                <div className="space-y-5">
+                  {section.paragraphs.map((p, pIdx) => (
+                    <p key={pIdx} className="text-slate-700 font-normal leading-relaxed text-base sm:text-lg lg:text-[19px]">
+                      {p}
+                    </p>
+                  ))}
+                </div>
               </section>
             ))}
           </div>
