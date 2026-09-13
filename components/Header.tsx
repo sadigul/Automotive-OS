@@ -305,21 +305,19 @@ export function Header() {
           </Link>
         </nav>
 
-        {/* Right: Action CTA */}
-        <div className="hidden sm:flex items-center gap-3 shrink-0">
-          <Link 
-            href="/migration"
-            className="text-xs font-semibold text-slate-600 hover:text-slate-950 px-3 py-2 transition-colors hidden xl:inline-block"
-          >
-            90-Day Switch Plan
-          </Link>
+        {/* Right: Contact Us Button with Smooth Fill Sweep Interaction */}
+        <div className="hidden md:flex items-center gap-3 shrink-0">
           <Link href="/contact-us">
             <button 
               type="button"
-              className="h-9 px-4 sm:px-5 rounded-lg bg-slate-950 text-white text-xs sm:text-[13px] font-bold hover:bg-slate-800 active:scale-[0.98] transition-all shadow-xs flex items-center gap-1.5 cursor-pointer"
+              className="relative group overflow-hidden h-10 px-6 rounded-full bg-white text-slate-950 text-[13.5px] font-bold border-2 border-slate-950 flex items-center justify-center transition-all duration-300 shadow-sm"
             >
-              <span>Let's Talk</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              {/* Smooth Black Fill Sweep on Hover */}
+              <span className="absolute inset-0 bg-slate-950 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />
+
+              <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
+                Contact Us
+              </span>
             </button>
           </Link>
         </div>
@@ -396,12 +394,11 @@ export function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="w-full mt-2"
               >
-                <button 
-                  type="button"
-                  className="w-full h-10 rounded-lg bg-slate-950 text-white text-sm font-bold flex items-center justify-center gap-2 hover:bg-slate-800 transition-colors cursor-pointer"
-                >
-                  <span>Let's Talk</span>
-                  <ArrowRight className="w-4 h-4" />
+                <button className="relative group overflow-hidden w-full h-11 rounded-full bg-white text-slate-950 text-sm font-bold border-2 border-slate-950 flex items-center justify-center transition-all duration-300">
+                  <span className="absolute inset-0 bg-slate-950 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left ease-out" />
+                  <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
+                    Contact Us
+                  </span>
                 </button>
               </Link>
             </div>
