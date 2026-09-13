@@ -173,6 +173,28 @@ export default function BlogDetailClient({ article }: Props) {
                       {p}
                     </p>
                   ))}
+                  {section.bulletList && section.bulletList.length > 0 && (
+                    <div className="my-6 space-y-3 bg-slate-50/90 rounded-2xl p-6 sm:p-7 border border-slate-200">
+                      {section.bulletList.map((item, bIdx) => (
+                        <div key={bIdx} className="flex items-start gap-3.5">
+                          <span className="w-2 h-2 rounded-full bg-slate-900 mt-2.5 shrink-0" />
+                          <p className="text-slate-800 text-base sm:text-lg leading-relaxed font-medium">
+                            {item}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {section.callout && (
+                    <div className="my-7 p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white shadow-md border border-slate-800">
+                      <div className="text-[11px] font-mono font-bold tracking-wider uppercase text-blue-400 mb-2">
+                        {section.callout.label}
+                      </div>
+                      <p className="text-base sm:text-lg font-semibold text-slate-100 leading-relaxed">
+                        {section.callout.text}
+                      </p>
+                    </div>
+                  )}
                 </div>
               </section>
             ))}

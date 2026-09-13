@@ -40,6 +40,27 @@ export function Footer() {
               <p className="mt-4 text-sm sm:text-[14.5px] text-slate-500 font-normal leading-relaxed max-w-sm">
                 The open operating system for modern automotive retail. Unifying cloud ERP, intelligent desking, service operations, and digital storefronts into one connected platform.
               </p>
+
+              {/* Follow Us On */}
+              <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-slate-700">
+                <span className="text-slate-400 font-normal">Follow us on:</span>
+                <a 
+                  href="https://facebook.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="px-2.5 py-1 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-800 hover:text-blue-600 font-bold transition-all inline-flex items-center gap-1.5"
+                >
+                  Facebook
+                </a>
+                <a 
+                  href="https://linkedin.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="px-2.5 py-1 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-800 hover:text-blue-700 font-bold transition-all inline-flex items-center gap-1.5"
+                >
+                  LinkedIn
+                </a>
+              </div>
             </div>
           </div>
 
@@ -188,6 +209,26 @@ export function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
           <div className="flex items-center gap-2">
             <span>&copy; {currentYear} DMSPilot Inc. All rights reserved.</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-slate-400">Follow us on:</span>
+            <a 
+              href="https://facebook.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-slate-700 hover:text-blue-600 font-semibold transition-colors"
+            >
+              Facebook
+            </a>
+            <span className="text-slate-300">·</span>
+            <a 
+              href="https://linkedin.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-slate-700 hover:text-blue-700 font-semibold transition-colors"
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
 
