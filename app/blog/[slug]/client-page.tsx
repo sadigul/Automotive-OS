@@ -133,12 +133,9 @@ export default function BlogDetailClient({ article }: Props) {
           {article.keyTakeaways && article.keyTakeaways.length > 0 && (
             <div className="w-full rounded-2xl bg-slate-50/90 border border-slate-200/90 p-6 sm:p-8 lg:p-10 mb-14 shadow-xs">
               <div className="flex items-center justify-between pb-5 mb-6 border-b border-slate-200">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
-                  <h3 className="text-xs sm:text-sm font-black uppercase tracking-wider text-slate-900">
-                    Executive Summary &amp; Key Findings
-                  </h3>
-                </div>
+                <h3 className="text-xs sm:text-sm font-black uppercase tracking-wider text-slate-900">
+                  Executive Summary &amp; Key Findings
+                </h3>
                 <span className="text-[11px] font-bold tracking-wider text-slate-400 uppercase font-mono hidden sm:inline">
                   Strategic Briefing
                 </span>
