@@ -14,9 +14,9 @@ export function Migration() {
           
           {/* Left Column: Headline, Narrative & Direct Action */}
           <div className="lg:col-span-6 flex flex-col justify-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-[-0.03em] leading-[1.15] mb-5">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 leading-[1.2] mb-4 sm:mb-5">
               Migrate 100% of your history. <br className="hidden sm:inline" />
-              <span className="text-slate-400">Without missing a single deal.</span>
+              <span className="text-slate-400 font-medium">Without missing a single deal.</span>
             </h2>
 
             <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed mb-8 max-w-lg">

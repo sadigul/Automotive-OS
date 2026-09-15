@@ -24,10 +24,10 @@ export function CustomSolutions() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.05 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-[-0.03em] leading-tight mb-6"
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-[1.2] mb-5"
             >
               Need a custom system <br className="hidden sm:inline" />
-              <span className="text-slate-400">beyond the standard OS?</span>
+              <span className="text-slate-400 font-medium">beyond the standard OS?</span>
             </motion.h2>
 
             {/* Subtitle */}

@@ -115,7 +115,7 @@ export function WhoWeServe() {
         
         {/* Left-Aligned Clean Section Title */}
         <div className="max-w-3xl mb-12 sm:mb-16">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-[-0.03em] leading-tight mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 leading-[1.2] mb-3 sm:mb-4">
             Who We Serve
           </h2>
           <p className="text-base sm:text-lg text-slate-500 font-normal leading-relaxed">

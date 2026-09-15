@@ -48,7 +48,7 @@ export function Reviews() {
             <Star className="w-4 h-4 fill-purple-700" />
             Customer Stories
           </div>
-          <h2 className="text-3xl md:text-5xl font-sans font-bold text-gray-900 tracking-tight mb-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 leading-[1.2] mb-4 sm:mb-6">
             Transforming operations daily
           </h2>
           <p className="text-lg text-gray-500 font-medium leading-relaxed">

@@ -142,7 +142,7 @@ export function CaseStudies() {
               <Award className="w-3.5 h-3.5" />
               <span>Proven Dealership Outcomes</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 leading-[1.2]">
               Real dealership groups. Measurable ROI.
             </h2>
             <p className="mt-4 text-base sm:text-lg text-slate-600 font-normal leading-relaxed">

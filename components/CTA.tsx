@@ -13,7 +13,7 @@ export function CTA() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-orange-500/20 via-transparent to-transparent pointer-events-none" />
           
           {/* Main Headline */}
-          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-[-0.04em] mb-6 relative z-10 leading-[1.05]">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight mb-5 relative z-10 leading-[1.2]">
             Dismantle the <br className="hidden sm:inline" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-300 to-white">
               Monopoly
