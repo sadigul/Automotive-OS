@@ -52,6 +52,30 @@ export function getContactContext(params: {
     };
   }
 
+  // 1b. Check if it's Discovery / Transition Process
+  if (params.mode === 'discovery' || rawKey === 'discovery' || rawKey === 'process') {
+    return {
+      sourceType: 'general',
+      slug: 'discovery',
+      title: 'Dealership Discovery & Transition Audit',
+      categoryLabel: 'Process & Implementation',
+      tagline: 'Comprehensive tech audit and zero-downtime transition planning across your dealerships.',
+      backUrl: '/#process',
+      backLabel: 'Back to Process Overview',
+      defaultInquiryType: 'consultation',
+      defaultSubject: 'Dealership Discovery Session & Transition Audit',
+      defaultMessage: 'Hello DMSPilot team, we would like to schedule a Discovery Session to audit our current DMS setup, review our multi-rooftop workflows, and plan a seamless transition roadmap.',
+      quickPrompts: [
+        'DMS Architecture Audit',
+        'Zero-Downtime Cutover Plan',
+        'Legacy CDK/Reynolds Data Extraction',
+        'Custom OEM API Integration',
+        'Multi-Rooftop Onboarding SLA'
+      ],
+      selectedModuleSlugs: ['enterprise-erp', 'custom-software']
+    };
+  }
+
   // 2. Check if it matches a Sector Suite (from sectorsData)
   if (rawKey && sectorsData[rawKey]) {
     const sector = sectorsData[rawKey];

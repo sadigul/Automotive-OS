@@ -3,6 +3,7 @@ import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { Solutions } from '@/components/Solutions';
 import { WhoWeServe } from '@/components/WhoWeServe';
+import { Process } from '@/components/Process';
 import { CustomSolutions } from '@/components/CustomSolutions';
 import { Migration } from '@/components/Migration';
 import { Blog } from '@/components/Blog';
@@ -15,6 +16,7 @@ export default function HomeClient() {
       <Hero />
       <Solutions />
       <WhoWeServe />
+      <Process />
       <CustomSolutions />
       <Migration />
       <Blog />

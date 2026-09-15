@@ -273,6 +273,12 @@ export function Header() {
           </div>
 
           <Link 
+            href="/#process" 
+            className="text-[14px] font-semibold text-slate-600 hover:text-slate-950 hover:bg-slate-50 transition-colors px-3.5 py-2 rounded-lg"
+          >
+            Process
+          </Link>
+          <Link 
             href="/migration" 
             className="text-[14px] font-semibold text-slate-600 hover:text-slate-950 hover:bg-slate-50 transition-colors px-3.5 py-2 rounded-lg"
           >
@@ -354,6 +360,13 @@ export function Header() {
             </div>
 
             <div className="space-y-1 pt-3 border-t border-slate-100">
+              <Link
+                href="/#process"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block px-3 py-2.5 rounded-lg text-[14px] font-semibold text-slate-800 hover:text-blue-600 hover:bg-slate-50 transition-colors"
+              >
+                Process
+              </Link>
               <Link
                 href="/migration"
                 onClick={() => setIsMobileMenuOpen(false)}

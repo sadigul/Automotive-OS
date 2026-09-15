@@ -173,6 +173,11 @@ export function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
+                <Link href="/#process" className="text-slate-600 hover:text-slate-950 transition-colors">
+                  Methodology &amp; Process
+                </Link>
+              </li>
+              <li>
                 <Link href="/migration" className="text-slate-600 hover:text-slate-950 transition-colors">
                   Data Migration
                 </Link>
