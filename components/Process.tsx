@@ -48,13 +48,9 @@ export function Process() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="text-left max-w-2xl mb-12 sm:mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 leading-[1.2] mb-3 sm:mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 leading-[1.2]">
             A proven transition process built for zero downtime
           </h2>
-          
-          <p className="text-sm sm:text-base text-slate-500 font-normal leading-relaxed">
-            Transitioning your dealerships to a modern automotive OS is seamless, predictable, and engineered never to interrupt daily sales or service bay revenue.
-          </p>
         </motion.div>
 
         {/* 4 Clean Steps in a Row — Pure Minimalist Layout, No Fluff, No Box Borders */}
