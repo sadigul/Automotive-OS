@@ -40,21 +40,14 @@ export function Process() {
     <section id="process" className="w-full py-16 sm:py-24 bg-white relative overflow-hidden select-none">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Clean Centered Header — Matching Stats aesthetic */}
+        {/* Left-Aligned Header */}
         <motion.div 
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center max-w-2xl mx-auto mb-14 sm:mb-18"
+          className="text-left max-w-2xl mb-12 sm:mb-16"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100/60 mb-3.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#6366F1]" />
-            <span className="text-[11px] sm:text-xs font-bold tracking-wider uppercase text-[#6366F1]">
-              How It Works
-            </span>
-          </div>
-
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 leading-[1.2] mb-3 sm:mb-4">
             A proven transition process built for zero downtime
           </h2>
@@ -123,7 +116,7 @@ export function Process() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-14 sm:mt-18 text-center"
+          className="mt-14 sm:mt-18 text-left"
         >
           <Link 
             href="/contact-us?mode=discovery"
