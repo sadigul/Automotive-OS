@@ -38,17 +38,17 @@ const steps = [
 export function Process() {
   return (
     <section id="process" className="w-full py-16 sm:py-24 bg-white relative overflow-hidden select-none">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Left-Aligned Header */}
+        {/* Left-Aligned Header — Aligned with Solutions & WhoWeServe width */}
         <motion.div 
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="text-left max-w-2xl mb-12 sm:mb-16"
+          className="text-left max-w-3xl mb-12 sm:mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 leading-[1.2]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-[-0.03em] leading-tight">
             A proven transition process built for zero downtime
           </h2>
         </motion.div>
