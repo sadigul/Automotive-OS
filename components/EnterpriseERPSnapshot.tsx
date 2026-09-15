@@ -61,48 +61,48 @@ export function EnterpriseERPSnapshot() {
     {
       order: 'Deal #1021',
       status: 'Processing',
-      statusColorLight: 'bg-blue-50 text-blue-600 border-blue-200',
-      statusColorDark: 'bg-blue-950/60 text-blue-400 border-blue-800/80',
+      statusColorLight: 'bg-blue-50 text-blue-700',
+      statusColorDark: 'bg-blue-950/60 text-blue-300',
       po: 'VIN #324',
       approval: 'Approved',
-      approvalColorLight: 'bg-emerald-50 text-emerald-600 border-emerald-200',
-      approvalColorDark: 'bg-emerald-950/60 text-emerald-400 border-emerald-800/80',
+      approvalColorLight: 'bg-emerald-50 text-emerald-700',
+      approvalColorDark: 'bg-emerald-950/60 text-emerald-300',
       task: 'Vehicle PDI Inspection',
       dueDate: '14 Nov 2025',
     },
     {
       order: 'RO #1022',
       status: 'Delivered',
-      statusColorLight: 'bg-emerald-50 text-emerald-600 border-emerald-200',
-      statusColorDark: 'bg-emerald-950/60 text-emerald-400 border-emerald-800/80',
+      statusColorLight: 'bg-emerald-50 text-emerald-700',
+      statusColorDark: 'bg-emerald-950/60 text-emerald-300',
       po: 'VIN #325',
       approval: 'Waiting Approval',
-      approvalColorLight: 'bg-cyan-50 text-cyan-700 border-cyan-200',
-      approvalColorDark: 'bg-cyan-950/60 text-cyan-400 border-cyan-800/80',
+      approvalColorLight: 'bg-cyan-50 text-cyan-700',
+      approvalColorDark: 'bg-cyan-950/60 text-cyan-300',
       task: 'F&I Contract Review',
       dueDate: '16 Nov 2025',
     },
     {
       order: 'Deal #1023',
       status: 'Shipped',
-      statusColorLight: 'bg-amber-50 text-amber-600 border-amber-200',
-      statusColorDark: 'bg-amber-950/60 text-amber-400 border-amber-800/80',
+      statusColorLight: 'bg-amber-50 text-amber-700',
+      statusColorDark: 'bg-amber-950/60 text-amber-300',
       po: 'VIN #326',
       approval: 'Pending Review',
-      approvalColorLight: 'bg-slate-100 text-slate-600 border-slate-200',
-      approvalColorDark: 'bg-slate-800 text-slate-300 border-slate-700',
+      approvalColorLight: 'bg-slate-100 text-slate-700',
+      approvalColorDark: 'bg-slate-800 text-slate-200',
       task: 'Trade-in Appraisal',
       dueDate: '18 Nov 2025',
     },
     {
       order: 'Deal #1024',
       status: 'Cancelled',
-      statusColorLight: 'bg-rose-50 text-rose-600 border-rose-200',
-      statusColorDark: 'bg-rose-950/60 text-rose-400 border-rose-800/80',
+      statusColorLight: 'bg-rose-50 text-rose-700',
+      statusColorDark: 'bg-rose-950/60 text-rose-300',
       po: 'VIN #327',
       approval: 'Rejected',
-      approvalColorLight: 'bg-rose-50 text-rose-600 border-rose-200',
-      approvalColorDark: 'bg-rose-950/60 text-rose-400 border-rose-800/80',
+      approvalColorLight: 'bg-rose-50 text-rose-700',
+      approvalColorDark: 'bg-rose-950/60 text-rose-300',
       task: 'Floorplan Reconciliation',
       dueDate: '20 Nov 2025',
     },
@@ -116,26 +116,42 @@ export function EnterpriseERPSnapshot() {
     }`}>
       
       {/* ── LEFT SIDEBAR (Full Height) ── */}
-      <aside className={`w-[220px] p-3 flex flex-col justify-between shrink-0 transition-colors duration-300 border-r ${
+      <aside className={`w-[240px] p-3.5 flex flex-col justify-between shrink-0 transition-colors duration-300 border-r ${
         darkMode ? 'bg-[#0f172a] border-slate-800' : 'bg-white border-slate-200'
       }`}>
         
         <div className="space-y-3.5">
           {/* Brand Logo */}
-          <div className="flex items-center justify-between px-1 pt-0.5">
-            <div className="flex items-center">
-              <Image 
-                src="/logo.svg" 
-                alt="Logo" 
-                width={26} 
-                height={26} 
-                className="h-6.5 w-6.5" 
-              />
+          <div className="flex items-center justify-between px-2 pt-1 pb-1">
+            <div className="flex items-center gap-2.5">
+              <div className="relative flex items-center justify-center shrink-0">
+                <Image 
+                  src="/logo.svg" 
+                  alt="DMSPilot" 
+                  width={24} 
+                  height={24} 
+                  className="h-6 w-6" 
+                />
+              </div>
+              <div className="flex items-center gap-1.5 min-w-0">
+                <span className={`font-black text-sm tracking-tight leading-none ${
+                  darkMode ? 'text-white' : 'text-slate-950'
+                }`}>
+                  DMSPilot
+                </span>
+                <span className={`text-[9px] font-mono font-bold uppercase px-1 py-0.5 rounded leading-none ${
+                  darkMode 
+                    ? 'bg-slate-800 text-teal-400' 
+                    : 'bg-slate-100 text-slate-600'
+                }`}>
+                  OS
+                </span>
+              </div>
             </div>
-            <button className={`w-5 h-5 rounded border flex items-center justify-center transition-colors ${
+            <button className={`w-5 h-5 rounded flex items-center justify-center transition-colors shrink-0 ${
               darkMode 
-                ? 'border-slate-700 text-slate-400 hover:text-slate-200 hover:bg-slate-800' 
-                : 'border-slate-200 text-slate-400 hover:text-slate-700 hover:bg-slate-50'
+                ? 'text-slate-400 hover:text-slate-200 hover:bg-slate-800' 
+                : 'text-slate-400 hover:text-slate-700 hover:bg-slate-100'
             }`}>
               <ChevronLeft className="w-3 h-3" />
             </button>
@@ -159,8 +175,8 @@ export function EnterpriseERPSnapshot() {
                     className={`w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-all text-left ${
                       isActive 
                         ? darkMode 
-                          ? 'bg-slate-800 text-white font-bold border border-slate-700' 
-                          : 'bg-slate-100 text-slate-950 font-bold border border-slate-200' 
+                          ? 'bg-slate-800 text-white font-bold' 
+                          : 'bg-slate-100 text-slate-950 font-bold' 
                         : darkMode 
                           ? 'text-slate-400 hover:text-slate-100 hover:bg-slate-800/60' 
                           : 'text-slate-600 hover:text-slate-950 hover:bg-slate-50'
@@ -196,8 +212,8 @@ export function EnterpriseERPSnapshot() {
                     className={`w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-all text-left ${
                       isActive 
                         ? darkMode 
-                          ? 'bg-slate-800 text-white font-bold border border-slate-700' 
-                          : 'bg-slate-100 text-slate-950 font-bold border border-slate-200' 
+                          ? 'bg-slate-800 text-white font-bold' 
+                          : 'bg-slate-100 text-slate-950 font-bold' 
                         : darkMode 
                           ? 'text-slate-400 hover:text-slate-100 hover:bg-slate-800/60' 
                           : 'text-slate-600 hover:text-slate-950 hover:bg-slate-50'
@@ -233,8 +249,8 @@ export function EnterpriseERPSnapshot() {
                     className={`w-full flex items-center gap-2.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-all text-left ${
                       isActive 
                         ? darkMode 
-                          ? 'bg-slate-800 text-white font-bold border border-slate-700' 
-                          : 'bg-slate-100 text-slate-950 font-bold border border-slate-200' 
+                          ? 'bg-slate-800 text-white font-bold' 
+                          : 'bg-slate-100 text-slate-950 font-bold' 
                         : darkMode 
                           ? 'text-slate-400 hover:text-slate-100 hover:bg-slate-800/60' 
                           : 'text-slate-600 hover:text-slate-950 hover:bg-slate-50'
@@ -286,13 +302,13 @@ export function EnterpriseERPSnapshot() {
           </div>
 
           {/* User Profile Card */}
-          <div className={`p-2 rounded-lg border flex items-center justify-between mt-1 transition-colors ${
+          <div className={`p-2 rounded-lg flex items-center justify-between mt-1 transition-colors ${
             darkMode 
-              ? 'bg-slate-800/80 border-slate-700' 
-              : 'bg-slate-50 border-slate-200'
+              ? 'bg-slate-800/80' 
+              : 'bg-slate-100/80'
           }`}>
             <div className="flex items-center gap-2 min-w-0">
-              <div className="relative w-7 h-7 rounded-full overflow-hidden border border-slate-300 dark:border-slate-700 shrink-0">
+              <div className="relative w-7 h-7 rounded-full overflow-hidden shrink-0">
                 <Image
                   src="/images/george-thomas.jpg"
                   alt="George Thomas"
@@ -329,10 +345,10 @@ export function EnterpriseERPSnapshot() {
             <input 
               type="text" 
               placeholder="Search modules, VIN, deals..."
-              className={`w-full pl-8 pr-3 py-1.5 rounded-lg text-xs font-medium border transition-colors focus:outline-none focus:border-teal-500 ${
+              className={`w-full pl-8 pr-3 py-1.5 rounded-lg text-xs font-medium transition-colors focus:outline-none ${
                 darkMode 
-                  ? 'bg-[#131c31] border-slate-800 text-white placeholder-slate-500' 
-                  : 'bg-white border-slate-200 text-slate-700 placeholder-slate-400'
+                  ? 'bg-[#131c31] text-white placeholder-slate-500 shadow-sm' 
+                  : 'bg-white text-slate-700 placeholder-slate-400 shadow-[0_1px_3px_rgba(0,0,0,0.05)]'
               }`}
               readOnly
             />
@@ -340,30 +356,30 @@ export function EnterpriseERPSnapshot() {
 
           {/* Right Header Controls */}
           <div className="flex items-center gap-2">
-            <button className={`relative p-1.5 rounded-lg border transition-colors ${
+            <button className={`relative p-1.5 rounded-lg transition-colors ${
               darkMode 
-                ? 'bg-[#131c31] border-slate-800 text-slate-300 hover:text-white' 
-                : 'bg-white border-slate-200 text-slate-600 hover:text-slate-900'
+                ? 'bg-[#131c31] text-slate-300 hover:text-white shadow-sm' 
+                : 'bg-white text-slate-600 hover:text-slate-900 shadow-[0_1px_3px_rgba(0,0,0,0.05)]'
             }`}>
               <MessageSquare className="w-3.5 h-3.5" />
-              <span className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-blue-500 text-white text-[8px] font-black flex items-center justify-center border border-white">
+              <span className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-blue-500 text-white text-[8px] font-black flex items-center justify-center">
                 4
               </span>
             </button>
 
-            <button className={`relative p-1.5 rounded-lg border transition-colors ${
+            <button className={`relative p-1.5 rounded-lg transition-colors ${
               darkMode 
-                ? 'bg-[#131c31] border-slate-800 text-slate-300 hover:text-white' 
-                : 'bg-white border-slate-200 text-slate-600 hover:text-slate-900'
+                ? 'bg-[#131c31] text-slate-300 hover:text-white shadow-sm' 
+                : 'bg-white text-slate-600 hover:text-slate-900 shadow-[0_1px_3px_rgba(0,0,0,0.05)]'
             }`}>
               <Bell className="w-3.5 h-3.5" />
-              <span className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-rose-500 text-white text-[8px] font-black flex items-center justify-center border border-white">
+              <span className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-rose-500 text-white text-[8px] font-black flex items-center justify-center">
                 6
               </span>
             </button>
 
             {/* George Thomas Top Header Avatar */}
-            <div className="relative w-7 h-7 rounded-full overflow-hidden border border-slate-300 dark:border-slate-700 shrink-0 ml-0.5">
+            <div className="relative w-7 h-7 rounded-full overflow-hidden shrink-0 ml-0.5">
               <Image
                 src="/images/george-thomas.jpg"
                 alt="George Thomas"
@@ -391,19 +407,19 @@ export function EnterpriseERPSnapshot() {
           </div>
 
           <div className="flex items-center gap-2">
-            <button className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg border text-xs font-semibold transition-colors ${
+            <button className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold transition-colors ${
               darkMode 
-                ? 'bg-[#131c31] border-slate-800 text-slate-300 hover:bg-slate-800' 
-                : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
+                ? 'bg-[#131c31] text-slate-300 hover:bg-slate-800 shadow-sm' 
+                : 'bg-white text-slate-700 hover:bg-slate-50 shadow-[0_1px_3px_rgba(0,0,0,0.05)]'
             }`}>
               <SlidersHorizontal className="w-3 h-3" />
               <span>Filter</span>
             </button>
 
-            <button className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg border text-xs font-semibold transition-colors ${
+            <button className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold transition-colors ${
               darkMode 
-                ? 'bg-[#131c31] border-slate-800 text-slate-300 hover:bg-slate-800' 
-                : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
+                ? 'bg-[#131c31] text-slate-300 hover:bg-slate-800 shadow-sm' 
+                : 'bg-white text-slate-700 hover:bg-slate-50 shadow-[0_1px_3px_rgba(0,0,0,0.05)]'
             }`}>
               <Download className="w-3 h-3" />
               <span>Export</span>
@@ -420,8 +436,8 @@ export function EnterpriseERPSnapshot() {
         <div className="grid grid-cols-4 gap-2.5">
           
           {/* Total Revenue */}
-          <div className={`p-3 rounded-xl border transition-colors ${
-            darkMode ? 'bg-[#131c31] border-slate-800' : 'bg-white border-slate-200'
+          <div className={`p-3 rounded-xl transition-all ${
+            darkMode ? 'bg-[#131c31] shadow-sm' : 'bg-white shadow-[0_1px_3px_rgba(0,0,0,0.05)]'
           }`}>
             <div className="flex items-center justify-between mb-1.5">
               <div className="flex items-center gap-1.5 text-xs font-medium">
@@ -439,10 +455,10 @@ export function EnterpriseERPSnapshot() {
               <span className={`text-lg font-black tracking-tight ${darkMode ? 'text-white' : 'text-slate-950'}`}>
                 $1,240,000
               </span>
-              <span className={`inline-flex items-center gap-0.5 px-1 py-0.2 rounded text-[9px] font-bold border ${
+              <span className={`inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[9px] font-bold ${
                 darkMode 
-                  ? 'bg-emerald-950/60 text-emerald-400 border-emerald-800' 
-                  : 'bg-emerald-50 text-emerald-600 border-emerald-100'
+                  ? 'bg-emerald-950/60 text-emerald-400' 
+                  : 'bg-emerald-50 text-emerald-600'
               }`}>
                 12 % <TrendingUp className="w-2 h-2 ml-0.5" />
               </span>
@@ -450,8 +466,8 @@ export function EnterpriseERPSnapshot() {
           </div>
 
           {/* Deals Processed */}
-          <div className={`p-3 rounded-xl border transition-colors ${
-            darkMode ? 'bg-[#131c31] border-slate-800' : 'bg-white border-slate-200'
+          <div className={`p-3 rounded-xl transition-all ${
+            darkMode ? 'bg-[#131c31] shadow-sm' : 'bg-white shadow-[0_1px_3px_rgba(0,0,0,0.05)]'
           }`}>
             <div className="flex items-center justify-between mb-1.5">
               <div className="flex items-center gap-1.5 text-xs font-medium">
@@ -469,10 +485,10 @@ export function EnterpriseERPSnapshot() {
               <span className={`text-lg font-black tracking-tight ${darkMode ? 'text-white' : 'text-slate-950'}`}>
                 1,024
               </span>
-              <span className={`inline-flex items-center gap-0.5 px-1 py-0.2 rounded text-[9px] font-bold border ${
+              <span className={`inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[9px] font-bold ${
                 darkMode 
-                  ? 'bg-rose-950/60 text-rose-400 border-rose-800' 
-                  : 'bg-rose-50 text-rose-500 border-rose-100'
+                  ? 'bg-rose-950/60 text-rose-400' 
+                  : 'bg-rose-50 text-rose-500'
               }`}>
                 12 % <TrendingDown className="w-2 h-2 ml-0.5" />
               </span>
@@ -480,8 +496,8 @@ export function EnterpriseERPSnapshot() {
           </div>
 
           {/* Active Technicians */}
-          <div className={`p-3 rounded-xl border transition-colors ${
-            darkMode ? 'bg-[#131c31] border-slate-800' : 'bg-white border-slate-200'
+          <div className={`p-3 rounded-xl transition-all ${
+            darkMode ? 'bg-[#131c31] shadow-sm' : 'bg-white shadow-[0_1px_3px_rgba(0,0,0,0.05)]'
           }`}>
             <div className="flex items-center justify-between mb-1.5">
               <div className="flex items-center gap-1.5 text-xs font-medium">
@@ -503,8 +519,8 @@ export function EnterpriseERPSnapshot() {
           </div>
 
           {/* Low Stock Alerts */}
-          <div className={`p-3 rounded-xl border transition-colors ${
-            darkMode ? 'bg-[#131c31] border-slate-800' : 'bg-white border-slate-200'
+          <div className={`p-3 rounded-xl transition-all ${
+            darkMode ? 'bg-[#131c31] shadow-sm' : 'bg-white shadow-[0_1px_3px_rgba(0,0,0,0.05)]'
           }`}>
             <div className="flex items-center justify-between mb-1.5">
               <div className="flex items-center gap-1.5 text-xs font-medium">
@@ -531,18 +547,18 @@ export function EnterpriseERPSnapshot() {
         <div className="grid grid-cols-2 gap-3">
           
           {/* 1. Sales Performance Area Chart */}
-          <div className={`p-3 rounded-xl border transition-colors ${
-            darkMode ? 'bg-[#131c31] border-slate-800' : 'bg-white border-slate-200'
+          <div className={`p-3 rounded-xl transition-all ${
+            darkMode ? 'bg-[#131c31] shadow-sm' : 'bg-white shadow-[0_1px_3px_rgba(0,0,0,0.05)]'
           }`}>
             <div className="flex items-center justify-between mb-1.5">
               <div className="flex items-center gap-1.5 text-xs font-bold">
                 <span className={darkMode ? 'text-white' : 'text-slate-900'}>Sales Performance</span>
                 <Info className="w-3 h-3 text-slate-400" />
               </div>
-              <button className={`flex items-center gap-1 text-[10.5px] font-medium px-2 py-0.5 rounded-md border ${
+              <button className={`flex items-center gap-1 text-[10.5px] font-medium px-2 py-0.5 rounded-md ${
                 darkMode 
-                  ? 'bg-slate-800 border-slate-700 text-slate-300' 
-                  : 'bg-slate-50 border-slate-200 text-slate-600'
+                  ? 'bg-slate-800 text-slate-300' 
+                  : 'bg-slate-100 text-slate-600'
               }`}>
                 <span>View by Week</span>
                 <ChevronDown className="w-2.5 h-2.5 text-slate-400" />
@@ -586,8 +602,8 @@ export function EnterpriseERPSnapshot() {
                   <circle cx="200" cy="70" r="3.5" fill="#3b82f6" stroke={darkMode ? '#131c31' : '#ffffff'} strokeWidth="2" />
                 </svg>
 
-                <div className={`absolute left-[33%] top-[30%] -translate-x-1/2 -translate-y-full mb-1 px-2 py-0.5 rounded-lg border text-center pointer-events-none ${
-                  darkMode ? 'bg-slate-800 border-slate-700 text-white' : 'bg-white border-slate-200 text-slate-900 '
+                <div className={`absolute left-[33%] top-[30%] -translate-x-1/2 -translate-y-full mb-1 px-2 py-0.5 rounded-lg shadow-md text-center pointer-events-none ${
+                  darkMode ? 'bg-slate-800 text-white' : 'bg-white text-slate-900'
                 }`}>
                   <div className="text-[8.5px] text-slate-400 font-medium">Wednesday</div>
                   <div className="text-[10.5px] font-bold text-teal-500">$20,000</div>
@@ -607,18 +623,18 @@ export function EnterpriseERPSnapshot() {
           </div>
 
           {/* 2. Expense vs Income Grouped Bar Chart */}
-          <div className={`p-3 rounded-xl border transition-colors ${
-            darkMode ? 'bg-[#131c31] border-slate-800' : 'bg-white border-slate-200'
+          <div className={`p-3 rounded-xl transition-all ${
+            darkMode ? 'bg-[#131c31] shadow-sm' : 'bg-white shadow-[0_1px_3px_rgba(0,0,0,0.05)]'
           }`}>
             <div className="flex items-center justify-between mb-1.5">
               <div className="flex items-center gap-1.5 text-xs font-bold">
                 <span className={darkMode ? 'text-white' : 'text-slate-900'}>Expense vs Income</span>
                 <Info className="w-3 h-3 text-slate-400" />
               </div>
-              <button className={`flex items-center gap-1 text-[10.5px] font-medium px-2 py-0.5 rounded-md border ${
+              <button className={`flex items-center gap-1 text-[10.5px] font-medium px-2 py-0.5 rounded-md ${
                 darkMode 
-                  ? 'bg-slate-800 border-slate-700 text-slate-300' 
-                  : 'bg-slate-50 border-slate-200 text-slate-600'
+                  ? 'bg-slate-800 text-slate-300' 
+                  : 'bg-slate-100 text-slate-600'
               }`}>
                 <span>View by Week</span>
                 <ChevronDown className="w-2.5 h-2.5 text-slate-400" />
@@ -654,8 +670,8 @@ export function EnterpriseERPSnapshot() {
                   <div className={`w-2.5 h-24 rounded-t-sm ${darkMode ? 'bg-slate-600' : 'bg-slate-950'}`} />
                   <div className="w-2.5 h-20 bg-teal-500 rounded-t-sm" />
                   
-                  <div className={`absolute -top-12 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-lg border text-left w-28 pointer-events-none  ${
-                    darkMode ? 'bg-slate-800 border-slate-700 text-white' : 'bg-white border-slate-200 text-slate-900'
+                  <div className={`absolute -top-12 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-lg shadow-md text-left w-28 pointer-events-none ${
+                    darkMode ? 'bg-slate-800 text-white' : 'bg-white text-slate-900'
                   }`}>
                     <div className="flex items-center justify-between text-[8.5px]">
                       <span className="text-teal-500 font-bold">Income:</span>
@@ -700,8 +716,8 @@ export function EnterpriseERPSnapshot() {
         </div>
 
         {/* ── BOTTOM TABLE CARD: "Recent Dealership Activity" ── */}
-        <div className={`rounded-xl border p-3 overflow-hidden transition-colors ${
-          darkMode ? 'bg-[#131c31] border-slate-800' : 'bg-white border-slate-200'
+        <div className={`rounded-xl p-3 overflow-hidden transition-all ${
+          darkMode ? 'bg-[#131c31] shadow-sm' : 'bg-white shadow-[0_1px_3px_rgba(0,0,0,0.05)]'
         }`}>
           
           <div className="flex items-center justify-between gap-2 mb-1.5">
@@ -711,10 +727,10 @@ export function EnterpriseERPSnapshot() {
             </div>
 
             <div className="flex items-center gap-2">
-              <button className={`flex items-center gap-1 text-[10.5px] font-medium px-2 py-0.5 rounded-md border ${
+              <button className={`flex items-center gap-1 text-[10.5px] font-medium px-2 py-0.5 rounded-md ${
                 darkMode 
-                  ? 'bg-slate-800 border-slate-700 text-slate-300' 
-                  : 'bg-slate-50 border-slate-200 text-slate-600'
+                  ? 'bg-slate-800 text-slate-300' 
+                  : 'bg-slate-100 text-slate-600'
               }`}>
                 <span>All Rooftops</span>
                 <ChevronDown className="w-2.5 h-2.5 text-slate-400" />
@@ -780,7 +796,7 @@ export function EnterpriseERPSnapshot() {
                       {row.order}
                     </td>
                     <td className="py-1.5 px-2">
-                      <span className={`inline-block px-1.5 py-0.2 rounded text-[9px] font-semibold border ${
+                      <span className={`inline-block px-1.5 py-0.5 rounded text-[9px] font-semibold ${
                         darkMode ? row.statusColorDark : row.statusColorLight
                       }`}>
                         {row.status}
@@ -792,7 +808,7 @@ export function EnterpriseERPSnapshot() {
                       {row.po}
                     </td>
                     <td className="py-1.5 px-2">
-                      <span className={`inline-block px-1.5 py-0.2 rounded text-[9px] font-semibold border ${
+                      <span className={`inline-block px-1.5 py-0.5 rounded text-[9px] font-semibold ${
                         darkMode ? row.approvalColorDark : row.approvalColorLight
                       }`}>
                         {row.approval}

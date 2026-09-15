@@ -49,10 +49,10 @@ export function ERPLaptopMockup({ children }: ERPLaptopMockupProps) {
           ref={screenRef}
           className="absolute z-10 overflow-hidden bg-[#0b0f19] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           style={{
-            left: '23.02%',
-            top: '15.56%',
-            width: '53.96%',
-            height: '61.85%',
+            left: '23.07%',
+            top: '15.65%',
+            width: '53.80%',
+            height: '61.57%',
             borderTopLeftRadius: '10px',
             borderTopRightRadius: '10px',
             borderBottomLeftRadius: '2px',

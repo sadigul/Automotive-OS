@@ -1,18 +1,13 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { motion } from 'motion/react';
 
-/* ─── Smooth Animated Number Counter ─── */
+/* ─── Ultra-Smooth Buttery Animated Number Counter ─── */
 function AnimatedCounter({ 
   value, 
-  prefix = '', 
-  suffix = '', 
-  decimals = 0 
 }: { 
   value: number; 
-  prefix?: string; 
-  suffix?: string; 
-  decimals?: number;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const [display, setDisplay] = useState('0');
@@ -28,97 +23,116 @@ function AnimatedCounter({
           hasAnimated.current = true;
           observer.disconnect();
 
-          const duration = 1400;
+          const duration = 1800; // Silky smooth deceleration
           const start = performance.now();
 
           function tick(now: number) {
             const elapsed = now - start;
             const progress = Math.min(elapsed / duration, 1);
-            // Smooth ease-out cubic
-            const eased = 1 - Math.pow(1 - progress, 3);
-            const current = eased * value;
+            // Quartic ease-out for ultra buttery decelerated rollout
+            const eased = 1 - Math.pow(1 - progress, 4);
+            const current = Math.floor(eased * value);
 
-            const formatted = decimals > 0 
-              ? current.toFixed(decimals) 
-              : Math.floor(current).toLocaleString('en-US');
-
-            setDisplay(`${prefix}${formatted}${suffix}`);
+            setDisplay(current.toLocaleString('en-US'));
 
             if (progress < 1) {
               requestAnimationFrame(tick);
             } else {
-              const finalFormatted = decimals > 0 
-                ? value.toFixed(decimals) 
-                : value.toLocaleString('en-US');
-              setDisplay(`${prefix}${finalFormatted}${suffix}`);
+              setDisplay(value.toLocaleString('en-US'));
             }
           }
 
           requestAnimationFrame(tick);
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.2 }
     );
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, [value, prefix, suffix, decimals]);
+  }, [value]);
 
-  return <span ref={ref} className="tabular-nums font-bold tracking-tight">{display}</span>;
+  return <span ref={ref} className="tabular-nums font-bold tracking-tight text-slate-900">{display}</span>;
 }
 
 const stats = [
   {
     numericValue: 38,
-    decimals: 0,
     prefix: '',
     suffix: '+',
     label: 'Dealerships freed from manual operations',
   },
   {
     numericValue: 4,
-    decimals: 0,
     prefix: '$',
     suffix: 'M+',
     label: 'Generated in client revenue',
   },
   {
     numericValue: 840,
-    decimals: 0,
     prefix: '',
     suffix: '+',
     label: 'Active rooftops served',
   },
   {
-    numericValue: 99.9,
-    decimals: 1,
+    numericValue: 4,
     prefix: '',
-    suffix: '%',
-    label: 'Uptime integrity & real-time sync',
+    suffix: 'M+',
+    label: 'VIN scans processed',
   },
 ];
 
 export function Stats() {
   return (
-    <div className="w-full text-left">
-      <div className="rounded-2xl sm:rounded-3xl border border-slate-200/80 bg-slate-50/50 p-6 sm:p-8 lg:p-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
-          {stats.map((stat, i) => (
-            <div key={i} className="flex flex-col">
-              <div className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-slate-950 tracking-tight leading-none mb-2.5">
-                <AnimatedCounter
-                  value={stat.numericValue}
-                  prefix={stat.prefix}
-                  suffix={stat.suffix}
-                  decimals={stat.decimals}
-                />
+    <div className="w-full py-8 sm:py-12 select-none">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Clean Centered Header */}
+        <motion.div 
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center mb-10 sm:mb-14"
+        >
+          <h2 className="text-base sm:text-lg font-semibold text-slate-600 tracking-tight">
+            Our results in numbers
+          </h2>
+        </motion.div>
+
+        {/* 4 Clean Stats in a Row — Pure Minimalist Layout, No Fluff, No Boxes */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 lg:gap-12"
+        >
+          {stats.map((stat, idx) => (
+            <div key={idx} className="flex flex-col items-center text-center">
+              {/* Large Number with Signature Violet Accent Suffix / Prefix */}
+              <div className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-none mb-2.5 sm:mb-3 flex items-baseline justify-center">
+                {stat.prefix && (
+                  <span className="text-[#6366F1] font-semibold mr-0.5">
+                    {stat.prefix}
+                  </span>
+                )}
+                <AnimatedCounter value={stat.numericValue} />
+                {stat.suffix && (
+                  <span className="text-[#6366F1] font-semibold ml-0.5">
+                    {stat.suffix}
+                  </span>
+                )}
               </div>
-              <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed">
+
+              {/* Clean Sub-Label */}
+              <p className="text-xs sm:text-sm text-slate-500 font-medium leading-relaxed max-w-[170px] sm:max-w-[190px] mx-auto">
                 {stat.label}
               </p>
             </div>
           ))}
-        </div>
+        </motion.div>
+
       </div>
     </div>
   );

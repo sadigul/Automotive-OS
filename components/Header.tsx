@@ -6,20 +6,8 @@ import { useState, useEffect } from 'react';
 import { 
   Menu, 
   X, 
-  ChevronDown, 
   ArrowRight,
-  Database,
-  Users,
-  Wrench,
-  Layers,
-  Globe,
-  Calculator,
-  Bot,
-  Building2,
-  Factory,
-  Package,
-  Truck,
-  ShieldCheck,
+  ChevronDown,
 } from 'lucide-react';
 
 export function Header() {
@@ -48,43 +36,42 @@ export function Header() {
       title: 'Enterprise ERP',
       desc: 'Multi-location inventory, accounting & operations',
       slug: 'enterprise-erp',
-      icon: Database,
     },
     {
       title: 'Sales CRM',
       desc: 'High-velocity lead pipelines & customer intelligence',
       slug: 'sales-crm',
-      icon: Users,
     },
     {
       title: 'Service Bay',
       desc: 'Paperless MPI, bay dispatch & parts tracking',
       slug: 'service-bay',
-      icon: Wrench,
     },
     {
       title: 'Digital Retail',
       desc: 'Penny-perfect desking & instant lender approvals',
       slug: 'digital-retail',
-      icon: Layers,
     },
     {
       title: 'E-Commerce & Storefronts',
       desc: 'Custom landing sites, digital showrooms & online checkout',
       slug: 'ecommerce',
-      icon: Globe,
     },
     {
       title: 'Accounting & Finance',
       desc: 'Automated bank feeds, general ledger & P&L balancing',
       slug: 'accounting',
-      icon: Calculator,
     },
     {
       title: 'AI Solutions',
       desc: '24/7 conversational voice, SMS & autonomous workflows',
       slug: 'ai-solutions',
-      icon: Bot,
+    },
+    {
+      title: 'Custom Software',
+      desc: 'Bespoke automotive workflows, custom APIs & dedicated integrations',
+      slug: 'custom-software',
+      href: '/contact-us?solution=custom-software',
     },
   ];
 
@@ -93,37 +80,31 @@ export function Header() {
       title: 'Dealerships',
       desc: 'Single stores, dealer networks & franchised groups',
       slug: 'dealerships',
-      icon: Building2,
     },
     {
       title: 'Manufacturers (OEMs)',
       desc: 'Automotive OEMs, factory assemblers & brand distributors',
       slug: 'manufacturers',
-      icon: Factory,
     },
     {
       title: 'Service Centers',
       desc: 'Independent repair shops, mechanics & collision bays',
       slug: 'service-centers',
-      icon: Wrench,
     },
     {
       title: 'Retailers & Parts',
       desc: 'Auto parts stores, tire distributors & accessory sellers',
       slug: 'retailers-parts',
-      icon: Package,
     },
     {
       title: 'Logistics & Transport',
       desc: 'Vehicle haulers, transport networks & lot logistics',
       slug: 'logistics-transport',
-      icon: Truck,
     },
     {
       title: 'Commercial Fleets',
       desc: 'Corporate fleets, municipal accounts & asset telemetry',
       slug: 'commercial-fleets',
-      icon: ShieldCheck,
     },
   ];
 
@@ -202,44 +183,25 @@ export function Header() {
                   </span>
                 </div>
 
-                {/* 2-Column Solutions Grid with Icons */}
+                {/* 2-Column Solutions Grid without Icons */}
                 <div className="grid grid-cols-2 gap-2">
-                  {solutionsList.map((sol) => {
-                    const IconComp = sol.icon;
-                    return (
-                      <Link 
-                        key={sol.slug} 
-                        href={`/solutions/${sol.slug}`} 
-                        className="group/card flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 border border-transparent hover:border-slate-200/80 transition-all duration-150"
-                      >
-                        <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center shrink-0 group-hover/card:bg-blue-50 group-hover/card:text-blue-600 text-slate-600 transition-colors mt-0.5">
-                          <IconComp className="w-4 h-4" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <span className="text-[13.5px] font-bold text-slate-900 group-hover/card:text-blue-600 transition-colors leading-tight block">
-                            {sol.title}
-                          </span>
-                          <p className="text-[11.5px] text-slate-500 leading-snug mt-1 font-normal line-clamp-1">
-                            {sol.desc}
-                          </p>
-                        </div>
-                        <ArrowRight className="w-3.5 h-3.5 text-blue-600 opacity-0 -translate-x-1 group-hover/card:opacity-100 group-hover/card:translate-x-0 transition-all duration-150 shrink-0 mt-2 ml-1" />
-                      </Link>
-                    );
-                  })}
-                </div>
-
-                <div className="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between px-2">
-                  <span className="text-xs text-slate-500 font-medium">
-                    Powering sales, desking, F&I, and service bays
-                  </span>
-                  <Link 
-                    href="/solutions" 
-                    className="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1 transition-colors"
-                  >
-                    <span>View all modules</span>
-                    <ArrowRight className="w-3 h-3" />
-                  </Link>
+                  {solutionsList.map((sol) => (
+                    <Link 
+                      key={sol.slug} 
+                      href={sol.href || `/solutions/${sol.slug}`} 
+                      className="group/card flex items-start justify-between p-3 rounded-lg hover:bg-slate-50 border border-transparent hover:border-slate-200/80 transition-all duration-150"
+                    >
+                      <div className="flex-1 min-w-0">
+                        <span className="text-[13.5px] font-bold text-slate-900 group-hover/card:text-blue-600 transition-colors leading-tight block">
+                          {sol.title}
+                        </span>
+                        <p className="text-[11.5px] text-slate-500 leading-snug mt-1 font-normal line-clamp-1">
+                          {sol.desc}
+                        </p>
+                      </div>
+                      <ArrowRight className="w-3.5 h-3.5 text-blue-600 opacity-0 -translate-x-1 group-hover/card:opacity-100 group-hover/card:translate-x-0 transition-all duration-150 shrink-0 mt-1 ml-2" />
+                    </Link>
+                  ))}
                 </div>
 
               </div>
@@ -285,44 +247,25 @@ export function Header() {
                   </span>
                 </div>
 
-                {/* 2-Column Who We Serve Grid with Icons */}
+                {/* 2-Column Who We Serve Grid without Icons */}
                 <div className="grid grid-cols-2 gap-2">
-                  {whoWeServeList.map((item) => {
-                    const IconComp = item.icon;
-                    return (
-                      <Link 
-                        key={item.title} 
-                        href={`/who-we-serve/${item.slug}`} 
-                        className="group/card flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 border border-transparent hover:border-slate-200/80 transition-all duration-150"
-                      >
-                        <div className="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center shrink-0 group-hover/card:bg-blue-50 group-hover/card:text-blue-600 text-slate-600 transition-colors mt-0.5">
-                          <IconComp className="w-4 h-4" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <span className="text-[13.5px] font-bold text-slate-900 group-hover/card:text-blue-600 transition-colors leading-tight block">
-                            {item.title}
-                          </span>
-                          <p className="text-[11.5px] text-slate-500 leading-snug mt-1 font-normal line-clamp-1">
-                            {item.desc}
-                          </p>
-                        </div>
-                        <ArrowRight className="w-3.5 h-3.5 text-blue-600 opacity-0 -translate-x-1 group-hover/card:opacity-100 group-hover/card:translate-x-0 transition-all duration-150 shrink-0 mt-2 ml-1" />
-                      </Link>
-                    );
-                  })}
-                </div>
-
-                <div className="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between px-2">
-                  <span className="text-xs text-slate-500 font-medium">
-                    Built for independent operators and enterprise auto groups
-                  </span>
-                  <Link 
-                    href="/who-we-serve" 
-                    className="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1 transition-colors"
-                  >
-                    <span>View all verticals</span>
-                    <ArrowRight className="w-3 h-3" />
-                  </Link>
+                  {whoWeServeList.map((item) => (
+                    <Link 
+                      key={item.title} 
+                      href={`/who-we-serve/${item.slug}`} 
+                      className="group/card flex items-start justify-between p-3 rounded-lg hover:bg-slate-50 border border-transparent hover:border-slate-200/80 transition-all duration-150"
+                    >
+                      <div className="flex-1 min-w-0">
+                        <span className="text-[13.5px] font-bold text-slate-900 group-hover/card:text-blue-600 transition-colors leading-tight block">
+                          {item.title}
+                        </span>
+                        <p className="text-[11.5px] text-slate-500 leading-snug mt-1 font-normal line-clamp-1">
+                          {item.desc}
+                        </p>
+                      </div>
+                      <ArrowRight className="w-3.5 h-3.5 text-blue-600 opacity-0 -translate-x-1 group-hover/card:opacity-100 group-hover/card:translate-x-0 transition-all duration-150 shrink-0 mt-1 ml-2" />
+                    </Link>
+                  ))}
                 </div>
 
               </div>
@@ -382,44 +325,32 @@ export function Header() {
               <p className="text-[10.5px] font-mono font-bold text-slate-400 uppercase tracking-wider px-3 py-1">
                 Platform Solutions
               </p>
-              {solutionsList.map((sol) => {
-                const IconComp = sol.icon;
-                return (
-                  <Link
-                    key={sol.slug}
-                    href={`/solutions/${sol.slug}`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-800 hover:text-blue-600 hover:bg-slate-50 transition-colors"
-                  >
-                    <div className="w-7 h-7 rounded-md bg-slate-100 flex items-center justify-center text-slate-600 shrink-0">
-                      <IconComp className="w-3.5 h-3.5" />
-                    </div>
-                    <span className="text-[13.5px] font-semibold">{sol.title}</span>
-                  </Link>
-                );
-              })}
+              {solutionsList.map((sol) => (
+                <Link
+                  key={sol.slug}
+                  href={sol.href || `/solutions/${sol.slug}`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block px-3 py-2.5 rounded-lg text-[13.5px] font-semibold text-slate-800 hover:text-blue-600 hover:bg-slate-50 transition-colors"
+                >
+                  {sol.title}
+                </Link>
+              ))}
             </div>
 
             <div className="space-y-1 pt-3 border-t border-slate-100">
               <p className="text-[10.5px] font-mono font-bold text-slate-400 uppercase tracking-wider px-3 py-1">
                 Who We Serve
               </p>
-              {whoWeServeList.map((item) => {
-                const IconComp = item.icon;
-                return (
-                  <Link
-                    key={item.title}
-                    href={`/who-we-serve/${item.slug}`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-800 hover:text-blue-600 hover:bg-slate-50 transition-colors"
-                  >
-                    <div className="w-7 h-7 rounded-md bg-slate-100 flex items-center justify-center text-slate-600 shrink-0">
-                      <IconComp className="w-3.5 h-3.5" />
-                    </div>
-                    <span className="text-[13.5px] font-semibold">{item.title}</span>
-                  </Link>
-                );
-              })}
+              {whoWeServeList.map((item) => (
+                <Link
+                  key={item.title}
+                  href={`/who-we-serve/${item.slug}`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block px-3 py-2.5 rounded-lg text-[13.5px] font-semibold text-slate-800 hover:text-blue-600 hover:bg-slate-50 transition-colors"
+                >
+                  {item.title}
+                </Link>
+              ))}
             </div>
 
             <div className="space-y-1 pt-3 border-t border-slate-100">

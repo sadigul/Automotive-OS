@@ -1,11 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { motion } from 'motion/react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import { Stats } from '@/components/Stats';
 import { ClientLogosMarquee } from '@/components/ClientLogosMarquee';
+import { EnterpriseERPSnapshot } from '@/components/EnterpriseERPSnapshot';
+import { Stats } from '@/components/Stats';
 
 const niches = [
   {
@@ -124,8 +126,24 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Beautiful Optimized Stats Section */}
-        <div className="w-full mt-14 sm:mt-16 lg:mt-20">
+        {/* Enterprise ERP Live Interactive Showcase (Direct ERP Dashboard, No Laptop Mockup) */}
+        <motion.div 
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="w-full mt-12 sm:mt-16 max-w-6xl mx-auto"
+        >
+          <div className="rounded-2xl sm:rounded-3xl border border-slate-200/60 shadow-[0_4px_24px_rgba(0,0,0,0.04)] overflow-hidden bg-white">
+            <div className="w-full overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+              <div className="min-w-[1040px]">
+                <EnterpriseERPSnapshot />
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Our results in numbers (Exact user design, no fluff, buttery smooth) */}
+        <div className="w-full mt-10 sm:mt-14 lg:mt-16">
           <Stats />
         </div>
 

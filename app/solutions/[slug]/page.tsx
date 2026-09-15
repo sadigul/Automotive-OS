@@ -1,6 +1,7 @@
 import { solutionsData } from '@/lib/solutions-data';
 import ClientPage from './client-page';
 import type { Metadata } from 'next';
+import { redirect } from 'next/navigation';
 
 const seoMeta: Record<string, { title: string; description: string; keywords: string[] }> = {
   'erp': {
@@ -131,5 +132,8 @@ export function generateStaticParams() {
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  if (slug === 'custom-software') {
+    redirect('/contact-us?solution=custom-software');
+  }
   return <ClientPage slug={slug} />;
 }
