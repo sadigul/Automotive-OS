@@ -25,11 +25,28 @@ export async function POST(req: NextRequest) {
 
     const resend = new Resend(process.env.RESEND_API_KEY);
 
-    await resend.emails.send({
-      from: `DMSPilot <onboarding@resend.dev>`,
-      to: 'sadigulx05@gmail.com',
+    const plainTextContent = `
+New Access Request Received — DMSPilot
+----------------------------------------
+Full Name: ${fullName}
+Email: ${email}
+Phone: ${phone}
+Company: ${companyName}
+Website: ${websiteUrl || 'N/A'}
+Location: ${location}
+Fleet Size: ${fleetSize}
+Current ERP/CRM: ${currentErp}
+Requested Modules: ${moduleList}
+${customDetails ? `Custom Requirements: ${customDetails}\n` : ''}
+Reply directly to respond to ${fullName} at ${email}.
+    `.trim();
+
+    const { data, error } = await resend.emails.send({
+      from: process.env.RESEND_FROM_EMAIL || 'DMSPilot <onboarding@resend.dev>',
+      to: ['sadigulx05@gmail.com'],
       replyTo: email,
       subject: `New Access Request: ${fullName} — ${companyName}`,
+      text: plainTextContent,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <h2 style="color: #111; border-bottom: 2px solid #7c3aed; padding-bottom: 10px;">New Access Request — DMSPilot</h2>
@@ -84,11 +101,19 @@ export async function POST(req: NextRequest) {
       `,
     });
 
-    return NextResponse.json({ success: true });
-  } catch (error) {
+    if (error) {
+      console.error('[API/Request-Access] Resend returned error:', error);
+      return NextResponse.json(
+        { success: false, error: error.message },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({ success: true, id: data?.id });
+  } catch (error: any) {
     console.error('Email send error:', error);
     return NextResponse.json(
-      { success: false, error: 'Failed to send request' },
+      { success: false, error: error?.message || 'Failed to send request' },
       { status: 500 }
     );
   }
